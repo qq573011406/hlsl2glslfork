@@ -20,16 +20,21 @@ CMakeCache.txt
 Makefile
 build/
 lib/
+
 Gen_hlslang.cpp
 gen_hlslang.cpp
 Gen_hlslang_tab.cpp
 hlslang_tab.cpp
+hlslang.output
 hlslang_tab.h
 tests/out-*.txt
+tests/**/*.txt
 *.dSYM
 tests/hlsl2glsltest/hlsl2glsltest
 tests/hlsl2glsltest/out.txt
 *-res.txt
+hlslang.output
+
 
 
 # Prerequisites
@@ -76,3 +81,4 @@ build/
 
 # vs
 .vs/
+

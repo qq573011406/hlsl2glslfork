@@ -7,8 +7,8 @@ vec4 xlat_main(  ) {
     foo += 100000.0;
     foo += -0.001;
     #line 6
-    foo += 1e-06;
-    foo += 1e-06;
+    foo += 1e-6;
+    foo += 1e-6;
     foo += 1111111.0;
     foo += 1111110.0;
     #line 10

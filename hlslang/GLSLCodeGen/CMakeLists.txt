@@ -3,4 +3,4 @@ add_library(GLSLCodeGen
     ${source_files}
 )
 target_link_libraries(GLSLCodeGen MachineIndependent)
-target_include_directories(GLSLCodeGen PRIVATE "${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/")
+target_include_directories(GLSLCodeGen PUBLIC "${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/")

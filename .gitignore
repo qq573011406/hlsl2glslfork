@@ -24,10 +24,55 @@ Gen_hlslang.cpp
 gen_hlslang.cpp
 Gen_hlslang_tab.cpp
 hlslang_tab.cpp
-hlslang.output
 hlslang_tab.h
 tests/out-*.txt
 *.dSYM
 tests/hlsl2glsltest/hlsl2glsltest
 tests/hlsl2glsltest/out.txt
 *-res.txt
+
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Editor
+.vscode/
+
+# Build
+build/
+
+!External/**/*.*
+.DS_Store
+
+# vs
+.vs/

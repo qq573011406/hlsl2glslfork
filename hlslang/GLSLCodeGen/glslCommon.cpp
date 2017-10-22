@@ -33,7 +33,7 @@ const char kGLSLTypeNames[EgstTypeCount][32] =
    "mat4x2",
    "mat4x3",
    "mat4",
-   "sampler",
+   "sampler2D",
    "sampler1D",
    "sampler1DShadow",
    "sampler2D",

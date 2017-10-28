@@ -63,7 +63,8 @@ private:
 	
 	bool linkerSanityCheck(HlslCrossCompiler* compiler, const char* entryFunc);
 	bool buildFunctionLists(HlslCrossCompiler* comp, EShLanguage lang, const std::string& entryPoint, GlslFunction*& globalFunction, std::vector<GlslFunction*>& functionList, FunctionSet& calledFunctions, GlslFunction*& funcMain);
-	void buildUniformsAndLibFunctions(const FunctionSet& calledFunctions, std::vector<GlslSymbol*>& constants, std::set<TOperator>& libFunctions);
+	void buildLibFunctions(const FunctionSet& calledFunctions, std::set<TOperator>& libFunctions);
+	void buildUniforms(const GlslFunction* globalFunction, std::vector<GlslSymbol*>& constants);
 	void buildUniformReflection(const std::vector<GlslSymbol*>& constants);
 	
 	void appendDuplicatedInSemantics(GlslSymbolOrStructMemberBase* sym, EAttribSemantic sem, std::vector<GlslSymbolOrStructMemberBase*>& list);

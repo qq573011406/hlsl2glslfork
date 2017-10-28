@@ -924,26 +924,28 @@ struct GlslSymbolSorter {
 	}
 };
 
-void HlslLinker::buildUniformsAndLibFunctions(const FunctionSet& calledFunctions, std::vector<GlslSymbol*>& constants, std::set<TOperator>& libFunctions)
+void HlslLinker::buildLibFunctions(const FunctionSet& calledFunctions, std::set<TOperator>& libFunctions)
 {
 	for (FunctionSet::const_iterator it = calledFunctions.begin(); it != calledFunctions.end(); ++it) {
-		const std::vector<GlslSymbol*> &symbols = (*it)->getSymbols();
-		
-		unsigned n_symbols = symbols.size();
-		for (unsigned i = 0; i != n_symbols; ++i) {
-			GlslSymbol* s = symbols[i];
-			if (s->getQualifier() == EqtUniform || s->getQualifier() == EqtMutableUniform)
-				constants.push_back(s);
-		}
-		
+		const std::vector<GlslSymbol*> &symbols = (*it)->getSymbols();	
 		//take each referenced library function, and add it to the set
 		const std::set<TOperator> &referencedFunctions = (*it)->getLibFunctions();
 		libFunctions.insert( referencedFunctions.begin(), referencedFunctions.end());
 	}
-	
-    // std::unique only removes contiguous duplicates, so vector must be sorted to remove them all
-    std::sort(constants.begin(), constants.end(), GlslSymbolSorter());
+}
 
+void HlslLinker::buildUniforms(const GlslFunction* globalFunction, std::vector<GlslSymbol*>& constants)
+{
+	if (globalFunction == nullptr) return;
+	const std::vector<GlslSymbol*> &symbols = globalFunction->getSymbols();
+	unsigned n_symbols = symbols.size();
+	for (unsigned i = 0; i != n_symbols; ++i) {
+		GlslSymbol* s = symbols[i];
+		if (s->getQualifier() == EqtUniform || s->getQualifier() == EqtMutableUniform)
+			constants.push_back(s);
+	}
+	// std::unique only removes contiguous duplicates, so vector must be sorted to remove them all
+	std::sort(constants.begin(), constants.end(), GlslSymbolSorter());
 	// Remove duplicates
 	constants.resize(std::unique(constants.begin(), constants.end()) - constants.begin());
 }
@@ -1563,7 +1565,8 @@ bool HlslLinker::link(HlslCrossCompiler* compiler, const char* entryFunc, ETarge
 	// uniforms and used built-in functions
 	std::vector<GlslSymbol*> constants;
 	std::set<TOperator> libFunctions;
-	buildUniformsAndLibFunctions(calledFunctions, constants, libFunctions);
+	buildLibFunctions(calledFunctions, libFunctions);
+	buildUniforms(globalFunction, constants);
 	// add built-in functions possibly used by uniform initializers
 	const std::set<TOperator>& referencedGlobalFunctions = globalFunction->getLibFunctions();
 	libFunctions.insert (referencedGlobalFunctions.begin(), referencedGlobalFunctions.end());

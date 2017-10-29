@@ -1564,9 +1564,9 @@ bool TGlslOutputTraverser::traverseAggregate( bool preVisit, TIntermAggregate *n
          current->beginStatement();                     
 
          out << '(';
-         node->getNodes()[0]->traverse(goit);
-         out << " * ";
          node->getNodes()[1]->traverse(goit);
+         out << " * ";
+         node->getNodes()[0]->traverse(goit);
          out << ')';
 
          return false;

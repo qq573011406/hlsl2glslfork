@@ -208,6 +208,8 @@ enum TTranslateOptions
 	//  instead of outputting e.g. "xlat_attrib_TEXCOORD0" for "appdata_t.texcoord : TEXCOORD0"
 	//  we will output "appdata_t_texcoord"
 	ETranslateOpPropogateOriginalAttribNames = (1<<4),
+
+	ETranslateOpBGRAVertexColor = (1<<5)
 };
 
 

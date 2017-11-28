@@ -18,83 +18,82 @@ add_library(MachineIndependent
 target_link_libraries(MachineIndependent PRIVATE preprocessor OSDependent)
 target_include_directories(MachineIndependent PUBLIC  "${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/")
 
+option(HLSL2GLSLFORK_GenrateScannerAndParserCode " Generate scanner and parser source code " OFF)
+
 if(WIN32)
-target_include_directories(MachineIndependent PUBLIC 
-"${PROJECT_SOURCE_DIR}/hlslang/OSDependent/Windows/"
-)
+    target_include_directories(MachineIndependent PUBLIC 
+    "${PROJECT_SOURCE_DIR}/hlslang/OSDependent/Windows/"
+    )
+    if(HLSL2GLSLFORK_GenrateScannerAndParserCode)
+        add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp
+        COMMAND ${PROJECT_SOURCE_DIR}/tools/flex.exe ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
+        MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
+        COMMENT "Executing flex on hlslang.l"
+        )
 
-add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp
-COMMAND ${PROJECT_SOURCE_DIR}/tools/flex.exe ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
-MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
-WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
-COMMENT "Executing flex on hlslang.l"
-)
-
-add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
-COMMAND bison.exe -d -t -v ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
-COMMAND move /y hlslang.tab.h ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang_tab.h
-COMMAND move /y hlslang.tab.c ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
-MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
-WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/tools/bin/
-COMMENT "Executing Bison on hlslang.y"
-)
-
-
+        add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
+        COMMAND bison.exe -d -t -v ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
+        COMMAND move /y hlslang.tab.h ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang_tab.h
+        COMMAND move /y hlslang.tab.c ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
+        MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/tools/bin/
+        COMMENT "Executing Bison on hlslang.y"
+        )
+    endif()
 
 elseif(APPLE)
-target_include_directories(MachineIndependent PUBLIC 
-"${PROJECT_SOURCE_DIR}/hlslang/OSDependent/Mac/"
-)
+    target_include_directories(MachineIndependent PUBLIC 
+    "${PROJECT_SOURCE_DIR}/hlslang/OSDependent/Mac/"
+    )
 
+    if(HLSL2GLSLFORK_GenrateScannerAndParserCode)
+        add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp
+        COMMAND flex hlslang.l
+        MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
+        COMMENT "Executing flex on hlslang.l"
+        )
 
-add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp
-COMMAND flex hlslang.l
-MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
-WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
-COMMENT "Executing flex on hlslang.l"
-)
-
-add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
-COMMAND bison -d -t -v hlslang.y
-COMMAND mv -f hlslang.tab.c Gen_hlslang_tab.cpp
-COMMAND mv -f hlslang.tab.h hlslang_tab.h
-MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
-WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
-COMMENT "Executing Bison on hlslang.y"
-)
-
+        add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
+        COMMAND bison -d -t -v hlslang.y
+        COMMAND mv -f hlslang.tab.c Gen_hlslang_tab.cpp
+        COMMAND mv -f hlslang.tab.h hlslang_tab.h
+        MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
+        COMMENT "Executing Bison on hlslang.y"
+        )
+    endif()
 
 elseif(UNIX)
-target_include_directories(MachineIndependent PUBLIC 
-"${PROJECT_SOURCE_DIR}/hlslang/OSDependent/Linux/"
-)
+    target_include_directories(MachineIndependent PUBLIC 
+    "${PROJECT_SOURCE_DIR}/hlslang/OSDependent/Linux/"
+    )
 
-add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp
-COMMAND flex hlslang.l
-MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
-WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
-COMMENT "Executing flex on hlslang.l"
-)
+    if(HLSL2GLSLFORK_GenrateScannerAndParserCode)   
+        add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp
+        COMMAND flex hlslang.l
+        MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.l
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
+        COMMENT "Executing flex on hlslang.l"
+        )
 
-add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
-COMMAND bison -d -t -v hlslang.y
-COMMAND mv -f hlslang.tab.c Gen_hlslang_tab.cpp
-COMMAND mv -f hlslang.tab.h hlslang_tab.h
-MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
-WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
-COMMENT "Executing Bison on hlslang.y"
-)
-
+        add_custom_command(OUTPUT ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
+        COMMAND bison -d -t -v hlslang.y
+        COMMAND mv -f hlslang.tab.c Gen_hlslang_tab.cpp
+        COMMAND mv -f hlslang.tab.h hlslang_tab.h
+        MAIN_DEPENDENCY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/hlslang.y
+        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/
+        COMMENT "Executing Bison on hlslang.y"
+        )
+    endif()
 
 endif(WIN32)
 
-add_custom_target(parser ALL
-DEPENDS ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp ${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp
-)
 
-set_source_files_properties(${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp PROPERTIES GENERATED 1)
-set_source_files_properties(${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp PROPERTIES GENERATED 1)
-
-
+if(HLSL2GLSLFORK_GenrateScannerAndParserCode)
+    set_source_files_properties(${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang.cpp PROPERTIES GENERATED 1)
+    set_source_files_properties(${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/Gen_hlslang_tab.cpp PROPERTIES GENERATED 1)
+endif()
 
 add_subdirectory(preprocessor)

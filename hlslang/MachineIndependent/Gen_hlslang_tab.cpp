@@ -1,21 +1,19 @@
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
-/* A Bison parser, made by GNU Bison 2.4.1.  */
+/* Bison implementation for Yacc-like parsers in C
 
-/* Skeleton implementation for Bison's Yacc-like parsers in C
-   
-      Copyright (C) 1984, 1989, 1990, 2000, 2001, 2002, 2003, 2004, 2005, 2006
-   Free Software Foundation, Inc.
-   
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
+
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
-   
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
@@ -28,7 +26,7 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
@@ -46,7 +44,7 @@
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "2.4.1"
+#define YYBISON_VERSION "3.0.4"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -60,15 +58,11 @@
 /* Pull parsers.  */
 #define YYPULL 1
 
-/* Using locations.  */
-#define YYLSP_NEEDED 0
 
 
 
 /* Copy the first part of user declarations.  */
-
-/* Line 189 of yacc.c  */
-#line 7 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 8 "hlslang.y" /* yacc.c:339  */
 
 
 /* Based on:
@@ -118,14 +112,15 @@ extern void yyerror(TParseContext&, const char*);
 
 
 
+#line 116 "hlslang.tab.c" /* yacc.c:339  */
 
-/* Line 189 of yacc.c  */
-#line 124 "hlslang.tab.c"
-
-/* Enabling traces.  */
-#ifndef YYDEBUG
-# define YYDEBUG 1
-#endif
+# ifndef YY_NULLPTR
+#  if defined __cplusplus && 201103L <= __cplusplus
+#   define YY_NULLPTR nullptr
+#  else
+#   define YY_NULLPTR 0
+#  endif
+# endif
 
 /* Enabling verbose error messages.  */
 #ifdef YYERROR_VERBOSE
@@ -135,165 +130,168 @@ extern void yyerror(TParseContext&, const char*);
 # define YYERROR_VERBOSE 0
 #endif
 
-/* Enabling the token table.  */
-#ifndef YYTOKEN_TABLE
-# define YYTOKEN_TABLE 0
+/* In a future release of Bison, this section will be replaced
+   by #include "hlslang.tab.h".  */
+#ifndef YY_YY_HLSLANG_TAB_H_INCLUDED
+# define YY_YY_HLSLANG_TAB_H_INCLUDED
+/* Debug traces.  */
+#ifndef YYDEBUG
+# define YYDEBUG 1
+#endif
+#if YYDEBUG
+extern int yydebug;
 #endif
 
-
-/* Tokens.  */
+/* Token type.  */
 #ifndef YYTOKENTYPE
 # define YYTOKENTYPE
-   /* Put the tokens into the symbol table, so that GDB and other debuggers
-      know about them.  */
-   enum yytokentype {
-     CONST_QUAL = 258,
-     STATIC_QUAL = 259,
-     BOOL_TYPE = 260,
-     FLOAT_TYPE = 261,
-     INT_TYPE = 262,
-     STRING_TYPE = 263,
-     FIXED_TYPE = 264,
-     HALF_TYPE = 265,
-     BREAK = 266,
-     CONTINUE = 267,
-     DO = 268,
-     ELSE = 269,
-     FOR = 270,
-     IF = 271,
-     DISCARD = 272,
-     RETURN = 273,
-     BVEC2 = 274,
-     BVEC3 = 275,
-     BVEC4 = 276,
-     IVEC2 = 277,
-     IVEC3 = 278,
-     IVEC4 = 279,
-     VEC2 = 280,
-     VEC3 = 281,
-     VEC4 = 282,
-     HVEC2 = 283,
-     HVEC3 = 284,
-     HVEC4 = 285,
-     FVEC2 = 286,
-     FVEC3 = 287,
-     FVEC4 = 288,
-     MATRIX2x2 = 289,
-     MATRIX2x3 = 290,
-     MATRIX2x4 = 291,
-     MATRIX3x2 = 292,
-     MATRIX3x3 = 293,
-     MATRIX3x4 = 294,
-     MATRIX4x2 = 295,
-     MATRIX4x3 = 296,
-     MATRIX4x4 = 297,
-     HMATRIX2x2 = 298,
-     HMATRIX2x3 = 299,
-     HMATRIX2x4 = 300,
-     HMATRIX3x2 = 301,
-     HMATRIX3x3 = 302,
-     HMATRIX3x4 = 303,
-     HMATRIX4x2 = 304,
-     HMATRIX4x3 = 305,
-     HMATRIX4x4 = 306,
-     FMATRIX2x2 = 307,
-     FMATRIX2x3 = 308,
-     FMATRIX2x4 = 309,
-     FMATRIX3x2 = 310,
-     FMATRIX3x3 = 311,
-     FMATRIX3x4 = 312,
-     FMATRIX4x2 = 313,
-     FMATRIX4x3 = 314,
-     FMATRIX4x4 = 315,
-     IN_QUAL = 316,
-     OUT_QUAL = 317,
-     INOUT_QUAL = 318,
-     UNIFORM = 319,
-     STRUCT = 320,
-     VOID_TYPE = 321,
-     WHILE = 322,
-     SAMPLER1D = 323,
-     SAMPLER2D = 324,
-     SAMPLER3D = 325,
-     SAMPLERCUBE = 326,
-     SAMPLER1DSHADOW = 327,
-     SAMPLER2DSHADOW = 328,
-     SAMPLER2DARRAY = 329,
-     SAMPLERRECTSHADOW = 330,
-     SAMPLERRECT = 331,
-     SAMPLER2D_HALF = 332,
-     SAMPLER2D_FLOAT = 333,
-     SAMPLERCUBE_HALF = 334,
-     SAMPLERCUBE_FLOAT = 335,
-     SAMPLERGENERIC = 336,
-     VECTOR = 337,
-     MATRIX = 338,
-     REGISTER = 339,
-     TEXTURE = 340,
-     SAMPLERSTATE = 341,
-     IDENTIFIER = 342,
-     TYPE_NAME = 343,
-     FLOATCONSTANT = 344,
-     INTCONSTANT = 345,
-     BOOLCONSTANT = 346,
-     STRINGCONSTANT = 347,
-     FIELD_SELECTION = 348,
-     LEFT_OP = 349,
-     RIGHT_OP = 350,
-     INC_OP = 351,
-     DEC_OP = 352,
-     LE_OP = 353,
-     GE_OP = 354,
-     EQ_OP = 355,
-     NE_OP = 356,
-     AND_OP = 357,
-     OR_OP = 358,
-     XOR_OP = 359,
-     MUL_ASSIGN = 360,
-     DIV_ASSIGN = 361,
-     ADD_ASSIGN = 362,
-     MOD_ASSIGN = 363,
-     LEFT_ASSIGN = 364,
-     RIGHT_ASSIGN = 365,
-     AND_ASSIGN = 366,
-     XOR_ASSIGN = 367,
-     OR_ASSIGN = 368,
-     SUB_ASSIGN = 369,
-     LEFT_PAREN = 370,
-     RIGHT_PAREN = 371,
-     LEFT_BRACKET = 372,
-     RIGHT_BRACKET = 373,
-     LEFT_BRACE = 374,
-     RIGHT_BRACE = 375,
-     DOT = 376,
-     COMMA = 377,
-     COLON = 378,
-     EQUAL = 379,
-     SEMICOLON = 380,
-     BANG = 381,
-     DASH = 382,
-     TILDE = 383,
-     PLUS = 384,
-     STAR = 385,
-     SLASH = 386,
-     PERCENT = 387,
-     LEFT_ANGLE = 388,
-     RIGHT_ANGLE = 389,
-     VERTICAL_BAR = 390,
-     CARET = 391,
-     AMPERSAND = 392,
-     QUESTION = 393
-   };
+  enum yytokentype
+  {
+    CONST_QUAL = 258,
+    STATIC_QUAL = 259,
+    BOOL_TYPE = 260,
+    FLOAT_TYPE = 261,
+    INT_TYPE = 262,
+    STRING_TYPE = 263,
+    FIXED_TYPE = 264,
+    HALF_TYPE = 265,
+    BREAK = 266,
+    CONTINUE = 267,
+    DO = 268,
+    ELSE = 269,
+    FOR = 270,
+    IF = 271,
+    DISCARD = 272,
+    RETURN = 273,
+    BVEC2 = 274,
+    BVEC3 = 275,
+    BVEC4 = 276,
+    IVEC2 = 277,
+    IVEC3 = 278,
+    IVEC4 = 279,
+    VEC2 = 280,
+    VEC3 = 281,
+    VEC4 = 282,
+    HVEC2 = 283,
+    HVEC3 = 284,
+    HVEC4 = 285,
+    FVEC2 = 286,
+    FVEC3 = 287,
+    FVEC4 = 288,
+    MATRIX2x2 = 289,
+    MATRIX2x3 = 290,
+    MATRIX2x4 = 291,
+    MATRIX3x2 = 292,
+    MATRIX3x3 = 293,
+    MATRIX3x4 = 294,
+    MATRIX4x2 = 295,
+    MATRIX4x3 = 296,
+    MATRIX4x4 = 297,
+    HMATRIX2x2 = 298,
+    HMATRIX2x3 = 299,
+    HMATRIX2x4 = 300,
+    HMATRIX3x2 = 301,
+    HMATRIX3x3 = 302,
+    HMATRIX3x4 = 303,
+    HMATRIX4x2 = 304,
+    HMATRIX4x3 = 305,
+    HMATRIX4x4 = 306,
+    FMATRIX2x2 = 307,
+    FMATRIX2x3 = 308,
+    FMATRIX2x4 = 309,
+    FMATRIX3x2 = 310,
+    FMATRIX3x3 = 311,
+    FMATRIX3x4 = 312,
+    FMATRIX4x2 = 313,
+    FMATRIX4x3 = 314,
+    FMATRIX4x4 = 315,
+    IN_QUAL = 316,
+    OUT_QUAL = 317,
+    INOUT_QUAL = 318,
+    UNIFORM = 319,
+    STRUCT = 320,
+    VOID_TYPE = 321,
+    WHILE = 322,
+    SAMPLER1D = 323,
+    SAMPLER2D = 324,
+    SAMPLER3D = 325,
+    SAMPLERCUBE = 326,
+    SAMPLER1DSHADOW = 327,
+    SAMPLER2DSHADOW = 328,
+    SAMPLER2DARRAY = 329,
+    SAMPLERRECTSHADOW = 330,
+    SAMPLERRECT = 331,
+    SAMPLER2D_HALF = 332,
+    SAMPLER2D_FLOAT = 333,
+    SAMPLERCUBE_HALF = 334,
+    SAMPLERCUBE_FLOAT = 335,
+    SAMPLERGENERIC = 336,
+    VECTOR = 337,
+    MATRIX = 338,
+    REGISTER = 339,
+    TEXTURE = 340,
+    SAMPLERSTATE = 341,
+    IDENTIFIER = 342,
+    TYPE_NAME = 343,
+    FLOATCONSTANT = 344,
+    INTCONSTANT = 345,
+    BOOLCONSTANT = 346,
+    STRINGCONSTANT = 347,
+    FIELD_SELECTION = 348,
+    LEFT_OP = 349,
+    RIGHT_OP = 350,
+    INC_OP = 351,
+    DEC_OP = 352,
+    LE_OP = 353,
+    GE_OP = 354,
+    EQ_OP = 355,
+    NE_OP = 356,
+    AND_OP = 357,
+    OR_OP = 358,
+    XOR_OP = 359,
+    MUL_ASSIGN = 360,
+    DIV_ASSIGN = 361,
+    ADD_ASSIGN = 362,
+    MOD_ASSIGN = 363,
+    LEFT_ASSIGN = 364,
+    RIGHT_ASSIGN = 365,
+    AND_ASSIGN = 366,
+    XOR_ASSIGN = 367,
+    OR_ASSIGN = 368,
+    SUB_ASSIGN = 369,
+    LEFT_PAREN = 370,
+    RIGHT_PAREN = 371,
+    LEFT_BRACKET = 372,
+    RIGHT_BRACKET = 373,
+    LEFT_BRACE = 374,
+    RIGHT_BRACE = 375,
+    DOT = 376,
+    COMMA = 377,
+    COLON = 378,
+    EQUAL = 379,
+    SEMICOLON = 380,
+    BANG = 381,
+    DASH = 382,
+    TILDE = 383,
+    PLUS = 384,
+    STAR = 385,
+    SLASH = 386,
+    PERCENT = 387,
+    LEFT_ANGLE = 388,
+    RIGHT_ANGLE = 389,
+    VERTICAL_BAR = 390,
+    CARET = 391,
+    AMPERSAND = 392,
+    QUESTION = 393
+  };
 #endif
 
-
-
+/* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE
-{
 
-/* Line 214 of yacc.c  */
-#line 56 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+union YYSTYPE
+{
+#line 57 "hlslang.y" /* yacc.c:355  */
 
     struct {
         TSourceLoc line;
@@ -327,27 +325,26 @@ typedef union YYSTYPE
         };
     } interm;
 
+#line 329 "hlslang.tab.c" /* yacc.c:355  */
+};
 
-
-/* Line 214 of yacc.c  */
-#line 334 "hlslang.tab.c"
-} YYSTYPE;
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
-# define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
 #endif
 
 
-/* Copy the second part of user declarations.  */
 
-/* Line 264 of yacc.c  */
-#line 90 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+int yyparse (TParseContext& parseContext);
+
+#endif /* !YY_YY_HLSLANG_TAB_H_INCLUDED  */
+
+/* Copy the second part of user declarations.  */
+#line 91 "hlslang.y" /* yacc.c:358  */
 
     extern int yylex(YYSTYPE*, TParseContext&);
 
-
-/* Line 264 of yacc.c  */
-#line 351 "hlslang.tab.c"
+#line 348 "hlslang.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -361,11 +358,8 @@ typedef unsigned char yytype_uint8;
 
 #ifdef YYTYPE_INT8
 typedef YYTYPE_INT8 yytype_int8;
-#elif (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
-typedef signed char yytype_int8;
 #else
-typedef short int yytype_int8;
+typedef signed char yytype_int8;
 #endif
 
 #ifdef YYTYPE_UINT16
@@ -385,8 +379,7 @@ typedef short int yytype_int16;
 #  define YYSIZE_T __SIZE_TYPE__
 # elif defined size_t
 #  define YYSIZE_T size_t
-# elif ! defined YYSIZE_T && (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
+# elif ! defined YYSIZE_T
 #  include <stddef.h> /* INFRINGES ON USER NAME SPACE */
 #  define YYSIZE_T size_t
 # else
@@ -397,41 +390,70 @@ typedef short int yytype_int16;
 #define YYSIZE_MAXIMUM ((YYSIZE_T) -1)
 
 #ifndef YY_
-# if YYENABLE_NLS
+# if defined YYENABLE_NLS && YYENABLE_NLS
 #  if ENABLE_NLS
 #   include <libintl.h> /* INFRINGES ON USER NAME SPACE */
-#   define YY_(msgid) dgettext ("bison-runtime", msgid)
+#   define YY_(Msgid) dgettext ("bison-runtime", Msgid)
 #  endif
 # endif
 # ifndef YY_
-#  define YY_(msgid) msgid
+#  define YY_(Msgid) Msgid
+# endif
+#endif
+
+#ifndef YY_ATTRIBUTE
+# if (defined __GNUC__                                               \
+      && (2 < __GNUC__ || (__GNUC__ == 2 && 96 <= __GNUC_MINOR__)))  \
+     || defined __SUNPRO_C && 0x5110 <= __SUNPRO_C
+#  define YY_ATTRIBUTE(Spec) __attribute__(Spec)
+# else
+#  define YY_ATTRIBUTE(Spec) /* empty */
+# endif
+#endif
+
+#ifndef YY_ATTRIBUTE_PURE
+# define YY_ATTRIBUTE_PURE   YY_ATTRIBUTE ((__pure__))
+#endif
+
+#ifndef YY_ATTRIBUTE_UNUSED
+# define YY_ATTRIBUTE_UNUSED YY_ATTRIBUTE ((__unused__))
+#endif
+
+#if !defined _Noreturn \
+     && (!defined __STDC_VERSION__ || __STDC_VERSION__ < 201112)
+# if defined _MSC_VER && 1200 <= _MSC_VER
+#  define _Noreturn __declspec (noreturn)
+# else
+#  define _Noreturn YY_ATTRIBUTE ((__noreturn__))
 # endif
 #endif
 
 /* Suppress unused-variable warnings by "using" E.  */
 #if ! defined lint || defined __GNUC__
-# define YYUSE(e) ((void) (e))
+# define YYUSE(E) ((void) (E))
 #else
-# define YYUSE(e) /* empty */
+# define YYUSE(E) /* empty */
 #endif
 
-/* Identity function, used to suppress warnings about constant conditions.  */
-#ifndef lint
-# define YYID(n) (n)
+#if defined __GNUC__ && 407 <= __GNUC__ * 100 + __GNUC_MINOR__
+/* Suppress an incorrect diagnostic about yylval being uninitialized.  */
+# define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN \
+    _Pragma ("GCC diagnostic push") \
+    _Pragma ("GCC diagnostic ignored \"-Wuninitialized\"")\
+    _Pragma ("GCC diagnostic ignored \"-Wmaybe-uninitialized\"")
+# define YY_IGNORE_MAYBE_UNINITIALIZED_END \
+    _Pragma ("GCC diagnostic pop")
 #else
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
-static int
-YYID (int yyi)
-#else
-static int
-YYID (yyi)
-    int yyi;
+# define YY_INITIAL_VALUE(Value) Value
 #endif
-{
-  return yyi;
-}
+#ifndef YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
+# define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
+# define YY_IGNORE_MAYBE_UNINITIALIZED_END
 #endif
+#ifndef YY_INITIAL_VALUE
+# define YY_INITIAL_VALUE(Value) /* Nothing. */
+#endif
+
 
 #if ! defined yyoverflow || YYERROR_VERBOSE
 
@@ -450,11 +472,11 @@ YYID (yyi)
 #    define alloca _alloca
 #   else
 #    define YYSTACK_ALLOC alloca
-#    if ! defined _ALLOCA_H && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
+#    if ! defined _ALLOCA_H && ! defined EXIT_SUCCESS
 #     include <stdlib.h> /* INFRINGES ON USER NAME SPACE */
-#     ifndef _STDLIB_H
-#      define _STDLIB_H 1
+      /* Use EXIT_SUCCESS as a witness for stdlib.h.  */
+#     ifndef EXIT_SUCCESS
+#      define EXIT_SUCCESS 0
 #     endif
 #    endif
 #   endif
@@ -462,8 +484,8 @@ YYID (yyi)
 # endif
 
 # ifdef YYSTACK_ALLOC
-   /* Pacify GCC's `empty if-body' warning.  */
-#  define YYSTACK_FREE(Ptr) do { /* empty */; } while (YYID (0))
+   /* Pacify GCC's 'empty if-body' warning.  */
+#  define YYSTACK_FREE(Ptr) do { /* empty */; } while (0)
 #  ifndef YYSTACK_ALLOC_MAXIMUM
     /* The OS might guarantee only one guard page at the bottom of the stack,
        and a page size can be as small as 4096 bytes.  So we cannot safely
@@ -477,25 +499,23 @@ YYID (yyi)
 #  ifndef YYSTACK_ALLOC_MAXIMUM
 #   define YYSTACK_ALLOC_MAXIMUM YYSIZE_MAXIMUM
 #  endif
-#  if (defined __cplusplus && ! defined _STDLIB_H \
+#  if (defined __cplusplus && ! defined EXIT_SUCCESS \
        && ! ((defined YYMALLOC || defined malloc) \
-	     && (defined YYFREE || defined free)))
+             && (defined YYFREE || defined free)))
 #   include <stdlib.h> /* INFRINGES ON USER NAME SPACE */
-#   ifndef _STDLIB_H
-#    define _STDLIB_H 1
+#   ifndef EXIT_SUCCESS
+#    define EXIT_SUCCESS 0
 #   endif
 #  endif
 #  ifndef YYMALLOC
 #   define YYMALLOC malloc
-#   if ! defined malloc && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
+#   if ! defined malloc && ! defined EXIT_SUCCESS
 void *malloc (YYSIZE_T); /* INFRINGES ON USER NAME SPACE */
 #   endif
 #  endif
 #  ifndef YYFREE
 #   define YYFREE free
-#   if ! defined free && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
+#   if ! defined free && ! defined EXIT_SUCCESS
 void free (void *); /* INFRINGES ON USER NAME SPACE */
 #   endif
 #  endif
@@ -505,7 +525,7 @@ void free (void *); /* INFRINGES ON USER NAME SPACE */
 
 #if (! defined yyoverflow \
      && (! defined __cplusplus \
-	 || (defined YYSTYPE_IS_TRIVIAL && YYSTYPE_IS_TRIVIAL)))
+         || (defined YYSTYPE_IS_TRIVIAL && YYSTYPE_IS_TRIVIAL)))
 
 /* A type that is properly aligned for any stack member.  */
 union yyalloc
@@ -523,41 +543,45 @@ union yyalloc
      ((N) * (sizeof (yytype_int16) + sizeof (YYSTYPE)) \
       + YYSTACK_GAP_MAXIMUM)
 
-/* Copy COUNT objects from FROM to TO.  The source and destination do
-   not overlap.  */
-# ifndef YYCOPY
-#  if defined __GNUC__ && 1 < __GNUC__
-#   define YYCOPY(To, From, Count) \
-      __builtin_memcpy (To, From, (Count) * sizeof (*(From)))
-#  else
-#   define YYCOPY(To, From, Count)		\
-      do					\
-	{					\
-	  YYSIZE_T yyi;				\
-	  for (yyi = 0; yyi < (Count); yyi++)	\
-	    (To)[yyi] = (From)[yyi];		\
-	}					\
-      while (YYID (0))
-#  endif
-# endif
+# define YYCOPY_NEEDED 1
 
 /* Relocate STACK from its old location to the new one.  The
    local variables YYSIZE and YYSTACKSIZE give the old and new number of
    elements in the stack, and YYPTR gives the new location of the
    stack.  Advance YYPTR to a properly aligned location for the next
    stack.  */
-# define YYSTACK_RELOCATE(Stack_alloc, Stack)				\
-    do									\
-      {									\
-	YYSIZE_T yynewbytes;						\
-	YYCOPY (&yyptr->Stack_alloc, Stack, yysize);			\
-	Stack = &yyptr->Stack_alloc;					\
-	yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \
-	yyptr += yynewbytes / sizeof (*yyptr);				\
-      }									\
-    while (YYID (0))
+# define YYSTACK_RELOCATE(Stack_alloc, Stack)                           \
+    do                                                                  \
+      {                                                                 \
+        YYSIZE_T yynewbytes;                                            \
+        YYCOPY (&yyptr->Stack_alloc, Stack, yysize);                    \
+        Stack = &yyptr->Stack_alloc;                                    \
+        yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \
+        yyptr += yynewbytes / sizeof (*yyptr);                          \
+      }                                                                 \
+    while (0)
 
 #endif
+
+#if defined YYCOPY_NEEDED && YYCOPY_NEEDED
+/* Copy COUNT objects from SRC to DST.  The source and destination do
+   not overlap.  */
+# ifndef YYCOPY
+#  if defined __GNUC__ && 1 < __GNUC__
+#   define YYCOPY(Dst, Src, Count) \
+      __builtin_memcpy (Dst, Src, (Count) * sizeof (*(Src)))
+#  else
+#   define YYCOPY(Dst, Src, Count)              \
+      do                                        \
+        {                                       \
+          YYSIZE_T yyi;                         \
+          for (yyi = 0; yyi < (Count); yyi++)   \
+            (Dst)[yyi] = (Src)[yyi];            \
+        }                                       \
+      while (0)
+#  endif
+# endif
+#endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  106
@@ -570,17 +594,19 @@ union yyalloc
 #define YYNNTS  93
 /* YYNRULES -- Number of rules.  */
 #define YYNRULES  325
-/* YYNRULES -- Number of states.  */
+/* YYNSTATES -- Number of states.  */
 #define YYNSTATES  497
 
-/* YYTRANSLATE(YYLEX) -- Bison symbol number corresponding to YYLEX.  */
+/* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
+   by yylex, with out-of-bounds checking.  */
 #define YYUNDEFTOK  2
 #define YYMAXUTOK   393
 
-#define YYTRANSLATE(YYX)						\
+#define YYTRANSLATE(YYX)                                                \
   ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
 
-/* YYTRANSLATE[YYLEX] -- Bison symbol number corresponding to YYLEX.  */
+/* YYTRANSLATE[TOKEN-NUM] -- Symbol number corresponding to TOKEN-NUM
+   as returned by yylex, without out-of-bounds checking.  */
 static const yytype_uint8 yytranslate[] =
 {
        0,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -626,187 +652,46 @@ static const yytype_uint8 yytranslate[] =
 };
 
 #if YYDEBUG
-/* YYPRHS[YYN] -- Index of the first RHS symbol of rule number YYN in
-   YYRHS.  */
-static const yytype_uint16 yyprhs[] =
-{
-       0,     0,     3,     5,     7,     9,    11,    13,    17,    19,
-      24,    26,    30,    33,    36,    38,    40,    42,    46,    49,
-      52,    55,    57,    60,    64,    67,    69,    71,    73,    75,
-      78,    81,    84,    89,    91,    93,    95,    97,    99,   103,
-     107,   111,   113,   117,   121,   123,   127,   131,   133,   137,
-     141,   145,   149,   151,   155,   159,   161,   165,   167,   171,
-     173,   177,   179,   183,   185,   189,   191,   195,   197,   203,
-     205,   209,   211,   213,   215,   217,   219,   221,   223,   225,
-     227,   229,   231,   233,   237,   239,   242,   245,   248,   253,
-     255,   257,   260,   264,   268,   271,   276,   280,   285,   291,
-     299,   303,   306,   310,   313,   314,   316,   318,   320,   322,
-     324,   329,   336,   344,   353,   363,   370,   372,   376,   382,
-     389,   397,   406,   412,   414,   417,   419,   421,   424,   427,
-     429,   431,   436,   438,   440,   442,   444,   446,   448,   455,
-     462,   469,   471,   473,   475,   477,   479,   481,   483,   485,
-     487,   489,   491,   493,   495,   497,   499,   501,   503,   505,
-     507,   509,   511,   513,   515,   517,   519,   521,   523,   525,
-     527,   529,   531,   533,   535,   537,   539,   541,   543,   545,
-     547,   549,   551,   553,   555,   557,   559,   561,   563,   565,
-     567,   569,   571,   573,   575,   577,   579,   581,   583,   585,
-     587,   593,   598,   600,   603,   607,   609,   613,   615,   619,
-     624,   631,   633,   635,   637,   639,   641,   643,   645,   647,
-     649,   651,   653,   656,   657,   658,   664,   666,   668,   671,
-     675,   677,   680,   682,   685,   691,   695,   697,   699,   704,
-     705,   712,   713,   722,   723,   731,   733,   735,   737,   738,
-     741,   745,   748,   751,   754,   758,   761,   763,   766,   768,
-     770,   772,   773,   777,   781,   786,   788,   790,   794,   798,
-     801,   805,   807,   810,   816,   818,   820,   822,   824,   826,
-     828,   830,   832,   834,   836,   838,   840,   842,   844,   846,
-     848,   850,   852,   854,   856,   858,   860,   862,   864,   866,
-     868,   870,   872,   877,   879,   883,   887,   893,   896,   897,
-     899,   901,   903,   906,   909,   912,   916,   921,   925,   927,
-     930,   935,   942,   949,   954,   961
-};
-
-/* YYRHS -- A `-1'-separated list of the rules' RHS.  */
-static const yytype_int16 yyrhs[] =
-{
-     211,     0,    -1,    87,    -1,   140,    -1,    90,    -1,    89,
-      -1,    91,    -1,   115,   167,   116,    -1,   141,    -1,   142,
-     117,   143,   118,    -1,   144,    -1,   142,   121,    93,    -1,
-     142,    96,    -1,   142,    97,    -1,   167,    -1,   145,    -1,
-     146,    -1,   142,   121,   146,    -1,   148,   116,    -1,   147,
-     116,    -1,   149,    66,    -1,   149,    -1,   149,   165,    -1,
-     148,   122,   165,    -1,   150,   115,    -1,   182,    -1,    87,
-      -1,    93,    -1,   142,    -1,    96,   151,    -1,    97,   151,
-      -1,   152,   151,    -1,   115,   183,   116,   151,    -1,   129,
-      -1,   127,    -1,   126,    -1,   128,    -1,   151,    -1,   153,
-     130,   151,    -1,   153,   131,   151,    -1,   153,   132,   151,
-      -1,   153,    -1,   154,   129,   153,    -1,   154,   127,   153,
-      -1,   154,    -1,   155,    94,   154,    -1,   155,    95,   154,
-      -1,   155,    -1,   156,   133,   155,    -1,   156,   134,   155,
-      -1,   156,    98,   155,    -1,   156,    99,   155,    -1,   156,
-      -1,   157,   100,   156,    -1,   157,   101,   156,    -1,   157,
-      -1,   158,   137,   157,    -1,   158,    -1,   159,   136,   158,
-      -1,   159,    -1,   160,   135,   159,    -1,   160,    -1,   161,
-     102,   160,    -1,   161,    -1,   162,   104,   161,    -1,   162,
-      -1,   163,   103,   162,    -1,   163,    -1,   163,   138,   167,
-     123,   165,    -1,   164,    -1,   151,   166,   165,    -1,   124,
-      -1,   105,    -1,   106,    -1,   108,    -1,   107,    -1,   114,
-      -1,   109,    -1,   110,    -1,   111,    -1,   112,    -1,   113,
-      -1,   165,    -1,   167,   122,   165,    -1,   164,    -1,   170,
-     125,    -1,   178,   125,    -1,   171,   116,    -1,   171,   116,
-     123,    87,    -1,   173,    -1,   172,    -1,   173,   175,    -1,
-     172,   122,   175,    -1,   180,    87,   115,    -1,   182,    87,
-      -1,   182,    87,   124,   189,    -1,   182,    87,   226,    -1,
-     182,    87,   123,    87,    -1,   182,    87,   117,   168,   118,
-      -1,   182,    87,   117,   168,   118,   123,    87,    -1,   181,
-     176,   174,    -1,   176,   174,    -1,   181,   176,   177,    -1,
-     176,   177,    -1,    -1,    61,    -1,    62,    -1,    63,    -1,
-     182,    -1,   179,    -1,   178,   122,    87,   228,    -1,   178,
-     122,    87,   117,   118,   228,    -1,   178,   122,    87,   117,
-     168,   118,   228,    -1,   178,   122,    87,   117,   118,   228,
-     124,   189,    -1,   178,   122,    87,   117,   168,   118,   228,
-     124,   189,    -1,   178,   122,    87,   228,   124,   189,    -1,
-     180,    -1,   180,    87,   228,    -1,   180,    87,   117,   118,
-     228,    -1,   180,    87,   117,   168,   118,   228,    -1,   180,
-      87,   117,   118,   228,   124,   189,    -1,   180,    87,   117,
-     168,   118,   228,   124,   189,    -1,   180,    87,   228,   124,
-     189,    -1,   182,    -1,   181,   182,    -1,     3,    -1,     4,
-      -1,     4,     3,    -1,     3,     4,    -1,    64,    -1,   183,
-      -1,   183,   117,   168,   118,    -1,    66,    -1,     6,    -1,
-      10,    -1,     9,    -1,     7,    -1,     5,    -1,    82,   133,
-       6,   122,    90,   134,    -1,    82,   133,     7,   122,    90,
-     134,    -1,    82,   133,     5,   122,    90,   134,    -1,    25,
-      -1,    26,    -1,    27,    -1,    28,    -1,    29,    -1,    30,
-      -1,    31,    -1,    32,    -1,    33,    -1,    19,    -1,    20,
-      -1,    21,    -1,    22,    -1,    23,    -1,    24,    -1,    34,
-      -1,    35,    -1,    36,    -1,    37,    -1,    38,    -1,    39,
-      -1,    40,    -1,    41,    -1,    42,    -1,    43,    -1,    44,
-      -1,    45,    -1,    46,    -1,    47,    -1,    48,    -1,    49,
-      -1,    50,    -1,    51,    -1,    52,    -1,    53,    -1,    54,
-      -1,    55,    -1,    56,    -1,    57,    -1,    58,    -1,    59,
-      -1,    60,    -1,    85,    -1,    81,    -1,    68,    -1,    69,
-      -1,    77,    -1,    78,    -1,    70,    -1,    71,    -1,    79,
-      -1,    80,    -1,    76,    -1,    75,    -1,    72,    -1,    73,
-      -1,    74,    -1,   184,    -1,    88,    -1,    65,    87,   119,
-     185,   120,    -1,    65,   119,   185,   120,    -1,   186,    -1,
-     185,   186,    -1,   182,   187,   125,    -1,   188,    -1,   187,
-     122,   188,    -1,    87,    -1,    87,   123,    87,    -1,    87,
-     117,   168,   118,    -1,    87,   117,   168,   118,   123,    87,
-      -1,   165,    -1,   215,    -1,   229,    -1,   169,    -1,   193,
-      -1,   192,    -1,   190,    -1,   199,    -1,   200,    -1,   203,
-      -1,   210,    -1,   119,   120,    -1,    -1,    -1,   119,   194,
-     198,   195,   120,    -1,   197,    -1,   192,    -1,   119,   120,
-      -1,   119,   198,   120,    -1,   191,    -1,   198,   191,    -1,
-     125,    -1,   167,   125,    -1,    16,   115,   167,   116,   201,
-      -1,   191,    14,   191,    -1,   191,    -1,   167,    -1,   180,
-      87,   124,   189,    -1,    -1,    67,   115,   204,   202,   116,
-     196,    -1,    -1,    13,   205,   191,    67,   115,   167,   116,
-     125,    -1,    -1,    15,   115,   206,   207,   209,   116,   196,
-      -1,   199,    -1,   190,    -1,   202,    -1,    -1,   208,   125,
-      -1,   208,   125,   167,    -1,    12,   125,    -1,    11,   125,
-      -1,    18,   125,    -1,    18,   167,   125,    -1,    17,   125,
-      -1,   212,    -1,   211,   212,    -1,   213,    -1,   169,    -1,
-     125,    -1,    -1,   170,   214,   197,    -1,   119,   216,   120,
-      -1,   119,   216,   122,   120,    -1,   165,    -1,   215,    -1,
-     216,   122,   165,    -1,   216,   122,   215,    -1,   133,   134,
-      -1,   133,   218,   134,    -1,   219,    -1,   218,   219,    -1,
-     220,    87,   124,   221,   125,    -1,     6,    -1,    10,    -1,
-       9,    -1,     7,    -1,     5,    -1,     8,    -1,    19,    -1,
-      20,    -1,    21,    -1,    22,    -1,    23,    -1,    24,    -1,
-      25,    -1,    26,    -1,    27,    -1,    28,    -1,    29,    -1,
-      30,    -1,    31,    -1,    32,    -1,    33,    -1,   222,    -1,
-      92,    -1,   223,    -1,   225,    -1,    90,    -1,    91,    -1,
-      89,    -1,   220,   115,   224,   116,    -1,   222,    -1,   224,
-     122,   222,    -1,   119,   224,   120,    -1,   123,    84,   115,
-      87,   116,    -1,   123,    87,    -1,    -1,   227,    -1,   226,
-      -1,   217,    -1,   227,   217,    -1,   227,   226,    -1,   226,
-     217,    -1,   227,   226,   217,    -1,    86,   119,   230,   120,
-      -1,    86,   119,   120,    -1,   231,    -1,   230,   231,    -1,
-      87,   124,    87,   125,    -1,    87,   124,   133,    87,   134,
-     125,    -1,    87,   124,   115,    87,   116,   125,    -1,    85,
-     124,    87,   125,    -1,    85,   124,   133,    87,   134,   125,
-      -1,    85,   124,   115,    87,   116,   125,    -1
-};
-
-/* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
+  /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   174,   174,   212,   215,   220,   225,   230,   236,   239,
-     303,   306,   393,   403,   416,   430,   546,   549,   567,   571,
-     578,   582,   589,   598,   610,   618,   645,   657,   667,   670,
-     680,   690,   708,   743,   744,   745,   746,   752,   753,   754,
-     755,   759,   760,   761,   765,   766,   767,   771,   772,   773,
-     774,   775,   779,   780,   781,   785,   786,   790,   791,   795,
-     796,   800,   801,   805,   806,   810,   811,   815,   816,   831,
-     832,   846,   847,   848,   849,   850,   851,   852,   853,   854,
-     855,   856,   860,   863,   874,   882,   883,   887,   920,   957,
-     960,   967,   975,   996,  1028,  1039,  1052,  1064,  1076,  1094,
-    1123,  1128,  1138,  1143,  1153,  1156,  1159,  1162,  1168,  1175,
-    1178,  1196,  1220,  1248,  1275,  1308,  1342,  1345,  1363,  1386,
-    1412,  1438,  1468,  1516,  1519,  1536,  1539,  1542,  1545,  1548,
-    1556,  1559,  1574,  1577,  1580,  1583,  1586,  1589,  1592,  1603,
-    1614,  1625,  1629,  1633,  1637,  1641,  1645,  1649,  1653,  1657,
-    1661,  1665,  1669,  1673,  1677,  1681,  1685,  1689,  1694,  1699,
-    1704,  1708,  1713,  1718,  1723,  1727,  1731,  1736,  1741,  1746,
-    1750,  1755,  1760,  1765,  1769,  1773,  1778,  1783,  1788,  1792,
-    1797,  1802,  1807,  1811,  1814,  1817,  1820,  1823,  1826,  1829,
-    1832,  1835,  1838,  1841,  1844,  1847,  1850,  1853,  1856,  1860,
-    1872,  1882,  1890,  1893,  1908,  1941,  1945,  1951,  1956,  1962,
-    1972,  1988,  1989,  1990,  1994,  1998,  1999,  2005,  2006,  2007,
-    2008,  2009,  2013,  2014,  2014,  2014,  2022,  2023,  2028,  2031,
-    2039,  2042,  2048,  2049,  2053,  2061,  2065,  2075,  2080,  2097,
-    2097,  2102,  2102,  2109,  2109,  2122,  2125,  2131,  2134,  2140,
-    2144,  2151,  2158,  2165,  2172,  2192,  2203,  2207,  2214,  2217,
-    2220,  2224,  2224,  2313,  2316,  2323,  2327,  2331,  2335,  2342,
-    2346,  2352,  2356,  2363,  2369,  2370,  2371,  2372,  2373,  2374,
-    2375,  2376,  2377,  2378,  2379,  2380,  2381,  2382,  2383,  2384,
-    2385,  2386,  2387,  2388,  2389,  2393,  2394,  2395,  2396,  2400,
-    2403,  2406,  2412,  2416,  2417,  2421,  2425,  2431,  2435,  2436,
-    2437,  2438,  2439,  2440,  2441,  2442,  2446,  2451,  2456,  2457,
-    2461,  2462,  2463,  2464,  2465,  2466
+       0,   175,   175,   213,   216,   221,   226,   231,   237,   240,
+     304,   307,   394,   404,   417,   431,   547,   550,   568,   572,
+     579,   583,   590,   599,   611,   619,   646,   658,   668,   671,
+     681,   691,   709,   744,   745,   746,   747,   753,   754,   755,
+     756,   760,   761,   762,   766,   767,   768,   772,   773,   774,
+     775,   776,   780,   781,   782,   786,   787,   791,   792,   796,
+     797,   801,   802,   806,   807,   811,   812,   816,   817,   832,
+     833,   847,   848,   849,   850,   851,   852,   853,   854,   855,
+     856,   857,   861,   864,   875,   883,   884,   888,   921,   958,
+     961,   968,   976,   997,  1029,  1040,  1053,  1065,  1077,  1095,
+    1124,  1129,  1139,  1144,  1154,  1157,  1160,  1163,  1169,  1176,
+    1179,  1197,  1221,  1249,  1276,  1309,  1343,  1346,  1364,  1387,
+    1413,  1439,  1469,  1517,  1520,  1537,  1540,  1543,  1546,  1549,
+    1557,  1560,  1575,  1578,  1581,  1584,  1587,  1590,  1593,  1604,
+    1615,  1626,  1630,  1634,  1638,  1642,  1646,  1650,  1654,  1658,
+    1662,  1666,  1670,  1674,  1678,  1682,  1686,  1690,  1695,  1700,
+    1705,  1709,  1714,  1719,  1724,  1728,  1732,  1737,  1742,  1747,
+    1751,  1756,  1761,  1766,  1770,  1774,  1779,  1784,  1789,  1793,
+    1798,  1803,  1808,  1812,  1815,  1818,  1821,  1824,  1827,  1830,
+    1833,  1836,  1839,  1842,  1845,  1848,  1851,  1854,  1857,  1861,
+    1873,  1883,  1891,  1894,  1909,  1942,  1946,  1952,  1957,  1963,
+    1973,  1989,  1990,  1991,  1995,  1999,  2000,  2006,  2007,  2008,
+    2009,  2010,  2014,  2015,  2015,  2015,  2023,  2024,  2029,  2032,
+    2040,  2043,  2049,  2050,  2054,  2062,  2066,  2076,  2081,  2098,
+    2098,  2103,  2103,  2110,  2110,  2123,  2126,  2132,  2135,  2141,
+    2145,  2152,  2159,  2166,  2173,  2193,  2204,  2208,  2215,  2218,
+    2221,  2225,  2225,  2314,  2317,  2324,  2328,  2332,  2336,  2343,
+    2347,  2353,  2357,  2364,  2370,  2371,  2372,  2373,  2374,  2375,
+    2376,  2377,  2378,  2379,  2380,  2381,  2382,  2383,  2384,  2385,
+    2386,  2387,  2388,  2389,  2390,  2394,  2395,  2396,  2397,  2401,
+    2404,  2407,  2413,  2417,  2418,  2422,  2426,  2432,  2436,  2437,
+    2438,  2439,  2440,  2441,  2442,  2443,  2447,  2452,  2457,  2458,
+    2462,  2463,  2464,  2465,  2466,  2467
 };
 #endif
 
-#if YYDEBUG || YYERROR_VERBOSE || YYTOKEN_TABLE
+#if YYDEBUG || YYERROR_VERBOSE || 0
 /* YYTNAME[SYMBOL-NUM] -- String name of the symbol SYMBOL-NUM.
    First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
 static const char *const yytname[] =
@@ -866,13 +751,13 @@ static const char *const yytname[] =
   "ann_literal", "ann_numerical_constant", "ann_literal_constructor",
   "ann_value_list", "ann_literal_init_list", "register_specifier",
   "semantic", "type_info", "sampler_initializer", "sampler_init_list",
-  "sampler_init_item", 0
+  "sampler_init_item", YY_NULLPTR
 };
 #endif
 
 # ifdef YYPRINT
-/* YYTOKNUM[YYLEX-NUM] -- Internal token number corresponding to
-   token YYLEX-NUM.  */
+/* YYTOKNUM[NUM] -- (External) token number corresponding to the
+   (internal) symbol number NUM (which must be that of a token).  */
 static const yytype_uint16 yytoknum[] =
 {
        0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
@@ -892,157 +777,18 @@ static const yytype_uint16 yytoknum[] =
 };
 # endif
 
-/* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
-static const yytype_uint8 yyr1[] =
-{
-       0,   139,   140,   141,   141,   141,   141,   141,   142,   142,
-     142,   142,   142,   142,   143,   144,   145,   145,   146,   146,
-     147,   147,   148,   148,   149,   150,   150,   150,   151,   151,
-     151,   151,   151,   152,   152,   152,   152,   153,   153,   153,
-     153,   154,   154,   154,   155,   155,   155,   156,   156,   156,
-     156,   156,   157,   157,   157,   158,   158,   159,   159,   160,
-     160,   161,   161,   162,   162,   163,   163,   164,   164,   165,
-     165,   166,   166,   166,   166,   166,   166,   166,   166,   166,
-     166,   166,   167,   167,   168,   169,   169,   170,   170,   171,
-     171,   172,   172,   173,   174,   174,   174,   174,   174,   174,
-     175,   175,   175,   175,   176,   176,   176,   176,   177,   178,
-     178,   178,   178,   178,   178,   178,   179,   179,   179,   179,
-     179,   179,   179,   180,   180,   181,   181,   181,   181,   181,
-     182,   182,   183,   183,   183,   183,   183,   183,   183,   183,
-     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
-     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
-     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
-     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
-     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
-     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
-     184,   184,   185,   185,   186,   187,   187,   188,   188,   188,
-     188,   189,   189,   189,   190,   191,   191,   192,   192,   192,
-     192,   192,   193,   194,   195,   193,   196,   196,   197,   197,
-     198,   198,   199,   199,   200,   201,   201,   202,   202,   204,
-     203,   205,   203,   206,   203,   207,   207,   208,   208,   209,
-     209,   210,   210,   210,   210,   210,   211,   211,   212,   212,
-     212,   214,   213,   215,   215,   216,   216,   216,   216,   217,
-     217,   218,   218,   219,   220,   220,   220,   220,   220,   220,
-     220,   220,   220,   220,   220,   220,   220,   220,   220,   220,
-     220,   220,   220,   220,   220,   221,   221,   221,   221,   222,
-     222,   222,   223,   224,   224,   225,   226,   227,   228,   228,
-     228,   228,   228,   228,   228,   228,   229,   229,   230,   230,
-     231,   231,   231,   231,   231,   231
-};
-
-/* YYR2[YYN] -- Number of symbols composing right hand side of rule YYN.  */
-static const yytype_uint8 yyr2[] =
-{
-       0,     2,     1,     1,     1,     1,     1,     3,     1,     4,
-       1,     3,     2,     2,     1,     1,     1,     3,     2,     2,
-       2,     1,     2,     3,     2,     1,     1,     1,     1,     2,
-       2,     2,     4,     1,     1,     1,     1,     1,     3,     3,
-       3,     1,     3,     3,     1,     3,     3,     1,     3,     3,
-       3,     3,     1,     3,     3,     1,     3,     1,     3,     1,
-       3,     1,     3,     1,     3,     1,     3,     1,     5,     1,
-       3,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     3,     1,     2,     2,     2,     4,     1,
-       1,     2,     3,     3,     2,     4,     3,     4,     5,     7,
-       3,     2,     3,     2,     0,     1,     1,     1,     1,     1,
-       4,     6,     7,     8,     9,     6,     1,     3,     5,     6,
-       7,     8,     5,     1,     2,     1,     1,     2,     2,     1,
-       1,     4,     1,     1,     1,     1,     1,     1,     6,     6,
-       6,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       5,     4,     1,     2,     3,     1,     3,     1,     3,     4,
-       6,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     2,     0,     0,     5,     1,     1,     2,     3,
-       1,     2,     1,     2,     5,     3,     1,     1,     4,     0,
-       6,     0,     8,     0,     7,     1,     1,     1,     0,     2,
-       3,     2,     2,     2,     3,     2,     1,     2,     1,     1,
-       1,     0,     3,     3,     4,     1,     1,     3,     3,     2,
-       3,     1,     2,     5,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
-       1,     1,     4,     1,     3,     3,     5,     2,     0,     1,
-       1,     1,     2,     2,     2,     3,     4,     3,     1,     2,
-       4,     6,     6,     4,     6,     6
-};
-
-/* YYDEFACT[STATE-NAME] -- Default rule to reduce with in state
-   STATE-NUM when YYTABLE doesn't specify something else to do.  Zero
-   means the default is an error.  */
-static const yytype_uint16 yydefact[] =
-{
-       0,   125,   126,   137,   133,   136,   135,   134,   150,   151,
-     152,   153,   154,   155,   141,   142,   143,   144,   145,   146,
-     147,   148,   149,   156,   157,   158,   159,   160,   161,   162,
-     163,   164,   165,   166,   167,   168,   169,   170,   171,   172,
-     173,   174,   175,   176,   177,   178,   179,   180,   181,   182,
-     129,     0,   132,   185,   186,   189,   190,   195,   196,   197,
-     194,   193,   187,   188,   191,   192,   184,     0,   183,   199,
-     260,   259,   261,     0,    90,   104,     0,   109,   116,     0,
-     123,   130,   198,     0,   256,   258,   128,   127,     0,     0,
-       0,    85,     0,    87,   104,   105,   106,   107,    91,     0,
-     104,     0,    86,   308,   124,     0,     1,   257,     0,     0,
-       0,   202,     0,     0,     0,     0,   262,     0,    92,   101,
-     103,   108,     0,   308,    93,     0,     0,     0,   311,   310,
-     309,   117,     2,     5,     4,     6,    27,     0,     0,     0,
-      35,    34,    36,    33,     3,     8,    28,    10,    15,    16,
-       0,     0,    21,     0,    37,     0,    41,    44,    47,    52,
-      55,    57,    59,    61,    63,    65,    67,    84,     0,    25,
-       0,   207,     0,   205,   201,   203,     0,     0,     0,     0,
-       0,   241,     0,     0,     0,     0,     0,   223,   228,   232,
-      37,    69,    82,     0,   214,     0,   123,   217,   230,   216,
-     215,     0,   218,   219,   220,   221,    88,    94,   100,   102,
-       0,   110,   308,     0,     0,   307,   278,   274,   277,   279,
-     276,   275,   280,   281,   282,   283,   284,   285,   286,   287,
-     288,   289,   290,   291,   292,   293,   294,   269,     0,   271,
-       0,   314,     0,   312,   313,     0,    29,    30,     0,   130,
-      12,    13,     0,     0,    19,    18,     0,   132,    22,    24,
-      31,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,   131,   200,     0,     0,     0,   204,     0,     0,     0,
-     252,   251,     0,   243,     0,   255,   253,     0,   239,   222,
-       0,    72,    73,    75,    74,    77,    78,    79,    80,    81,
-      76,    71,     0,     0,   233,   229,   231,     0,     0,     0,
-      96,   308,     0,     0,   118,   308,     0,   270,   272,     0,
-     315,     0,     0,   211,   122,   212,   213,     7,     0,     0,
-      14,    26,    11,    17,    23,    38,    39,    40,    43,    42,
-      45,    46,    50,    51,    48,    49,    53,    54,    56,    58,
-      60,    62,    64,    66,     0,     0,   208,   206,   140,   138,
-     139,     0,     0,     0,   254,     0,   224,    70,    83,     0,
-      97,    95,   111,   308,   115,     0,   119,     0,     0,     0,
-     265,   266,     0,    32,     9,     0,   209,     0,   246,   245,
-     248,     0,   237,     0,     0,     0,    98,     0,   112,   120,
-       0,   306,   301,   299,   300,   296,     0,     0,     0,   295,
-     297,   298,     0,     0,   317,     0,   318,   263,     0,    68,
-       0,     0,   247,     0,     0,   236,   234,     0,     0,   225,
-       0,   113,     0,   121,   303,     0,     0,   273,     0,     0,
-     316,   319,   264,   267,   268,   210,     0,   249,     0,     0,
-       0,   227,   240,   226,    99,   114,   305,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,   250,   244,   235,   238,
-     304,   302,   323,     0,     0,   320,     0,     0,   242,     0,
-       0,     0,     0,   325,   324,   322,   321
-};
-
-/* YYDEFGOTO[NTERM-NUM].  */
-static const yytype_int16 yydefgoto[] =
-{
-      -1,   144,   145,   146,   339,   147,   148,   149,   150,   151,
-     152,   153,   190,   155,   156,   157,   158,   159,   160,   161,
-     162,   163,   164,   165,   166,   191,   192,   312,   193,   168,
-     194,   195,    73,    74,    75,   119,    98,    99,   120,    76,
-      77,    78,    79,   169,    81,    82,   110,   111,   172,   173,
-     334,   197,   198,   199,   200,   300,   405,   462,   463,   201,
-     202,   203,   436,   404,   204,   375,   292,   372,   400,   433,
-     434,   205,    83,    84,    85,    92,   335,   392,   128,   238,
-     239,   240,   418,   444,   420,   445,   421,   129,   130,   131,
-     336,   425,   426
-};
-
-/* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
-   STATE-NUM.  */
 #define YYPACT_NINF -387
+
+#define yypact_value_is_default(Yystate) \
+  (!!((Yystate) == (-387)))
+
+#define YYTABLE_NINF -90
+
+#define yytable_value_is_error(Yytable_value) \
+  0
+
+  /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
+     STATE-NUM.  */
 static const yytype_int16 yypact[] =
 {
     2208,    86,    36,  -387,  -387,  -387,  -387,  -387,  -387,  -387,
@@ -1097,7 +843,64 @@ static const yytype_int16 yypact[] =
      277,   279,   280,  -387,  -387,  -387,  -387
 };
 
-/* YYPGOTO[NTERM-NUM].  */
+  /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
+     Performed when YYTABLE does not specify something else to do.  Zero
+     means the default is an error.  */
+static const yytype_uint16 yydefact[] =
+{
+       0,   125,   126,   137,   133,   136,   135,   134,   150,   151,
+     152,   153,   154,   155,   141,   142,   143,   144,   145,   146,
+     147,   148,   149,   156,   157,   158,   159,   160,   161,   162,
+     163,   164,   165,   166,   167,   168,   169,   170,   171,   172,
+     173,   174,   175,   176,   177,   178,   179,   180,   181,   182,
+     129,     0,   132,   185,   186,   189,   190,   195,   196,   197,
+     194,   193,   187,   188,   191,   192,   184,     0,   183,   199,
+     260,   259,   261,     0,    90,   104,     0,   109,   116,     0,
+     123,   130,   198,     0,   256,   258,   128,   127,     0,     0,
+       0,    85,     0,    87,   104,   105,   106,   107,    91,     0,
+     104,     0,    86,   308,   124,     0,     1,   257,     0,     0,
+       0,   202,     0,     0,     0,     0,   262,     0,    92,   101,
+     103,   108,     0,   308,    93,     0,     0,     0,   311,   310,
+     309,   117,     2,     5,     4,     6,    27,     0,     0,     0,
+      35,    34,    36,    33,     3,     8,    28,    10,    15,    16,
+       0,     0,    21,     0,    37,     0,    41,    44,    47,    52,
+      55,    57,    59,    61,    63,    65,    67,    84,     0,    25,
+       0,   207,     0,   205,   201,   203,     0,     0,     0,     0,
+       0,   241,     0,     0,     0,     0,     0,   223,   228,   232,
+      37,    69,    82,     0,   214,     0,   123,   217,   230,   216,
+     215,     0,   218,   219,   220,   221,    88,    94,   100,   102,
+       0,   110,   308,     0,     0,   307,   278,   274,   277,   279,
+     276,   275,   280,   281,   282,   283,   284,   285,   286,   287,
+     288,   289,   290,   291,   292,   293,   294,   269,     0,   271,
+       0,   314,     0,   312,   313,     0,    29,    30,     0,   130,
+      12,    13,     0,     0,    19,    18,     0,   132,    22,    24,
+      31,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+       0,   131,   200,     0,     0,     0,   204,     0,     0,     0,
+     252,   251,     0,   243,     0,   255,   253,     0,   239,   222,
+       0,    72,    73,    75,    74,    77,    78,    79,    80,    81,
+      76,    71,     0,     0,   233,   229,   231,     0,     0,     0,
+      96,   308,     0,     0,   118,   308,     0,   270,   272,     0,
+     315,     0,     0,   211,   122,   212,   213,     7,     0,     0,
+      14,    26,    11,    17,    23,    38,    39,    40,    43,    42,
+      45,    46,    50,    51,    48,    49,    53,    54,    56,    58,
+      60,    62,    64,    66,     0,     0,   208,   206,   140,   138,
+     139,     0,     0,     0,   254,     0,   224,    70,    83,     0,
+      97,    95,   111,   308,   115,     0,   119,     0,     0,     0,
+     265,   266,     0,    32,     9,     0,   209,     0,   246,   245,
+     248,     0,   237,     0,     0,     0,    98,     0,   112,   120,
+       0,   306,   301,   299,   300,   296,     0,     0,     0,   295,
+     297,   298,     0,     0,   317,     0,   318,   263,     0,    68,
+       0,     0,   247,     0,     0,   236,   234,     0,     0,   225,
+       0,   113,     0,   121,   303,     0,     0,   273,     0,     0,
+     316,   319,   264,   267,   268,   210,     0,   249,     0,     0,
+       0,   227,   240,   226,    99,   114,   305,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,   250,   244,   235,   238,
+     304,   302,   323,     0,     0,   320,     0,     0,   242,     0,
+       0,     0,     0,   325,   324,   322,   321
+};
+
+  /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int16 yypgoto[] =
 {
     -387,  -387,  -387,  -387,  -387,  -387,  -387,   141,  -387,  -387,
@@ -1112,11 +915,24 @@ static const yytype_int16 yypgoto[] =
     -387,  -387,     3
 };
 
-/* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
-   positive, shift that token.  If negative, reduce the rule which
-   number is the opposite.  If zero, do what YYDEFACT says.
-   If YYTABLE_NINF, syntax error.  */
-#define YYTABLE_NINF -90
+  /* YYDEFGOTO[NTERM-NUM].  */
+static const yytype_int16 yydefgoto[] =
+{
+      -1,   144,   145,   146,   339,   147,   148,   149,   150,   151,
+     152,   153,   190,   155,   156,   157,   158,   159,   160,   161,
+     162,   163,   164,   165,   166,   191,   192,   312,   193,   168,
+     194,   195,    73,    74,    75,   119,    98,    99,   120,    76,
+      77,    78,    79,   169,    81,    82,   110,   111,   172,   173,
+     334,   197,   198,   199,   200,   300,   405,   462,   463,   201,
+     202,   203,   436,   404,   204,   375,   292,   372,   400,   433,
+     434,   205,    83,    84,    85,    92,   335,   392,   128,   238,
+     239,   240,   418,   444,   420,   445,   421,   129,   130,   131,
+     336,   425,   426
+};
+
+  /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
+     positive, shift that token.  If negative, reduce the rule whose
+     number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int16 yytable[] =
 {
       80,   248,   419,   316,   211,   258,   216,   217,   218,   219,
@@ -1665,8 +1481,8 @@ static const yytype_int16 yycheck[] =
       -1,    -1,    88
 };
 
-/* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
-   symbol of state STATE-NUM.  */
+  /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
+     symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
        0,     3,     4,     5,     6,     7,     9,    10,    19,    20,
@@ -1721,95 +1537,117 @@ static const yytype_uint8 yystos[] =
      134,   116,   134,   125,   125,   125,   125
 };
 
-#define yyerrok		(yyerrstatus = 0)
-#define yyclearin	(yychar = YYEMPTY)
-#define YYEMPTY		(-2)
-#define YYEOF		0
+  /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
+static const yytype_uint8 yyr1[] =
+{
+       0,   139,   140,   141,   141,   141,   141,   141,   142,   142,
+     142,   142,   142,   142,   143,   144,   145,   145,   146,   146,
+     147,   147,   148,   148,   149,   150,   150,   150,   151,   151,
+     151,   151,   151,   152,   152,   152,   152,   153,   153,   153,
+     153,   154,   154,   154,   155,   155,   155,   156,   156,   156,
+     156,   156,   157,   157,   157,   158,   158,   159,   159,   160,
+     160,   161,   161,   162,   162,   163,   163,   164,   164,   165,
+     165,   166,   166,   166,   166,   166,   166,   166,   166,   166,
+     166,   166,   167,   167,   168,   169,   169,   170,   170,   171,
+     171,   172,   172,   173,   174,   174,   174,   174,   174,   174,
+     175,   175,   175,   175,   176,   176,   176,   176,   177,   178,
+     178,   178,   178,   178,   178,   178,   179,   179,   179,   179,
+     179,   179,   179,   180,   180,   181,   181,   181,   181,   181,
+     182,   182,   183,   183,   183,   183,   183,   183,   183,   183,
+     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
+     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
+     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
+     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
+     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
+     183,   183,   183,   183,   183,   183,   183,   183,   183,   183,
+     184,   184,   185,   185,   186,   187,   187,   188,   188,   188,
+     188,   189,   189,   189,   190,   191,   191,   192,   192,   192,
+     192,   192,   193,   194,   195,   193,   196,   196,   197,   197,
+     198,   198,   199,   199,   200,   201,   201,   202,   202,   204,
+     203,   205,   203,   206,   203,   207,   207,   208,   208,   209,
+     209,   210,   210,   210,   210,   210,   211,   211,   212,   212,
+     212,   214,   213,   215,   215,   216,   216,   216,   216,   217,
+     217,   218,   218,   219,   220,   220,   220,   220,   220,   220,
+     220,   220,   220,   220,   220,   220,   220,   220,   220,   220,
+     220,   220,   220,   220,   220,   221,   221,   221,   221,   222,
+     222,   222,   223,   224,   224,   225,   226,   227,   228,   228,
+     228,   228,   228,   228,   228,   228,   229,   229,   230,   230,
+     231,   231,   231,   231,   231,   231
+};
 
-#define YYACCEPT	goto yyacceptlab
-#define YYABORT		goto yyabortlab
-#define YYERROR		goto yyerrorlab
+  /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
+static const yytype_uint8 yyr2[] =
+{
+       0,     2,     1,     1,     1,     1,     1,     3,     1,     4,
+       1,     3,     2,     2,     1,     1,     1,     3,     2,     2,
+       2,     1,     2,     3,     2,     1,     1,     1,     1,     2,
+       2,     2,     4,     1,     1,     1,     1,     1,     3,     3,
+       3,     1,     3,     3,     1,     3,     3,     1,     3,     3,
+       3,     3,     1,     3,     3,     1,     3,     1,     3,     1,
+       3,     1,     3,     1,     3,     1,     3,     1,     5,     1,
+       3,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     3,     1,     2,     2,     2,     4,     1,
+       1,     2,     3,     3,     2,     4,     3,     4,     5,     7,
+       3,     2,     3,     2,     0,     1,     1,     1,     1,     1,
+       4,     6,     7,     8,     9,     6,     1,     3,     5,     6,
+       7,     8,     5,     1,     2,     1,     1,     2,     2,     1,
+       1,     4,     1,     1,     1,     1,     1,     1,     6,     6,
+       6,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       5,     4,     1,     2,     3,     1,     3,     1,     3,     4,
+       6,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     2,     0,     0,     5,     1,     1,     2,     3,
+       1,     2,     1,     2,     5,     3,     1,     1,     4,     0,
+       6,     0,     8,     0,     7,     1,     1,     1,     0,     2,
+       3,     2,     2,     2,     3,     2,     1,     2,     1,     1,
+       1,     0,     3,     3,     4,     1,     1,     3,     3,     2,
+       3,     1,     2,     5,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+       1,     1,     4,     1,     3,     3,     5,     2,     0,     1,
+       1,     1,     2,     2,     2,     3,     4,     3,     1,     2,
+       4,     6,     6,     4,     6,     6
+};
 
 
-/* Like YYERROR except do call yyerror.  This remains here temporarily
-   to ease the transition to the new meaning of YYERROR, for GCC.
-   Once GCC version 2 has supplanted version 1, this can go.  */
+#define yyerrok         (yyerrstatus = 0)
+#define yyclearin       (yychar = YYEMPTY)
+#define YYEMPTY         (-2)
+#define YYEOF           0
 
-#define YYFAIL		goto yyerrlab
+#define YYACCEPT        goto yyacceptlab
+#define YYABORT         goto yyabortlab
+#define YYERROR         goto yyerrorlab
+
 
 #define YYRECOVERING()  (!!yyerrstatus)
 
-#define YYBACKUP(Token, Value)					\
-do								\
-  if (yychar == YYEMPTY && yylen == 1)				\
-    {								\
-      yychar = (Token);						\
-      yylval = (Value);						\
-      yytoken = YYTRANSLATE (yychar);				\
-      YYPOPSTACK (1);						\
-      goto yybackup;						\
-    }								\
-  else								\
-    {								\
+#define YYBACKUP(Token, Value)                                  \
+do                                                              \
+  if (yychar == YYEMPTY)                                        \
+    {                                                           \
+      yychar = (Token);                                         \
+      yylval = (Value);                                         \
+      YYPOPSTACK (yylen);                                       \
+      yystate = *yyssp;                                         \
+      goto yybackup;                                            \
+    }                                                           \
+  else                                                          \
+    {                                                           \
       yyerror (parseContext, YY_("syntax error: cannot back up")); \
-      YYERROR;							\
-    }								\
-while (YYID (0))
+      YYERROR;                                                  \
+    }                                                           \
+while (0)
+
+/* Error token number */
+#define YYTERROR        1
+#define YYERRCODE       256
 
 
-#define YYTERROR	1
-#define YYERRCODE	256
-
-
-/* YYLLOC_DEFAULT -- Set CURRENT to span from RHS[1] to RHS[N].
-   If N is 0, then set CURRENT to the empty location which ends
-   the previous symbol: RHS[0] (always defined).  */
-
-#define YYRHSLOC(Rhs, K) ((Rhs)[K])
-#ifndef YYLLOC_DEFAULT
-# define YYLLOC_DEFAULT(Current, Rhs, N)				\
-    do									\
-      if (YYID (N))                                                    \
-	{								\
-	  (Current).first_line   = YYRHSLOC (Rhs, 1).first_line;	\
-	  (Current).first_column = YYRHSLOC (Rhs, 1).first_column;	\
-	  (Current).last_line    = YYRHSLOC (Rhs, N).last_line;		\
-	  (Current).last_column  = YYRHSLOC (Rhs, N).last_column;	\
-	}								\
-      else								\
-	{								\
-	  (Current).first_line   = (Current).last_line   =		\
-	    YYRHSLOC (Rhs, 0).last_line;				\
-	  (Current).first_column = (Current).last_column =		\
-	    YYRHSLOC (Rhs, 0).last_column;				\
-	}								\
-    while (YYID (0))
-#endif
-
-
-/* YY_LOCATION_PRINT -- Print the location on the stream.
-   This macro was not mandated originally: define only if we know
-   we won't break user code: when these are the locations we know.  */
-
-#ifndef YY_LOCATION_PRINT
-# if YYLTYPE_IS_TRIVIAL
-#  define YY_LOCATION_PRINT(File, Loc)			\
-     fprintf (File, "%d.%d-%d.%d",			\
-	      (Loc).first_line, (Loc).first_column,	\
-	      (Loc).last_line,  (Loc).last_column)
-# else
-#  define YY_LOCATION_PRINT(File, Loc) ((void) 0)
-# endif
-#endif
-
-
-/* YYLEX -- calling `yylex' with the right arguments.  */
-
-#ifdef YYLEX_PARAM
-# define YYLEX yylex (&yylval, YYLEX_PARAM)
-#else
-# define YYLEX yylex (&yylval, parseContext)
-#endif
 
 /* Enable debugging if requested.  */
 #if YYDEBUG
@@ -1819,56 +1657,47 @@ while (YYID (0))
 #  define YYFPRINTF fprintf
 # endif
 
-# define YYDPRINTF(Args)			\
-do {						\
-  if (yydebug)					\
-    YYFPRINTF Args;				\
-} while (YYID (0))
+# define YYDPRINTF(Args)                        \
+do {                                            \
+  if (yydebug)                                  \
+    YYFPRINTF Args;                             \
+} while (0)
 
-# define YY_SYMBOL_PRINT(Title, Type, Value, Location)			  \
-do {									  \
-  if (yydebug)								  \
-    {									  \
-      YYFPRINTF (stderr, "%s ", Title);					  \
-      yy_symbol_print (stderr,						  \
-		  Type, Value, parseContext); \
-      YYFPRINTF (stderr, "\n");						  \
-    }									  \
-} while (YYID (0))
+/* This macro is provided for backward compatibility. */
+#ifndef YY_LOCATION_PRINT
+# define YY_LOCATION_PRINT(File, Loc) ((void) 0)
+#endif
 
 
-/*--------------------------------.
-| Print this symbol on YYOUTPUT.  |
-`--------------------------------*/
+# define YY_SYMBOL_PRINT(Title, Type, Value, Location)                    \
+do {                                                                      \
+  if (yydebug)                                                            \
+    {                                                                     \
+      YYFPRINTF (stderr, "%s ", Title);                                   \
+      yy_symbol_print (stderr,                                            \
+                  Type, Value, parseContext); \
+      YYFPRINTF (stderr, "\n");                                           \
+    }                                                                     \
+} while (0)
 
-/*ARGSUSED*/
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
+
+/*----------------------------------------.
+| Print this symbol's value on YYOUTPUT.  |
+`----------------------------------------*/
+
 static void
 yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep, TParseContext& parseContext)
-#else
-static void
-yy_symbol_value_print (yyoutput, yytype, yyvaluep, parseContext)
-    FILE *yyoutput;
-    int yytype;
-    YYSTYPE const * const yyvaluep;
-    TParseContext& parseContext;
-#endif
 {
+  FILE *yyo = yyoutput;
+  YYUSE (yyo);
+  YYUSE (parseContext);
   if (!yyvaluep)
     return;
-  YYUSE (parseContext);
 # ifdef YYPRINT
   if (yytype < YYNTOKENS)
     YYPRINT (yyoutput, yytoknum[yytype], *yyvaluep);
-# else
-  YYUSE (yyoutput);
 # endif
-  switch (yytype)
-    {
-      default:
-	break;
-    }
+  YYUSE (yytype);
 }
 
 
@@ -1876,23 +1705,11 @@ yy_symbol_value_print (yyoutput, yytype, yyvaluep, parseContext)
 | Print this symbol on YYOUTPUT.  |
 `--------------------------------*/
 
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
 static void
 yy_symbol_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep, TParseContext& parseContext)
-#else
-static void
-yy_symbol_print (yyoutput, yytype, yyvaluep, parseContext)
-    FILE *yyoutput;
-    int yytype;
-    YYSTYPE const * const yyvaluep;
-    TParseContext& parseContext;
-#endif
 {
-  if (yytype < YYNTOKENS)
-    YYFPRINTF (yyoutput, "token %s (", yytname[yytype]);
-  else
-    YYFPRINTF (yyoutput, "nterm %s (", yytname[yytype]);
+  YYFPRINTF (yyoutput, "%s %s (",
+             yytype < YYNTOKENS ? "token" : "nterm", yytname[yytype]);
 
   yy_symbol_value_print (yyoutput, yytype, yyvaluep, parseContext);
   YYFPRINTF (yyoutput, ")");
@@ -1903,16 +1720,8 @@ yy_symbol_print (yyoutput, yytype, yyvaluep, parseContext)
 | TOP (included).                                                   |
 `------------------------------------------------------------------*/
 
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
 static void
 yy_stack_print (yytype_int16 *yybottom, yytype_int16 *yytop)
-#else
-static void
-yy_stack_print (yybottom, yytop)
-    yytype_int16 *yybottom;
-    yytype_int16 *yytop;
-#endif
 {
   YYFPRINTF (stderr, "Stack now");
   for (; yybottom <= yytop; yybottom++)
@@ -1923,50 +1732,42 @@ yy_stack_print (yybottom, yytop)
   YYFPRINTF (stderr, "\n");
 }
 
-# define YY_STACK_PRINT(Bottom, Top)				\
-do {								\
-  if (yydebug)							\
-    yy_stack_print ((Bottom), (Top));				\
-} while (YYID (0))
+# define YY_STACK_PRINT(Bottom, Top)                            \
+do {                                                            \
+  if (yydebug)                                                  \
+    yy_stack_print ((Bottom), (Top));                           \
+} while (0)
 
 
 /*------------------------------------------------.
 | Report that the YYRULE is going to be reduced.  |
 `------------------------------------------------*/
 
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
 static void
-yy_reduce_print (YYSTYPE *yyvsp, int yyrule, TParseContext& parseContext)
-#else
-static void
-yy_reduce_print (yyvsp, yyrule, parseContext)
-    YYSTYPE *yyvsp;
-    int yyrule;
-    TParseContext& parseContext;
-#endif
+yy_reduce_print (yytype_int16 *yyssp, YYSTYPE *yyvsp, int yyrule, TParseContext& parseContext)
 {
+  unsigned long int yylno = yyrline[yyrule];
   int yynrhs = yyr2[yyrule];
   int yyi;
-  unsigned long int yylno = yyrline[yyrule];
   YYFPRINTF (stderr, "Reducing stack by rule %d (line %lu):\n",
-	     yyrule - 1, yylno);
+             yyrule - 1, yylno);
   /* The symbols being reduced.  */
   for (yyi = 0; yyi < yynrhs; yyi++)
     {
       YYFPRINTF (stderr, "   $%d = ", yyi + 1);
-      yy_symbol_print (stderr, yyrhs[yyprhs[yyrule] + yyi],
-		       &(yyvsp[(yyi + 1) - (yynrhs)])
-		       		       , parseContext);
+      yy_symbol_print (stderr,
+                       yystos[yyssp[yyi + 1 - yynrhs]],
+                       &(yyvsp[(yyi + 1) - (yynrhs)])
+                                              , parseContext);
       YYFPRINTF (stderr, "\n");
     }
 }
 
-# define YY_REDUCE_PRINT(Rule)		\
-do {					\
-  if (yydebug)				\
-    yy_reduce_print (yyvsp, Rule, parseContext); \
-} while (YYID (0))
+# define YY_REDUCE_PRINT(Rule)          \
+do {                                    \
+  if (yydebug)                          \
+    yy_reduce_print (yyssp, yyvsp, Rule, parseContext); \
+} while (0)
 
 /* Nonzero means print parse trace.  It is left uninitialized so that
    multiple parsers can coexist.  */
@@ -1980,7 +1781,7 @@ int yydebug;
 
 
 /* YYINITDEPTH -- initial size of the parser's stacks.  */
-#ifndef	YYINITDEPTH
+#ifndef YYINITDEPTH
 # define YYINITDEPTH 200
 #endif
 
@@ -1995,7 +1796,6 @@ int yydebug;
 # define YYMAXDEPTH 10000
 #endif
 
-
 
 #if YYERROR_VERBOSE
 
@@ -2004,15 +1804,8 @@ int yydebug;
 #   define yystrlen strlen
 #  else
 /* Return the length of YYSTR.  */
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
 static YYSIZE_T
 yystrlen (const char *yystr)
-#else
-static YYSIZE_T
-yystrlen (yystr)
-    const char *yystr;
-#endif
 {
   YYSIZE_T yylen;
   for (yylen = 0; yystr[yylen]; yylen++)
@@ -2028,16 +1821,8 @@ yystrlen (yystr)
 #  else
 /* Copy YYSRC to YYDEST, returning the address of the terminating '\0' in
    YYDEST.  */
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
 static char *
 yystpcpy (char *yydest, const char *yysrc)
-#else
-static char *
-yystpcpy (yydest, yysrc)
-    char *yydest;
-    const char *yysrc;
-#endif
 {
   char *yyd = yydest;
   const char *yys = yysrc;
@@ -2067,27 +1852,27 @@ yytnamerr (char *yyres, const char *yystr)
       char const *yyp = yystr;
 
       for (;;)
-	switch (*++yyp)
-	  {
-	  case '\'':
-	  case ',':
-	    goto do_not_strip_quotes;
+        switch (*++yyp)
+          {
+          case '\'':
+          case ',':
+            goto do_not_strip_quotes;
 
-	  case '\\':
-	    if (*++yyp != '\\')
-	      goto do_not_strip_quotes;
-	    /* Fall through.  */
-	  default:
-	    if (yyres)
-	      yyres[yyn] = *yyp;
-	    yyn++;
-	    break;
+          case '\\':
+            if (*++yyp != '\\')
+              goto do_not_strip_quotes;
+            /* Fall through.  */
+          default:
+            if (yyres)
+              yyres[yyn] = *yyp;
+            yyn++;
+            break;
 
-	  case '"':
-	    if (yyres)
-	      yyres[yyn] = '\0';
-	    return yyn;
-	  }
+          case '"':
+            if (yyres)
+              yyres[yyn] = '\0';
+            return yyn;
+          }
     do_not_strip_quotes: ;
     }
 
@@ -2098,199 +1883,179 @@ yytnamerr (char *yyres, const char *yystr)
 }
 # endif
 
-/* Copy into YYRESULT an error message about the unexpected token
-   YYCHAR while in state YYSTATE.  Return the number of bytes copied,
-   including the terminating null byte.  If YYRESULT is null, do not
-   copy anything; just return the number of bytes that would be
-   copied.  As a special case, return 0 if an ordinary "syntax error"
-   message will do.  Return YYSIZE_MAXIMUM if overflow occurs during
-   size calculation.  */
-static YYSIZE_T
-yysyntax_error (char *yyresult, int yystate, int yychar)
+/* Copy into *YYMSG, which is of size *YYMSG_ALLOC, an error message
+   about the unexpected token YYTOKEN for the state stack whose top is
+   YYSSP.
+
+   Return 0 if *YYMSG was successfully written.  Return 1 if *YYMSG is
+   not large enough to hold the message.  In that case, also set
+   *YYMSG_ALLOC to the required number of bytes.  Return 2 if the
+   required number of bytes is too large to store.  */
+static int
+yysyntax_error (YYSIZE_T *yymsg_alloc, char **yymsg,
+                yytype_int16 *yyssp, int yytoken)
 {
-  int yyn = yypact[yystate];
+  YYSIZE_T yysize0 = yytnamerr (YY_NULLPTR, yytname[yytoken]);
+  YYSIZE_T yysize = yysize0;
+  enum { YYERROR_VERBOSE_ARGS_MAXIMUM = 5 };
+  /* Internationalized format string. */
+  const char *yyformat = YY_NULLPTR;
+  /* Arguments of yyformat. */
+  char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
+  /* Number of reported tokens (one for the "unexpected", one per
+     "expected"). */
+  int yycount = 0;
 
-  if (! (YYPACT_NINF < yyn && yyn <= YYLAST))
-    return 0;
-  else
+  /* There are many possibilities here to consider:
+     - If this state is a consistent state with a default action, then
+       the only way this function was invoked is if the default action
+       is an error action.  In that case, don't check for expected
+       tokens because there are none.
+     - The only way there can be no lookahead present (in yychar) is if
+       this state is a consistent state with a default action.  Thus,
+       detecting the absence of a lookahead is sufficient to determine
+       that there is no unexpected or expected token to report.  In that
+       case, just report a simple "syntax error".
+     - Don't assume there isn't a lookahead just because this state is a
+       consistent state with a default action.  There might have been a
+       previous inconsistent state, consistent state with a non-default
+       action, or user semantic action that manipulated yychar.
+     - Of course, the expected token list depends on states to have
+       correct lookahead information, and it depends on the parser not
+       to perform extra reductions after fetching a lookahead from the
+       scanner and before detecting a syntax error.  Thus, state merging
+       (from LALR or IELR) and default reductions corrupt the expected
+       token list.  However, the list is correct for canonical LR with
+       one exception: it will still contain any token that will not be
+       accepted due to an error action in a later state.
+  */
+  if (yytoken != YYEMPTY)
     {
-      int yytype = YYTRANSLATE (yychar);
-      YYSIZE_T yysize0 = yytnamerr (0, yytname[yytype]);
-      YYSIZE_T yysize = yysize0;
-      YYSIZE_T yysize1;
-      int yysize_overflow = 0;
-      enum { YYERROR_VERBOSE_ARGS_MAXIMUM = 5 };
-      char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
-      int yyx;
+      int yyn = yypact[*yyssp];
+      yyarg[yycount++] = yytname[yytoken];
+      if (!yypact_value_is_default (yyn))
+        {
+          /* Start YYX at -YYN if negative to avoid negative indexes in
+             YYCHECK.  In other words, skip the first -YYN actions for
+             this state because they are default actions.  */
+          int yyxbegin = yyn < 0 ? -yyn : 0;
+          /* Stay within bounds of both yycheck and yytname.  */
+          int yychecklim = YYLAST - yyn + 1;
+          int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;
+          int yyx;
 
-# if 0
-      /* This is so xgettext sees the translatable formats that are
-	 constructed on the fly.  */
-      YY_("syntax error, unexpected %s");
-      YY_("syntax error, unexpected %s, expecting %s");
-      YY_("syntax error, unexpected %s, expecting %s or %s");
-      YY_("syntax error, unexpected %s, expecting %s or %s or %s");
-      YY_("syntax error, unexpected %s, expecting %s or %s or %s or %s");
-# endif
-      char *yyfmt;
-      char const *yyf;
-      static char const yyunexpected[] = "syntax error, unexpected %s";
-      static char const yyexpecting[] = ", expecting %s";
-      static char const yyor[] = " or %s";
-      char yyformat[sizeof yyunexpected
-		    + sizeof yyexpecting - 1
-		    + ((YYERROR_VERBOSE_ARGS_MAXIMUM - 2)
-		       * (sizeof yyor - 1))];
-      char const *yyprefix = yyexpecting;
-
-      /* Start YYX at -YYN if negative to avoid negative indexes in
-	 YYCHECK.  */
-      int yyxbegin = yyn < 0 ? -yyn : 0;
-
-      /* Stay within bounds of both yycheck and yytname.  */
-      int yychecklim = YYLAST - yyn + 1;
-      int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;
-      int yycount = 1;
-
-      yyarg[0] = yytname[yytype];
-      yyfmt = yystpcpy (yyformat, yyunexpected);
-
-      for (yyx = yyxbegin; yyx < yyxend; ++yyx)
-	if (yycheck[yyx + yyn] == yyx && yyx != YYTERROR)
-	  {
-	    if (yycount == YYERROR_VERBOSE_ARGS_MAXIMUM)
-	      {
-		yycount = 1;
-		yysize = yysize0;
-		yyformat[sizeof yyunexpected - 1] = '\0';
-		break;
-	      }
-	    yyarg[yycount++] = yytname[yyx];
-	    yysize1 = yysize + yytnamerr (0, yytname[yyx]);
-	    yysize_overflow |= (yysize1 < yysize);
-	    yysize = yysize1;
-	    yyfmt = yystpcpy (yyfmt, yyprefix);
-	    yyprefix = yyor;
-	  }
-
-      yyf = YY_(yyformat);
-      yysize1 = yysize + yystrlen (yyf);
-      yysize_overflow |= (yysize1 < yysize);
-      yysize = yysize1;
-
-      if (yysize_overflow)
-	return YYSIZE_MAXIMUM;
-
-      if (yyresult)
-	{
-	  /* Avoid sprintf, as that infringes on the user's name space.
-	     Don't have undefined behavior even if the translation
-	     produced a string with the wrong number of "%s"s.  */
-	  char *yyp = yyresult;
-	  int yyi = 0;
-	  while ((*yyp = *yyf) != '\0')
-	    {
-	      if (*yyp == '%' && yyf[1] == 's' && yyi < yycount)
-		{
-		  yyp += yytnamerr (yyp, yyarg[yyi++]);
-		  yyf += 2;
-		}
-	      else
-		{
-		  yyp++;
-		  yyf++;
-		}
-	    }
-	}
-      return yysize;
+          for (yyx = yyxbegin; yyx < yyxend; ++yyx)
+            if (yycheck[yyx + yyn] == yyx && yyx != YYTERROR
+                && !yytable_value_is_error (yytable[yyx + yyn]))
+              {
+                if (yycount == YYERROR_VERBOSE_ARGS_MAXIMUM)
+                  {
+                    yycount = 1;
+                    yysize = yysize0;
+                    break;
+                  }
+                yyarg[yycount++] = yytname[yyx];
+                {
+                  YYSIZE_T yysize1 = yysize + yytnamerr (YY_NULLPTR, yytname[yyx]);
+                  if (! (yysize <= yysize1
+                         && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
+                    return 2;
+                  yysize = yysize1;
+                }
+              }
+        }
     }
+
+  switch (yycount)
+    {
+# define YYCASE_(N, S)                      \
+      case N:                               \
+        yyformat = S;                       \
+      break
+      YYCASE_(0, YY_("syntax error"));
+      YYCASE_(1, YY_("syntax error, unexpected %s"));
+      YYCASE_(2, YY_("syntax error, unexpected %s, expecting %s"));
+      YYCASE_(3, YY_("syntax error, unexpected %s, expecting %s or %s"));
+      YYCASE_(4, YY_("syntax error, unexpected %s, expecting %s or %s or %s"));
+      YYCASE_(5, YY_("syntax error, unexpected %s, expecting %s or %s or %s or %s"));
+# undef YYCASE_
+    }
+
+  {
+    YYSIZE_T yysize1 = yysize + yystrlen (yyformat);
+    if (! (yysize <= yysize1 && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
+      return 2;
+    yysize = yysize1;
+  }
+
+  if (*yymsg_alloc < yysize)
+    {
+      *yymsg_alloc = 2 * yysize;
+      if (! (yysize <= *yymsg_alloc
+             && *yymsg_alloc <= YYSTACK_ALLOC_MAXIMUM))
+        *yymsg_alloc = YYSTACK_ALLOC_MAXIMUM;
+      return 1;
+    }
+
+  /* Avoid sprintf, as that infringes on the user's name space.
+     Don't have undefined behavior even if the translation
+     produced a string with the wrong number of "%s"s.  */
+  {
+    char *yyp = *yymsg;
+    int yyi = 0;
+    while ((*yyp = *yyformat) != '\0')
+      if (*yyp == '%' && yyformat[1] == 's' && yyi < yycount)
+        {
+          yyp += yytnamerr (yyp, yyarg[yyi++]);
+          yyformat += 2;
+        }
+      else
+        {
+          yyp++;
+          yyformat++;
+        }
+  }
+  return 0;
 }
 #endif /* YYERROR_VERBOSE */
-
 
 /*-----------------------------------------------.
 | Release the memory associated to this symbol.  |
 `-----------------------------------------------*/
 
-/*ARGSUSED*/
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
 static void
 yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep, TParseContext& parseContext)
-#else
-static void
-yydestruct (yymsg, yytype, yyvaluep, parseContext)
-    const char *yymsg;
-    int yytype;
-    YYSTYPE *yyvaluep;
-    TParseContext& parseContext;
-#endif
 {
   YYUSE (yyvaluep);
   YYUSE (parseContext);
-
   if (!yymsg)
     yymsg = "Deleting";
   YY_SYMBOL_PRINT (yymsg, yytype, yyvaluep, yylocationp);
 
-  switch (yytype)
-    {
-
-      default:
-	break;
-    }
+  YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
+  YYUSE (yytype);
+  YY_IGNORE_MAYBE_UNINITIALIZED_END
 }
 
-/* Prevent warnings from -Wmissing-prototypes.  */
-#ifdef YYPARSE_PARAM
-#if defined __STDC__ || defined __cplusplus
-int yyparse (void *YYPARSE_PARAM);
-#else
-int yyparse ();
-#endif
-#else /* ! YYPARSE_PARAM */
-#if defined __STDC__ || defined __cplusplus
-int yyparse (TParseContext& parseContext);
-#else
-int yyparse ();
-#endif
-#endif /* ! YYPARSE_PARAM */
 
 
 
+/*----------.
+| yyparse.  |
+`----------*/
 
-
-/*-------------------------.
-| yyparse or yypush_parse.  |
-`-------------------------*/
-
-#ifdef YYPARSE_PARAM
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
-int
-yyparse (void *YYPARSE_PARAM)
-#else
-int
-yyparse (YYPARSE_PARAM)
-    void *YYPARSE_PARAM;
-#endif
-#else /* ! YYPARSE_PARAM */
-#if (defined __STDC__ || defined __C99__FUNC__ \
-     || defined __cplusplus || defined _MSC_VER)
 int
 yyparse (TParseContext& parseContext)
-#else
-int
-yyparse (parseContext)
-    TParseContext& parseContext;
-#endif
-#endif
 {
 /* The lookahead symbol.  */
 int yychar;
 
+
 /* The semantic value of the lookahead symbol.  */
-YYSTYPE yylval;
+/* Default value used for initialization, for pacifying older GCCs
+   or non-GCC compilers.  */
+YY_INITIAL_VALUE (static YYSTYPE yyval_default;)
+YYSTYPE yylval YY_INITIAL_VALUE (= yyval_default);
 
     /* Number of syntax errors so far.  */
     int yynerrs;
@@ -2300,10 +2065,10 @@ YYSTYPE yylval;
     int yyerrstatus;
 
     /* The stacks and their tools:
-       `yyss': related to states.
-       `yyvs': related to semantic values.
+       'yyss': related to states.
+       'yyvs': related to semantic values.
 
-       Refer to the stacks thru separate pointers, to allow yyoverflow
+       Refer to the stacks through separate pointers, to allow yyoverflow
        to reallocate them elsewhere.  */
 
     /* The state stack.  */
@@ -2321,7 +2086,7 @@ YYSTYPE yylval;
   int yyn;
   int yyresult;
   /* Lookahead token as an internal (translated) token number.  */
-  int yytoken;
+  int yytoken = 0;
   /* The variables used to return semantic value and location from the
      action routines.  */
   YYSTYPE yyval;
@@ -2339,9 +2104,8 @@ YYSTYPE yylval;
      Keep to zero when no symbol should be popped.  */
   int yylen = 0;
 
-  yytoken = 0;
-  yyss = yyssa;
-  yyvs = yyvsa;
+  yyssp = yyss = yyssa;
+  yyvsp = yyvs = yyvsa;
   yystacksize = YYINITDEPTH;
 
   YYDPRINTF ((stderr, "Starting parse\n"));
@@ -2350,14 +2114,6 @@ YYSTYPE yylval;
   yyerrstatus = 0;
   yynerrs = 0;
   yychar = YYEMPTY; /* Cause a token to be read.  */
-
-  /* Initialize stack pointers.
-     Waste one element of value and location stack
-     so that they stay on the same level as the state stack.
-     The wasted elements are never initialized.  */
-  yyssp = yyss;
-  yyvsp = yyvs;
-
   goto yysetstate;
 
 /*------------------------------------------------------------.
@@ -2378,23 +2134,23 @@ YYSTYPE yylval;
 
 #ifdef yyoverflow
       {
-	/* Give user a chance to reallocate the stack.  Use copies of
-	   these so that the &'s don't force the real ones into
-	   memory.  */
-	YYSTYPE *yyvs1 = yyvs;
-	yytype_int16 *yyss1 = yyss;
+        /* Give user a chance to reallocate the stack.  Use copies of
+           these so that the &'s don't force the real ones into
+           memory.  */
+        YYSTYPE *yyvs1 = yyvs;
+        yytype_int16 *yyss1 = yyss;
 
-	/* Each stack pointer address is followed by the size of the
-	   data in use in that stack, in bytes.  This used to be a
-	   conditional around just the two extra args, but that might
-	   be undefined if yyoverflow is a macro.  */
-	yyoverflow (YY_("memory exhausted"),
-		    &yyss1, yysize * sizeof (*yyssp),
-		    &yyvs1, yysize * sizeof (*yyvsp),
-		    &yystacksize);
+        /* Each stack pointer address is followed by the size of the
+           data in use in that stack, in bytes.  This used to be a
+           conditional around just the two extra args, but that might
+           be undefined if yyoverflow is a macro.  */
+        yyoverflow (YY_("memory exhausted"),
+                    &yyss1, yysize * sizeof (*yyssp),
+                    &yyvs1, yysize * sizeof (*yyvsp),
+                    &yystacksize);
 
-	yyss = yyss1;
-	yyvs = yyvs1;
+        yyss = yyss1;
+        yyvs = yyvs1;
       }
 #else /* no yyoverflow */
 # ifndef YYSTACK_RELOCATE
@@ -2402,22 +2158,22 @@ YYSTYPE yylval;
 # else
       /* Extend the stack our own way.  */
       if (YYMAXDEPTH <= yystacksize)
-	goto yyexhaustedlab;
+        goto yyexhaustedlab;
       yystacksize *= 2;
       if (YYMAXDEPTH < yystacksize)
-	yystacksize = YYMAXDEPTH;
+        yystacksize = YYMAXDEPTH;
 
       {
-	yytype_int16 *yyss1 = yyss;
-	union yyalloc *yyptr =
-	  (union yyalloc *) YYSTACK_ALLOC (YYSTACK_BYTES (yystacksize));
-	if (! yyptr)
-	  goto yyexhaustedlab;
-	YYSTACK_RELOCATE (yyss_alloc, yyss);
-	YYSTACK_RELOCATE (yyvs_alloc, yyvs);
+        yytype_int16 *yyss1 = yyss;
+        union yyalloc *yyptr =
+          (union yyalloc *) YYSTACK_ALLOC (YYSTACK_BYTES (yystacksize));
+        if (! yyptr)
+          goto yyexhaustedlab;
+        YYSTACK_RELOCATE (yyss_alloc, yyss);
+        YYSTACK_RELOCATE (yyvs_alloc, yyvs);
 #  undef YYSTACK_RELOCATE
-	if (yyss1 != yyssa)
-	  YYSTACK_FREE (yyss1);
+        if (yyss1 != yyssa)
+          YYSTACK_FREE (yyss1);
       }
 # endif
 #endif /* no yyoverflow */
@@ -2426,10 +2182,10 @@ YYSTYPE yylval;
       yyvsp = yyvs + yysize - 1;
 
       YYDPRINTF ((stderr, "Stack size increased to %lu\n",
-		  (unsigned long int) yystacksize));
+                  (unsigned long int) yystacksize));
 
       if (yyss + yystacksize - 1 <= yyssp)
-	YYABORT;
+        YYABORT;
     }
 
   YYDPRINTF ((stderr, "Entering state %d\n", yystate));
@@ -2449,7 +2205,7 @@ yybackup:
 
   /* First try to decide what to do without reference to lookahead token.  */
   yyn = yypact[yystate];
-  if (yyn == YYPACT_NINF)
+  if (yypact_value_is_default (yyn))
     goto yydefault;
 
   /* Not known => get a lookahead token if don't already have one.  */
@@ -2458,7 +2214,7 @@ yybackup:
   if (yychar == YYEMPTY)
     {
       YYDPRINTF ((stderr, "Reading a token: "));
-      yychar = YYLEX;
+      yychar = yylex (&yylval, parseContext);
     }
 
   if (yychar <= YYEOF)
@@ -2480,8 +2236,8 @@ yybackup:
   yyn = yytable[yyn];
   if (yyn <= 0)
     {
-      if (yyn == 0 || yyn == YYTABLE_NINF)
-	goto yyerrlab;
+      if (yytable_value_is_error (yyn))
+        goto yyerrlab;
       yyn = -yyn;
       goto yyreduce;
     }
@@ -2498,7 +2254,9 @@ yybackup:
   yychar = YYEMPTY;
 
   yystate = yyn;
+  YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
   *++yyvsp = yylval;
+  YY_IGNORE_MAYBE_UNINITIALIZED_END
 
   goto yynewstate;
 
@@ -2521,7 +2279,7 @@ yyreduce:
   yylen = yyr2[yyn];
 
   /* If YYLEN is nonzero, implement the default value of the action:
-     `$$ = $1'.
+     '$$ = $1'.
 
      Otherwise, the following line sets YYVAL to garbage.
      This behavior is undocumented and Bison
@@ -2535,24 +2293,22 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-
-/* Line 1455 of yacc.c  */
-#line 174 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 175 "hlslang.y" /* yacc.c:1646  */
     {
         // The symbol table search was done in the lexical phase
-        const TSymbol* symbol = (yyvsp[(1) - (1)].lex).symbol;
+        const TSymbol* symbol = (yyvsp[0].lex).symbol;
         const TVariable* variable;
         if (symbol == 0) {
-            parseContext.error((yyvsp[(1) - (1)].lex).line, "undeclared identifier", (yyvsp[(1) - (1)].lex).string->c_str(), "");
+            parseContext.error((yyvsp[0].lex).line, "undeclared identifier", (yyvsp[0].lex).string->c_str(), "");
             parseContext.recover();
             TType type(EbtFloat, EbpUndefined);
-            TVariable* fakeVariable = new TVariable((yyvsp[(1) - (1)].lex).string, type);
+            TVariable* fakeVariable = new TVariable((yyvsp[0].lex).string, type);
             parseContext.symbolTable.insert(*fakeVariable);
             variable = fakeVariable;
         } else {
             // This identifier can only be a variable type symbol 
             if (! symbol->isVariable()) {
-                parseContext.error((yyvsp[(1) - (1)].lex).line, "variable expected", (yyvsp[(1) - (1)].lex).string->c_str(), "");
+                parseContext.error((yyvsp[0].lex).line, "variable expected", (yyvsp[0].lex).string->c_str(), "");
                 parseContext.recover();
             }
             variable = static_cast<const TVariable*>(symbol);
@@ -2563,315 +2319,302 @@ yyreduce:
 		
 		if (variable->getType().getQualifier() == EvqConst && variable->constValue)
 		{
-			TIntermConstant* c = ir_add_constant(variable->getType(), (yyvsp[(1) - (1)].lex).line);
+			TIntermConstant* c = ir_add_constant(variable->getType(), (yyvsp[0].lex).line);
 			c->copyValuesFrom(*variable->constValue);
 			(yyval.interm.intermTypedNode) = c;
 		}
 		else
 		{
-			TIntermSymbol* sym = ir_add_symbol(variable, (yyvsp[(1) - (1)].lex).line);
+			TIntermSymbol* sym = ir_add_symbol(variable, (yyvsp[0].lex).line);
 			(yyval.interm.intermTypedNode) = sym;
 		}
-    ;}
+    }
+#line 2333 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-
-/* Line 1455 of yacc.c  */
-#line 212 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 213 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 2341 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-
-/* Line 1455 of yacc.c  */
-#line 215 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 216 "hlslang.y" /* yacc.c:1646  */
     {
-        TIntermConstant* constant = ir_add_constant(TType(EbtInt, EbpUndefined, EvqConst), (yyvsp[(1) - (1)].lex).line);
-		constant->setValue((yyvsp[(1) - (1)].lex).i);
+        TIntermConstant* constant = ir_add_constant(TType(EbtInt, EbpUndefined, EvqConst), (yyvsp[0].lex).line);
+		constant->setValue((yyvsp[0].lex).i);
 		(yyval.interm.intermTypedNode) = constant;
-    ;}
+    }
+#line 2351 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-
-/* Line 1455 of yacc.c  */
-#line 220 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 221 "hlslang.y" /* yacc.c:1646  */
     {
-        TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst), (yyvsp[(1) - (1)].lex).line);
-		constant->setValue((yyvsp[(1) - (1)].lex).f);
+        TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst), (yyvsp[0].lex).line);
+		constant->setValue((yyvsp[0].lex).f);
 		(yyval.interm.intermTypedNode) = constant;
-    ;}
+    }
+#line 2361 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-
-/* Line 1455 of yacc.c  */
-#line 225 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 226 "hlslang.y" /* yacc.c:1646  */
     {
-        TIntermConstant* constant = ir_add_constant(TType(EbtBool, EbpUndefined, EvqConst), (yyvsp[(1) - (1)].lex).line);
-		constant->setValue((yyvsp[(1) - (1)].lex).b);
+        TIntermConstant* constant = ir_add_constant(TType(EbtBool, EbpUndefined, EvqConst), (yyvsp[0].lex).line);
+		constant->setValue((yyvsp[0].lex).b);
 		(yyval.interm.intermTypedNode) = constant;
-    ;}
+    }
+#line 2371 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-
-/* Line 1455 of yacc.c  */
-#line 230 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 231 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermTypedNode) = (yyvsp[(2) - (3)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.intermTypedNode) = (yyvsp[-1].interm.intermTypedNode);
+    }
+#line 2379 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-
-/* Line 1455 of yacc.c  */
-#line 236 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 237 "hlslang.y" /* yacc.c:1646  */
     { 
-        (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 2387 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-
-/* Line 1455 of yacc.c  */
-#line 239 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 240 "hlslang.y" /* yacc.c:1646  */
     {
-        if (!(yyvsp[(1) - (4)].interm.intermTypedNode)) {
-            parseContext.error((yyvsp[(2) - (4)].lex).line, " left of '[' is null ", "expression", "");
+        if (!(yyvsp[-3].interm.intermTypedNode)) {
+            parseContext.error((yyvsp[-2].lex).line, " left of '[' is null ", "expression", "");
             YYERROR;
         }
-        if (!(yyvsp[(1) - (4)].interm.intermTypedNode)->isArray() && !(yyvsp[(1) - (4)].interm.intermTypedNode)->isMatrix() && !(yyvsp[(1) - (4)].interm.intermTypedNode)->isVector()) {
-            if ((yyvsp[(1) - (4)].interm.intermTypedNode)->getAsSymbolNode())
-                parseContext.error((yyvsp[(2) - (4)].lex).line, " left of '[' is not of type array, matrix, or vector ", (yyvsp[(1) - (4)].interm.intermTypedNode)->getAsSymbolNode()->getSymbol().c_str(), "");
+        if (!(yyvsp[-3].interm.intermTypedNode)->isArray() && !(yyvsp[-3].interm.intermTypedNode)->isMatrix() && !(yyvsp[-3].interm.intermTypedNode)->isVector()) {
+            if ((yyvsp[-3].interm.intermTypedNode)->getAsSymbolNode())
+                parseContext.error((yyvsp[-2].lex).line, " left of '[' is not of type array, matrix, or vector ", (yyvsp[-3].interm.intermTypedNode)->getAsSymbolNode()->getSymbol().c_str(), "");
             else
-                parseContext.error((yyvsp[(2) - (4)].lex).line, " left of '[' is not of type array, matrix, or vector ", "expression", "");
+                parseContext.error((yyvsp[-2].lex).line, " left of '[' is not of type array, matrix, or vector ", "expression", "");
             parseContext.recover();
         }
-		if ((yyvsp[(3) - (4)].interm.intermTypedNode)->getQualifier() == EvqConst) {
-			if (((yyvsp[(1) - (4)].interm.intermTypedNode)->isVector() || (yyvsp[(1) - (4)].interm.intermTypedNode)->isMatrix()) && (yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getRowsCount() <= (yyvsp[(3) - (4)].interm.intermTypedNode)->getAsConstant()->toInt() && !(yyvsp[(1) - (4)].interm.intermTypedNode)->isArray() ) {
-				parseContext.error((yyvsp[(2) - (4)].lex).line, "", "[", "field selection out of range '%d'", (yyvsp[(3) - (4)].interm.intermTypedNode)->getAsConstant()->toInt());
+		if ((yyvsp[-1].interm.intermTypedNode)->getQualifier() == EvqConst) {
+			if (((yyvsp[-3].interm.intermTypedNode)->isVector() || (yyvsp[-3].interm.intermTypedNode)->isMatrix()) && (yyvsp[-3].interm.intermTypedNode)->getType().getRowsCount() <= (yyvsp[-1].interm.intermTypedNode)->getAsConstant()->toInt() && !(yyvsp[-3].interm.intermTypedNode)->isArray() ) {
+				parseContext.error((yyvsp[-2].lex).line, "", "[", "field selection out of range '%d'", (yyvsp[-1].interm.intermTypedNode)->getAsConstant()->toInt());
 				parseContext.recover();
 			} else {
-				if ((yyvsp[(1) - (4)].interm.intermTypedNode)->isArray()) {
-					if ((yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getArraySize() == 0) {
-						if ((yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getMaxArraySize() <= (yyvsp[(3) - (4)].interm.intermTypedNode)->getAsConstant()->toInt()) {
-							if (parseContext.arraySetMaxSize((yyvsp[(1) - (4)].interm.intermTypedNode)->getAsSymbolNode(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getTypePointer(), (yyvsp[(3) - (4)].interm.intermTypedNode)->getAsConstant()->toInt(), true, (yyvsp[(2) - (4)].lex).line))
+				if ((yyvsp[-3].interm.intermTypedNode)->isArray()) {
+					if ((yyvsp[-3].interm.intermTypedNode)->getType().getArraySize() == 0) {
+						if ((yyvsp[-3].interm.intermTypedNode)->getType().getMaxArraySize() <= (yyvsp[-1].interm.intermTypedNode)->getAsConstant()->toInt()) {
+							if (parseContext.arraySetMaxSize((yyvsp[-3].interm.intermTypedNode)->getAsSymbolNode(), (yyvsp[-3].interm.intermTypedNode)->getTypePointer(), (yyvsp[-1].interm.intermTypedNode)->getAsConstant()->toInt(), true, (yyvsp[-2].lex).line))
 								parseContext.recover(); 
 						} else {
-							if (parseContext.arraySetMaxSize((yyvsp[(1) - (4)].interm.intermTypedNode)->getAsSymbolNode(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getTypePointer(), 0, false, (yyvsp[(2) - (4)].lex).line))
+							if (parseContext.arraySetMaxSize((yyvsp[-3].interm.intermTypedNode)->getAsSymbolNode(), (yyvsp[-3].interm.intermTypedNode)->getTypePointer(), 0, false, (yyvsp[-2].lex).line))
 								parseContext.recover(); 
 						}
-					} else if ( (yyvsp[(3) - (4)].interm.intermTypedNode)->getAsConstant()->toInt() >= (yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getArraySize()) {
-						parseContext.error((yyvsp[(2) - (4)].lex).line, "", "[", "array index out of range '%d'", (yyvsp[(3) - (4)].interm.intermTypedNode)->getAsConstant()->toInt());
+					} else if ( (yyvsp[-1].interm.intermTypedNode)->getAsConstant()->toInt() >= (yyvsp[-3].interm.intermTypedNode)->getType().getArraySize()) {
+						parseContext.error((yyvsp[-2].lex).line, "", "[", "array index out of range '%d'", (yyvsp[-1].interm.intermTypedNode)->getAsConstant()->toInt());
 						parseContext.recover();
 					}
 				}
-				(yyval.interm.intermTypedNode) = ir_add_index(EOpIndexDirect, (yyvsp[(1) - (4)].interm.intermTypedNode), (yyvsp[(3) - (4)].interm.intermTypedNode), (yyvsp[(2) - (4)].lex).line);
+				(yyval.interm.intermTypedNode) = ir_add_index(EOpIndexDirect, (yyvsp[-3].interm.intermTypedNode), (yyvsp[-1].interm.intermTypedNode), (yyvsp[-2].lex).line);
 			}
 		} else {
-			if ((yyvsp[(1) - (4)].interm.intermTypedNode)->isArray() && (yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getArraySize() == 0) {
-				parseContext.error((yyvsp[(2) - (4)].lex).line, "", "[", "array must be redeclared with a size before being indexed with a variable");
+			if ((yyvsp[-3].interm.intermTypedNode)->isArray() && (yyvsp[-3].interm.intermTypedNode)->getType().getArraySize() == 0) {
+				parseContext.error((yyvsp[-2].lex).line, "", "[", "array must be redeclared with a size before being indexed with a variable");
 				parseContext.recover();
 			}
 			
-			(yyval.interm.intermTypedNode) = ir_add_index(EOpIndexIndirect, (yyvsp[(1) - (4)].interm.intermTypedNode), (yyvsp[(3) - (4)].interm.intermTypedNode), (yyvsp[(2) - (4)].lex).line);
+			(yyval.interm.intermTypedNode) = ir_add_index(EOpIndexIndirect, (yyvsp[-3].interm.intermTypedNode), (yyvsp[-1].interm.intermTypedNode), (yyvsp[-2].lex).line);
 		}
         if ((yyval.interm.intermTypedNode) == 0) {
-            TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst), (yyvsp[(2) - (4)].lex).line);
+            TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst), (yyvsp[-2].lex).line);
 			constant->setValue(0.f);
 			(yyval.interm.intermTypedNode) = constant;
-        } else if ((yyvsp[(1) - (4)].interm.intermTypedNode)->isArray()) {
-            if ((yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getStruct())
-                (yyval.interm.intermTypedNode)->setType(TType((yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getStruct(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getTypeName(), EbpUndefined, (yyvsp[(1) - (4)].interm.intermTypedNode)->getLine()));
+        } else if ((yyvsp[-3].interm.intermTypedNode)->isArray()) {
+            if ((yyvsp[-3].interm.intermTypedNode)->getType().getStruct())
+                (yyval.interm.intermTypedNode)->setType(TType((yyvsp[-3].interm.intermTypedNode)->getType().getStruct(), (yyvsp[-3].interm.intermTypedNode)->getType().getTypeName(), EbpUndefined, (yyvsp[-3].interm.intermTypedNode)->getLine()));
             else
-                (yyval.interm.intermTypedNode)->setType(TType((yyvsp[(1) - (4)].interm.intermTypedNode)->getBasicType(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getPrecision(), EvqTemporary, (yyvsp[(1) - (4)].interm.intermTypedNode)->getColsCount(),(yyvsp[(1) - (4)].interm.intermTypedNode)->getRowsCount(),  (yyvsp[(1) - (4)].interm.intermTypedNode)->isMatrix()));
+                (yyval.interm.intermTypedNode)->setType(TType((yyvsp[-3].interm.intermTypedNode)->getBasicType(), (yyvsp[-3].interm.intermTypedNode)->getPrecision(), EvqTemporary, (yyvsp[-3].interm.intermTypedNode)->getColsCount(),(yyvsp[-3].interm.intermTypedNode)->getRowsCount(),  (yyvsp[-3].interm.intermTypedNode)->isMatrix()));
                 
-            if ((yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getQualifier() == EvqConst)
+            if ((yyvsp[-3].interm.intermTypedNode)->getType().getQualifier() == EvqConst)
                 (yyval.interm.intermTypedNode)->getTypePointer()->changeQualifier(EvqConst);
-        } else if ((yyvsp[(1) - (4)].interm.intermTypedNode)->isMatrix() && (yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getQualifier() == EvqConst)         
-            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[(1) - (4)].interm.intermTypedNode)->getBasicType(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getPrecision(), EvqConst, 1, (yyvsp[(1) - (4)].interm.intermTypedNode)->getColsCount()));
-        else if ((yyvsp[(1) - (4)].interm.intermTypedNode)->isMatrix())            
-            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[(1) - (4)].interm.intermTypedNode)->getBasicType(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getPrecision(), EvqTemporary, 1, (yyvsp[(1) - (4)].interm.intermTypedNode)->getColsCount()));
-        else if ((yyvsp[(1) - (4)].interm.intermTypedNode)->isVector() && (yyvsp[(1) - (4)].interm.intermTypedNode)->getType().getQualifier() == EvqConst)          
-            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[(1) - (4)].interm.intermTypedNode)->getBasicType(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getPrecision(), EvqConst));
-        else if ((yyvsp[(1) - (4)].interm.intermTypedNode)->isVector())       
-            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[(1) - (4)].interm.intermTypedNode)->getBasicType(), (yyvsp[(1) - (4)].interm.intermTypedNode)->getPrecision(), EvqTemporary));
+        } else if ((yyvsp[-3].interm.intermTypedNode)->isMatrix() && (yyvsp[-3].interm.intermTypedNode)->getType().getQualifier() == EvqConst)         
+            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[-3].interm.intermTypedNode)->getBasicType(), (yyvsp[-3].interm.intermTypedNode)->getPrecision(), EvqConst, 1, (yyvsp[-3].interm.intermTypedNode)->getColsCount()));
+        else if ((yyvsp[-3].interm.intermTypedNode)->isMatrix())            
+            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[-3].interm.intermTypedNode)->getBasicType(), (yyvsp[-3].interm.intermTypedNode)->getPrecision(), EvqTemporary, 1, (yyvsp[-3].interm.intermTypedNode)->getColsCount()));
+        else if ((yyvsp[-3].interm.intermTypedNode)->isVector() && (yyvsp[-3].interm.intermTypedNode)->getType().getQualifier() == EvqConst)          
+            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[-3].interm.intermTypedNode)->getBasicType(), (yyvsp[-3].interm.intermTypedNode)->getPrecision(), EvqConst));
+        else if ((yyvsp[-3].interm.intermTypedNode)->isVector())       
+            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[-3].interm.intermTypedNode)->getBasicType(), (yyvsp[-3].interm.intermTypedNode)->getPrecision(), EvqTemporary));
         else
-            (yyval.interm.intermTypedNode)->setType((yyvsp[(1) - (4)].interm.intermTypedNode)->getType());
-    ;}
+            (yyval.interm.intermTypedNode)->setType((yyvsp[-3].interm.intermTypedNode)->getType());
+    }
+#line 2456 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-
-/* Line 1455 of yacc.c  */
-#line 303 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 304 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 2464 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-
-/* Line 1455 of yacc.c  */
-#line 306 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 307 "hlslang.y" /* yacc.c:1646  */
     {
-        if (!(yyvsp[(1) - (3)].interm.intermTypedNode)) {
-            parseContext.error((yyvsp[(3) - (3)].lex).line, "field selection on null object", ".", "");
+        if (!(yyvsp[-2].interm.intermTypedNode)) {
+            parseContext.error((yyvsp[0].lex).line, "field selection on null object", ".", "");
             YYERROR;
         }
-        if ((yyvsp[(1) - (3)].interm.intermTypedNode)->isArray()) {
-            parseContext.error((yyvsp[(3) - (3)].lex).line, "cannot apply dot operator to an array", ".", "");
+        if ((yyvsp[-2].interm.intermTypedNode)->isArray()) {
+            parseContext.error((yyvsp[0].lex).line, "cannot apply dot operator to an array", ".", "");
             parseContext.recover();
         }
 
-        if ((yyvsp[(1) - (3)].interm.intermTypedNode)->isVector()) {
+        if ((yyvsp[-2].interm.intermTypedNode)->isVector()) {
             TVectorFields fields;
-            if (! parseContext.parseVectorFields(*(yyvsp[(3) - (3)].lex).string, (yyvsp[(1) - (3)].interm.intermTypedNode)->getRowsCount(), fields, (yyvsp[(3) - (3)].lex).line)) {
+            if (! parseContext.parseVectorFields(*(yyvsp[0].lex).string, (yyvsp[-2].interm.intermTypedNode)->getRowsCount(), fields, (yyvsp[0].lex).line)) {
                 fields.num = 1;
                 fields.offsets[0] = 0;
                 parseContext.recover();
             }
 
-			(yyval.interm.intermTypedNode) = ir_add_vector_swizzle(fields, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, (yyvsp[(3) - (3)].lex).line);
-        } else if ((yyvsp[(1) - (3)].interm.intermTypedNode)->isMatrix()) {
+			(yyval.interm.intermTypedNode) = ir_add_vector_swizzle(fields, (yyvsp[-2].interm.intermTypedNode), (yyvsp[-1].lex).line, (yyvsp[0].lex).line);
+        } else if ((yyvsp[-2].interm.intermTypedNode)->isMatrix()) {
             TVectorFields fields;
-            if (!parseContext.parseMatrixFields(*(yyvsp[(3) - (3)].lex).string, (yyvsp[(1) - (3)].interm.intermTypedNode)->getColsCount(), (yyvsp[(1) - (3)].interm.intermTypedNode)->getRowsCount(), fields, (yyvsp[(3) - (3)].lex).line)) {
+            if (!parseContext.parseMatrixFields(*(yyvsp[0].lex).string, (yyvsp[-2].interm.intermTypedNode)->getColsCount(), (yyvsp[-2].interm.intermTypedNode)->getRowsCount(), fields, (yyvsp[0].lex).line)) {
                 fields.num = 1;
                 fields.offsets[0] = 0;
                 parseContext.recover();
             }
 
-            TString vectorString = *(yyvsp[(3) - (3)].lex).string;
-            TIntermTyped* index = ir_add_swizzle(fields, (yyvsp[(3) - (3)].lex).line);                
-            (yyval.interm.intermTypedNode) = ir_add_index(EOpMatrixSwizzle, (yyvsp[(1) - (3)].interm.intermTypedNode), index, (yyvsp[(2) - (3)].lex).line);
-            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[(1) - (3)].interm.intermTypedNode)->getBasicType(), (yyvsp[(1) - (3)].interm.intermTypedNode)->getPrecision(), EvqTemporary, 1, fields.num));
+            TString vectorString = *(yyvsp[0].lex).string;
+            TIntermTyped* index = ir_add_swizzle(fields, (yyvsp[0].lex).line);                
+            (yyval.interm.intermTypedNode) = ir_add_index(EOpMatrixSwizzle, (yyvsp[-2].interm.intermTypedNode), index, (yyvsp[-1].lex).line);
+            (yyval.interm.intermTypedNode)->setType(TType((yyvsp[-2].interm.intermTypedNode)->getBasicType(), (yyvsp[-2].interm.intermTypedNode)->getPrecision(), EvqTemporary, 1, fields.num));
                     
-        } else if ((yyvsp[(1) - (3)].interm.intermTypedNode)->getBasicType() == EbtStruct) {
+        } else if ((yyvsp[-2].interm.intermTypedNode)->getBasicType() == EbtStruct) {
             bool fieldFound = false;
-            TTypeList* fields = (yyvsp[(1) - (3)].interm.intermTypedNode)->getType().getStruct();
+            TTypeList* fields = (yyvsp[-2].interm.intermTypedNode)->getType().getStruct();
             if (fields == 0) {
-                parseContext.error((yyvsp[(2) - (3)].lex).line, "structure has no fields", "Internal Error", "");
+                parseContext.error((yyvsp[-1].lex).line, "structure has no fields", "Internal Error", "");
                 parseContext.recover();
-                (yyval.interm.intermTypedNode) = (yyvsp[(1) - (3)].interm.intermTypedNode);
+                (yyval.interm.intermTypedNode) = (yyvsp[-2].interm.intermTypedNode);
             } else {
                 unsigned int i;
                 for (i = 0; i < fields->size(); ++i) {
-                    if ((*fields)[i].type->getFieldName() == *(yyvsp[(3) - (3)].lex).string) {
+                    if ((*fields)[i].type->getFieldName() == *(yyvsp[0].lex).string) {
                         fieldFound = true;
                         break;
                     }
                 }
                 if (fieldFound) {
-					TIntermConstant* index = ir_add_constant(TType(EbtInt, EbpUndefined, EvqConst), (yyvsp[(3) - (3)].lex).line);
+					TIntermConstant* index = ir_add_constant(TType(EbtInt, EbpUndefined, EvqConst), (yyvsp[0].lex).line);
 					index->setValue(i);
-					(yyval.interm.intermTypedNode) = ir_add_index(EOpIndexDirectStruct, (yyvsp[(1) - (3)].interm.intermTypedNode), index, (yyvsp[(2) - (3)].lex).line);                
+					(yyval.interm.intermTypedNode) = ir_add_index(EOpIndexDirectStruct, (yyvsp[-2].interm.intermTypedNode), index, (yyvsp[-1].lex).line);                
 					(yyval.interm.intermTypedNode)->setType(*(*fields)[i].type);
                 } else {
-                    parseContext.error((yyvsp[(2) - (3)].lex).line, " no such field in structure", (yyvsp[(3) - (3)].lex).string->c_str(), "");
+                    parseContext.error((yyvsp[-1].lex).line, " no such field in structure", (yyvsp[0].lex).string->c_str(), "");
                     parseContext.recover();
-                    (yyval.interm.intermTypedNode) = (yyvsp[(1) - (3)].interm.intermTypedNode);
+                    (yyval.interm.intermTypedNode) = (yyvsp[-2].interm.intermTypedNode);
                 }
             }
-        } else if ((yyvsp[(1) - (3)].interm.intermTypedNode)->isScalar()) {
+        } else if ((yyvsp[-2].interm.intermTypedNode)->isScalar()) {
 
             // HLSL allows ".xxxx" field selection on single component floats.  Handle that here.
             TVectorFields fields;
 
             // Check to make sure only the "x" component is accessed.
-            if (! parseContext.parseVectorFields(*(yyvsp[(3) - (3)].lex).string, 1, fields, (yyvsp[(3) - (3)].lex).line))
+            if (! parseContext.parseVectorFields(*(yyvsp[0].lex).string, 1, fields, (yyvsp[0].lex).line))
 			{
                 fields.num = 1;
                 fields.offsets[0] = 0;
                 parseContext.recover();
-				(yyval.interm.intermTypedNode) = (yyvsp[(1) - (3)].interm.intermTypedNode);
+				(yyval.interm.intermTypedNode) = (yyvsp[-2].interm.intermTypedNode);
             }
 			else
 			{
 				// Create the appropriate constructor based on the number of ".x"'s there are in the selection field
-				TString vectorString = *(yyvsp[(3) - (3)].lex).string;
-				TQualifier qualifier = (yyvsp[(1) - (3)].interm.intermTypedNode)->getType().getQualifier() == EvqConst ? EvqConst : EvqTemporary;
-				TType type((yyvsp[(1) - (3)].interm.intermTypedNode)->getBasicType(), (yyvsp[(1) - (3)].interm.intermTypedNode)->getPrecision(), qualifier, 1, (int) vectorString.size());
+				TString vectorString = *(yyvsp[0].lex).string;
+				TQualifier qualifier = (yyvsp[-2].interm.intermTypedNode)->getType().getQualifier() == EvqConst ? EvqConst : EvqTemporary;
+				TType type((yyvsp[-2].interm.intermTypedNode)->getBasicType(), (yyvsp[-2].interm.intermTypedNode)->getPrecision(), qualifier, 1, (int) vectorString.size());
 				(yyval.interm.intermTypedNode) = parseContext.constructBuiltIn(&type, parseContext.getConstructorOp(type),
-												   (yyval.interm.intermTypedNode), (yyvsp[(1) - (3)].interm.intermTypedNode)->getLine(), false);
+												   (yyval.interm.intermTypedNode), (yyvsp[-2].interm.intermTypedNode)->getLine(), false);
 			}
         } else {
-            parseContext.error((yyvsp[(2) - (3)].lex).line, " field selection requires structure, vector, or matrix on left hand side", (yyvsp[(3) - (3)].lex).string->c_str(), "");
+            parseContext.error((yyvsp[-1].lex).line, " field selection requires structure, vector, or matrix on left hand side", (yyvsp[0].lex).string->c_str(), "");
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = (yyvsp[(1) - (3)].interm.intermTypedNode);
+            (yyval.interm.intermTypedNode) = (yyvsp[-2].interm.intermTypedNode);
         }
         // don't delete $3.string, it's from the pool
-    ;}
+    }
+#line 2556 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-
-/* Line 1455 of yacc.c  */
-#line 393 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 394 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.lValueErrorCheck((yyvsp[(2) - (2)].lex).line, "++", (yyvsp[(1) - (2)].interm.intermTypedNode)))
+        if (parseContext.lValueErrorCheck((yyvsp[0].lex).line, "++", (yyvsp[-1].interm.intermTypedNode)))
             parseContext.recover();
-        (yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPostIncrement, (yyvsp[(1) - (2)].interm.intermTypedNode), (yyvsp[(2) - (2)].lex).line, parseContext);
+        (yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPostIncrement, (yyvsp[-1].interm.intermTypedNode), (yyvsp[0].lex).line, parseContext);
         if ((yyval.interm.intermTypedNode) == 0) {
-            parseContext.unaryOpError((yyvsp[(2) - (2)].lex).line, "++", (yyvsp[(1) - (2)].interm.intermTypedNode)->getCompleteString());
+            parseContext.unaryOpError((yyvsp[0].lex).line, "++", (yyvsp[-1].interm.intermTypedNode)->getCompleteString());
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = (yyvsp[(1) - (2)].interm.intermTypedNode);
+            (yyval.interm.intermTypedNode) = (yyvsp[-1].interm.intermTypedNode);
         }
-    ;}
+    }
+#line 2571 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-
-/* Line 1455 of yacc.c  */
-#line 403 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 404 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.lValueErrorCheck((yyvsp[(2) - (2)].lex).line, "--", (yyvsp[(1) - (2)].interm.intermTypedNode)))
+        if (parseContext.lValueErrorCheck((yyvsp[0].lex).line, "--", (yyvsp[-1].interm.intermTypedNode)))
             parseContext.recover();
-        (yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPostDecrement, (yyvsp[(1) - (2)].interm.intermTypedNode), (yyvsp[(2) - (2)].lex).line, parseContext);
+        (yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPostDecrement, (yyvsp[-1].interm.intermTypedNode), (yyvsp[0].lex).line, parseContext);
         if ((yyval.interm.intermTypedNode) == 0) {
-            parseContext.unaryOpError((yyvsp[(2) - (2)].lex).line, "--", (yyvsp[(1) - (2)].interm.intermTypedNode)->getCompleteString());
+            parseContext.unaryOpError((yyvsp[0].lex).line, "--", (yyvsp[-1].interm.intermTypedNode)->getCompleteString());
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = (yyvsp[(1) - (2)].interm.intermTypedNode);
+            (yyval.interm.intermTypedNode) = (yyvsp[-1].interm.intermTypedNode);
         }
-    ;}
+    }
+#line 2586 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-
-/* Line 1455 of yacc.c  */
-#line 416 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 417 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.scalarErrorCheck((yyvsp[(1) - (1)].interm.intermTypedNode), "[]"))
+        if (parseContext.scalarErrorCheck((yyvsp[0].interm.intermTypedNode), "[]"))
             parseContext.recover();
         TType type(EbtInt, EbpUndefined);
-        (yyval.interm.intermTypedNode) = parseContext.constructBuiltIn(&type, EOpConstructInt, (yyvsp[(1) - (1)].interm.intermTypedNode), (yyvsp[(1) - (1)].interm.intermTypedNode)->getLine(), true);
+        (yyval.interm.intermTypedNode) = parseContext.constructBuiltIn(&type, EOpConstructInt, (yyvsp[0].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode)->getLine(), true);
         if ((yyval.interm.intermTypedNode) == 0) {
-            parseContext.error((yyvsp[(1) - (1)].interm.intermTypedNode)->getLine(), "cannot convert to index", "[]", "");
+            parseContext.error((yyvsp[0].interm.intermTypedNode)->getLine(), "cannot convert to index", "[]", "");
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
+            (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
         }
-    ;}
+    }
+#line 2602 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-
-/* Line 1455 of yacc.c  */
-#line 430 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 431 "hlslang.y" /* yacc.c:1646  */
     {
-        TFunction* fnCall = (yyvsp[(1) - (1)].interm).function;
+        TFunction* fnCall = (yyvsp[0].interm).function;
         TOperator op = fnCall->getBuiltInOp();
 
         if (op == EOpArrayLength) {
-            if ((yyvsp[(1) - (1)].interm).intermNode->getAsTyped() == 0 || (yyvsp[(1) - (1)].interm).intermNode->getAsTyped()->getType().getArraySize() == 0) {
-                parseContext.error((yyvsp[(1) - (1)].interm).line, "", fnCall->getName().c_str(), "array must be declared with a size before using this method");
+            if ((yyvsp[0].interm).intermNode->getAsTyped() == 0 || (yyvsp[0].interm).intermNode->getAsTyped()->getType().getArraySize() == 0) {
+                parseContext.error((yyvsp[0].interm).line, "", fnCall->getName().c_str(), "array must be declared with a size before using this method");
                 parseContext.recover();
             }
 
-			TIntermConstant* constant = ir_add_constant(TType(EbtInt, EbpUndefined, EvqConst), (yyvsp[(1) - (1)].interm).line);
-			constant->setValue((yyvsp[(1) - (1)].interm).intermNode->getAsTyped()->getType().getArraySize());
+			TIntermConstant* constant = ir_add_constant(TType(EbtInt, EbpUndefined, EvqConst), (yyvsp[0].interm).line);
+			constant->setValue((yyvsp[0].interm).intermNode->getAsTyped()->getType().getArraySize());
             (yyval.interm.intermTypedNode) = constant;
         } else if (op != EOpNull) {
             //
@@ -2880,18 +2623,18 @@ yyreduce:
             // Their parameters will be verified algorithmically.
             //
             TType type(EbtVoid, EbpUndefined);  // use this to get the type back
-            if (parseContext.constructorErrorCheck((yyvsp[(1) - (1)].interm).line, (yyvsp[(1) - (1)].interm).intermNode, *fnCall, op, &type)) {
+            if (parseContext.constructorErrorCheck((yyvsp[0].interm).line, (yyvsp[0].interm).intermNode, *fnCall, op, &type)) {
                 (yyval.interm.intermTypedNode) = 0;
             } else {
                 //
                 // It's a constructor, of type 'type'.
                 //
-                (yyval.interm.intermTypedNode) = parseContext.addConstructor((yyvsp[(1) - (1)].interm).intermNode, &type, op, fnCall, (yyvsp[(1) - (1)].interm).line);
+                (yyval.interm.intermTypedNode) = parseContext.addConstructor((yyvsp[0].interm).intermNode, &type, op, fnCall, (yyvsp[0].interm).line);
             }
 
             if ((yyval.interm.intermTypedNode) == 0) {
                 parseContext.recover();
-                (yyval.interm.intermTypedNode) = ir_set_aggregate_op(0, op, (yyvsp[(1) - (1)].interm).line);
+                (yyval.interm.intermTypedNode) = ir_set_aggregate_op(0, op, (yyvsp[0].interm).line);
 				(yyval.interm.intermTypedNode)->setType(type);
             }
         } else {
@@ -2900,16 +2643,16 @@ yyreduce:
             //
             const TFunction* fnCandidate;
             bool builtIn;
-            fnCandidate = parseContext.findFunction((yyvsp[(1) - (1)].interm).line, fnCall, &builtIn);
+            fnCandidate = parseContext.findFunction((yyvsp[0].interm).line, fnCall, &builtIn);
 
             if ( fnCandidate && fnCandidate->getMangledName() != fnCall->getMangledName()) {
                 //add constructors to arguments to ensure that they have proper types
-                TIntermNode *temp = parseContext.promoteFunctionArguments( (yyvsp[(1) - (1)].interm).intermNode,
+                TIntermNode *temp = parseContext.promoteFunctionArguments( (yyvsp[0].interm).intermNode,
                                       fnCandidate);
                 if (temp)
-                    (yyvsp[(1) - (1)].interm).intermNode = temp;
+                    (yyvsp[0].interm).intermNode = temp;
                 else {
-                    parseContext.error( (yyvsp[(1) - (1)].interm).intermNode->getLine(), " unable to suitably promote arguments to function",
+                    parseContext.error( (yyvsp[0].interm).intermNode->getLine(), " unable to suitably promote arguments to function",
                                         fnCandidate->getName().c_str(), "");
                     fnCandidate = 0;
                 }
@@ -2929,21 +2672,21 @@ yyreduce:
                         //
                         // Treat it like a built-in unary operator.
                         //
-                        (yyval.interm.intermTypedNode) = ir_add_unary_math(op, (yyvsp[(1) - (1)].interm).intermNode, gNullSourceLoc, parseContext);
+                        (yyval.interm.intermTypedNode) = ir_add_unary_math(op, (yyvsp[0].interm).intermNode, gNullSourceLoc, parseContext);
                         if ((yyval.interm.intermTypedNode) == 0)  {
-                            parseContext.error((yyvsp[(1) - (1)].interm).intermNode->getLine(), " wrong operand type", "Internal Error",
+                            parseContext.error((yyvsp[0].interm).intermNode->getLine(), " wrong operand type", "Internal Error",
                                 "built in unary operator function.  Type: %s",
-                                static_cast<TIntermTyped*>((yyvsp[(1) - (1)].interm).intermNode)->getCompleteString().c_str());
+                                static_cast<TIntermTyped*>((yyvsp[0].interm).intermNode)->getCompleteString().c_str());
                             YYERROR;
                         }
                     } else {
-                        (yyval.interm.intermTypedNode) = ir_set_aggregate_op((yyvsp[(1) - (1)].interm).intermAggregate, op, (yyvsp[(1) - (1)].interm).line);
+                        (yyval.interm.intermTypedNode) = ir_set_aggregate_op((yyvsp[0].interm).intermAggregate, op, (yyvsp[0].interm).line);
 						(yyval.interm.intermTypedNode)->setType(fnCandidate->getReturnType());
                     }
                 } else {
                     // This is a real function call
                     
-                    (yyval.interm.intermTypedNode) = ir_set_aggregate_op((yyvsp[(1) - (1)].interm).intermAggregate, EOpFunctionCall, (yyvsp[(1) - (1)].interm).line);
+                    (yyval.interm.intermTypedNode) = ir_set_aggregate_op((yyvsp[0].interm).intermAggregate, EOpFunctionCall, (yyvsp[0].interm).line);
                     (yyval.interm.intermTypedNode)->setType(fnCandidate->getReturnType());                   
                     
                     (yyval.interm.intermTypedNode)->getAsAggregate()->setName(fnCandidate->getMangledName());
@@ -2954,7 +2697,7 @@ yyreduce:
                         qual = (*fnCandidate)[i].type->getQualifier();
                         if (qual == EvqOut || qual == EvqInOut) {
                             if (parseContext.lValueErrorCheck((yyval.interm.intermTypedNode)->getLine(), "assign", (yyval.interm.intermTypedNode)->getAsAggregate()->getNodes()[i]->getAsTyped())) {
-                                parseContext.error((yyvsp[(1) - (1)].interm).intermNode->getLine(), "Constant value cannot be passed for 'out' or 'inout' parameters.", "Error", "");
+                                parseContext.error((yyvsp[0].interm).intermNode->getLine(), "Constant value cannot be passed for 'out' or 'inout' parameters.", "Error", "");
                                 parseContext.recover();
                             }
                         }
@@ -2965,708 +2708,636 @@ yyreduce:
                 // error message was put out by PaFindFunction()
                 // Put on a dummy node for error recovery
                 
-				TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst), (yyvsp[(1) - (1)].interm).line);
+				TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst), (yyvsp[0].interm).line);
 				constant->setValue(0.f);
 				(yyval.interm.intermTypedNode) = constant;
                 parseContext.recover();
             }
         }
         delete fnCall;
-    ;}
+    }
+#line 2720 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-
-/* Line 1455 of yacc.c  */
-#line 546 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 547 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm) = (yyvsp[(1) - (1)].interm);
-    ;}
+        (yyval.interm) = (yyvsp[0].interm);
+    }
+#line 2728 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-
-/* Line 1455 of yacc.c  */
-#line 549 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 550 "hlslang.y" /* yacc.c:1646  */
     {
-        if ((yyvsp[(1) - (3)].interm.intermTypedNode)->isArray() && (yyvsp[(3) - (3)].interm).function->getName() == "length") {
+        if ((yyvsp[-2].interm.intermTypedNode)->isArray() && (yyvsp[0].interm).function->getName() == "length") {
             //
             // implement array.length()
             //
-            (yyval.interm) = (yyvsp[(3) - (3)].interm);
-            (yyval.interm).intermNode = (yyvsp[(1) - (3)].interm.intermTypedNode);
+            (yyval.interm) = (yyvsp[0].interm);
+            (yyval.interm).intermNode = (yyvsp[-2].interm.intermTypedNode);
             (yyval.interm).function->relateToOperator(EOpArrayLength);
 
         } else {
-            parseContext.error((yyvsp[(3) - (3)].interm).line, "methods are not supported", "", "");
+            parseContext.error((yyvsp[0].interm).line, "methods are not supported", "", "");
             parseContext.recover();
-            (yyval.interm) = (yyvsp[(3) - (3)].interm);
+            (yyval.interm) = (yyvsp[0].interm);
         }
-    ;}
+    }
+#line 2748 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-
-/* Line 1455 of yacc.c  */
-#line 567 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 568 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm) = (yyvsp[(1) - (2)].interm);
-        (yyval.interm).line = (yyvsp[(2) - (2)].lex).line;
-    ;}
+        (yyval.interm) = (yyvsp[-1].interm);
+        (yyval.interm).line = (yyvsp[0].lex).line;
+    }
+#line 2757 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-
-/* Line 1455 of yacc.c  */
-#line 571 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 572 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm) = (yyvsp[(1) - (2)].interm);
-        (yyval.interm).line = (yyvsp[(2) - (2)].lex).line;
-    ;}
+        (yyval.interm) = (yyvsp[-1].interm);
+        (yyval.interm).line = (yyvsp[0].lex).line;
+    }
+#line 2766 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-
-/* Line 1455 of yacc.c  */
-#line 578 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 579 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm).function = (yyvsp[(1) - (2)].interm.function);
+        (yyval.interm).function = (yyvsp[-1].interm.function);
         (yyval.interm).intermNode = 0;
-    ;}
+    }
+#line 2775 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-
-/* Line 1455 of yacc.c  */
-#line 582 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 583 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm).function = (yyvsp[(1) - (1)].interm.function);
+        (yyval.interm).function = (yyvsp[0].interm.function);
         (yyval.interm).intermNode = 0;
-    ;}
+    }
+#line 2784 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
-
-/* Line 1455 of yacc.c  */
-#line 589 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 590 "hlslang.y" /* yacc.c:1646  */
     {
-		if (!(yyvsp[(2) - (2)].interm.intermTypedNode)) {
+		if (!(yyvsp[0].interm.intermTypedNode)) {
           YYERROR;
 		}
-		TParameter param = { 0, 0, new TType((yyvsp[(2) - (2)].interm.intermTypedNode)->getType()) };
-        (yyvsp[(1) - (2)].interm.function)->addParameter(param);
-        (yyval.interm).function = (yyvsp[(1) - (2)].interm.function);
-        (yyval.interm).intermNode = (yyvsp[(2) - (2)].interm.intermTypedNode);
-    ;}
+		TParameter param = { 0, 0, new TType((yyvsp[0].interm.intermTypedNode)->getType()) };
+        (yyvsp[-1].interm.function)->addParameter(param);
+        (yyval.interm).function = (yyvsp[-1].interm.function);
+        (yyval.interm).intermNode = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 2798 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-
-/* Line 1455 of yacc.c  */
-#line 598 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 599 "hlslang.y" /* yacc.c:1646  */
     {
-		if (!(yyvsp[(3) - (3)].interm.intermTypedNode)) {
+		if (!(yyvsp[0].interm.intermTypedNode)) {
           YYERROR;
 		}
-        TParameter param = { 0, 0, new TType((yyvsp[(3) - (3)].interm.intermTypedNode)->getType()) };
-        (yyvsp[(1) - (3)].interm).function->addParameter(param);
-        (yyval.interm).function = (yyvsp[(1) - (3)].interm).function;
-        (yyval.interm).intermNode = ir_grow_aggregate((yyvsp[(1) - (3)].interm).intermNode, (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line);
-    ;}
+        TParameter param = { 0, 0, new TType((yyvsp[0].interm.intermTypedNode)->getType()) };
+        (yyvsp[-2].interm).function->addParameter(param);
+        (yyval.interm).function = (yyvsp[-2].interm).function;
+        (yyval.interm).intermNode = ir_grow_aggregate((yyvsp[-2].interm).intermNode, (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line);
+    }
+#line 2812 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 24:
-
-/* Line 1455 of yacc.c  */
-#line 610 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 611 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.function) = (yyvsp[(1) - (2)].interm.function);
-    ;}
+        (yyval.interm.function) = (yyvsp[-1].interm.function);
+    }
+#line 2820 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
-
-/* Line 1455 of yacc.c  */
-#line 618 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 619 "hlslang.y" /* yacc.c:1646  */
     {
         //
         // Constructor
         //
-        if ((yyvsp[(1) - (1)].interm.type).array) {
+        if ((yyvsp[0].interm.type).array) {
             //TODO : figure out how to deal with array constructors
         }
 
-        if ((yyvsp[(1) - (1)].interm.type).userDef) {
+        if ((yyvsp[0].interm.type).userDef) {
             TString tempString = "";
-            TType type((yyvsp[(1) - (1)].interm.type));
+            TType type((yyvsp[0].interm.type));
             TFunction *function = new TFunction(&tempString, type, EOpConstructStruct);
             (yyval.interm.function) = function;
         } else {
-            TOperator op = ir_get_constructor_op((yyvsp[(1) - (1)].interm.type), parseContext, false);
+            TOperator op = ir_get_constructor_op((yyvsp[0].interm.type), parseContext, false);
             if (op == EOpNull) {
-                parseContext.error((yyvsp[(1) - (1)].interm.type).line, "cannot construct this type", TType::getBasicString((yyvsp[(1) - (1)].interm.type).type), "");
+                parseContext.error((yyvsp[0].interm.type).line, "cannot construct this type", TType::getBasicString((yyvsp[0].interm.type).type), "");
                 parseContext.recover();
-                (yyvsp[(1) - (1)].interm.type).type = EbtFloat;
+                (yyvsp[0].interm.type).type = EbtFloat;
                 op = EOpConstructFloat;
             }
             TString tempString = "";
-            TType type((yyvsp[(1) - (1)].interm.type));
+            TType type((yyvsp[0].interm.type));
             TFunction *function = new TFunction(&tempString, type, op);
             (yyval.interm.function) = function;
         }
-    ;}
+    }
+#line 2852 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 26:
-
-/* Line 1455 of yacc.c  */
-#line 645 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 646 "hlslang.y" /* yacc.c:1646  */
     {
-		if (parseContext.reservedErrorCheck((yyvsp[(1) - (1)].lex).line, *(yyvsp[(1) - (1)].lex).string)) 
+		if (parseContext.reservedErrorCheck((yyvsp[0].lex).line, *(yyvsp[0].lex).string)) 
 			parseContext.recover();
 		TType type(EbtVoid, EbpUndefined);
 		const TString *mangled;
-		if ( *(yyvsp[(1) - (1)].lex).string == "main")
+		if ( *(yyvsp[0].lex).string == "main")
 			mangled = NewPoolTString("xlat_main");
 		else
-			mangled = (yyvsp[(1) - (1)].lex).string;
+			mangled = (yyvsp[0].lex).string;
 		TFunction *function = new TFunction( mangled, type);
 		(yyval.interm.function) = function;
-	;}
+	}
+#line 2869 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-
-/* Line 1455 of yacc.c  */
-#line 657 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 658 "hlslang.y" /* yacc.c:1646  */
     {
-		if (parseContext.reservedErrorCheck((yyvsp[(1) - (1)].lex).line, *(yyvsp[(1) - (1)].lex).string)) 
+		if (parseContext.reservedErrorCheck((yyvsp[0].lex).line, *(yyvsp[0].lex).string)) 
 			parseContext.recover();
 		TType type(EbtVoid, EbpUndefined);
-		TFunction *function = new TFunction((yyvsp[(1) - (1)].lex).string, type);
+		TFunction *function = new TFunction((yyvsp[0].lex).string, type);
 		(yyval.interm.function) = function;
-    ;}
+    }
+#line 2881 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
-
-/* Line 1455 of yacc.c  */
-#line 667 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 668 "hlslang.y" /* yacc.c:1646  */
     {
-		(yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-    ;}
+		(yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 2889 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
-
-/* Line 1455 of yacc.c  */
-#line 670 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 671 "hlslang.y" /* yacc.c:1646  */
     {
-		if (parseContext.lValueErrorCheck((yyvsp[(1) - (2)].lex).line, "++", (yyvsp[(2) - (2)].interm.intermTypedNode)))
+		if (parseContext.lValueErrorCheck((yyvsp[-1].lex).line, "++", (yyvsp[0].interm.intermTypedNode)))
 			parseContext.recover();
-		(yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPreIncrement, (yyvsp[(2) - (2)].interm.intermTypedNode), (yyvsp[(1) - (2)].lex).line, parseContext);
+		(yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPreIncrement, (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, parseContext);
 		if ((yyval.interm.intermTypedNode) == 0) {
-			parseContext.unaryOpError((yyvsp[(1) - (2)].lex).line, "++", (yyvsp[(2) - (2)].interm.intermTypedNode)->getCompleteString());
+			parseContext.unaryOpError((yyvsp[-1].lex).line, "++", (yyvsp[0].interm.intermTypedNode)->getCompleteString());
 			parseContext.recover();
-			(yyval.interm.intermTypedNode) = (yyvsp[(2) - (2)].interm.intermTypedNode);
+			(yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
 		}
-    ;}
+    }
+#line 2904 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
-
-/* Line 1455 of yacc.c  */
-#line 680 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 681 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.lValueErrorCheck((yyvsp[(1) - (2)].lex).line, "--", (yyvsp[(2) - (2)].interm.intermTypedNode)))
+        if (parseContext.lValueErrorCheck((yyvsp[-1].lex).line, "--", (yyvsp[0].interm.intermTypedNode)))
             parseContext.recover();
-		(yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPreDecrement, (yyvsp[(2) - (2)].interm.intermTypedNode), (yyvsp[(1) - (2)].lex).line, parseContext);
+		(yyval.interm.intermTypedNode) = ir_add_unary_math(EOpPreDecrement, (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, parseContext);
 		if ((yyval.interm.intermTypedNode) == 0) {
-			parseContext.unaryOpError((yyvsp[(1) - (2)].lex).line, "--", (yyvsp[(2) - (2)].interm.intermTypedNode)->getCompleteString());
+			parseContext.unaryOpError((yyvsp[-1].lex).line, "--", (yyvsp[0].interm.intermTypedNode)->getCompleteString());
 			parseContext.recover();
-			(yyval.interm.intermTypedNode) = (yyvsp[(2) - (2)].interm.intermTypedNode);
+			(yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
 		}
-    ;}
+    }
+#line 2919 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
-
-/* Line 1455 of yacc.c  */
-#line 690 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 691 "hlslang.y" /* yacc.c:1646  */
     {
-		if ((yyvsp[(1) - (2)].interm).op != EOpNull) {
-			(yyval.interm.intermTypedNode) = ir_add_unary_math((yyvsp[(1) - (2)].interm).op, (yyvsp[(2) - (2)].interm.intermTypedNode), (yyvsp[(1) - (2)].interm).line, parseContext);
+		if ((yyvsp[-1].interm).op != EOpNull) {
+			(yyval.interm.intermTypedNode) = ir_add_unary_math((yyvsp[-1].interm).op, (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].interm).line, parseContext);
 			if ((yyval.interm.intermTypedNode) == 0) {
 				const char* errorOp = "";
-				switch((yyvsp[(1) - (2)].interm).op) {
+				switch((yyvsp[-1].interm).op) {
 					case EOpNegative:   errorOp = "-"; break;
 					case EOpLogicalNot: errorOp = "!"; break;
 					case EOpBitwiseNot: errorOp = "~"; break;
 					default: break;
 				}
-				parseContext.unaryOpError((yyvsp[(1) - (2)].interm).line, errorOp, (yyvsp[(2) - (2)].interm.intermTypedNode)->getCompleteString());
+				parseContext.unaryOpError((yyvsp[-1].interm).line, errorOp, (yyvsp[0].interm.intermTypedNode)->getCompleteString());
 				parseContext.recover();
-				(yyval.interm.intermTypedNode) = (yyvsp[(2) - (2)].interm.intermTypedNode);
+				(yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
 			}
 		} else
-			(yyval.interm.intermTypedNode) = (yyvsp[(2) - (2)].interm.intermTypedNode);
-    ;}
+			(yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 2942 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 32:
-
-/* Line 1455 of yacc.c  */
-#line 708 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 709 "hlslang.y" /* yacc.c:1646  */
     {
         // cast operator, insert constructor
-        TOperator op = ir_get_constructor_op((yyvsp[(2) - (4)].interm.type), parseContext, true);
+        TOperator op = ir_get_constructor_op((yyvsp[-2].interm.type), parseContext, true);
         if (op == EOpNull) {
-            parseContext.error((yyvsp[(2) - (4)].interm.type).line, "cannot cast this type", TType::getBasicString((yyvsp[(2) - (4)].interm.type).type), "");
+            parseContext.error((yyvsp[-2].interm.type).line, "cannot cast this type", TType::getBasicString((yyvsp[-2].interm.type).type), "");
             parseContext.recover();
-            (yyvsp[(2) - (4)].interm.type).type = EbtFloat;
+            (yyvsp[-2].interm.type).type = EbtFloat;
             op = EOpConstructFloat;
         }
         TString tempString = "";
-        TType type((yyvsp[(2) - (4)].interm.type));
+        TType type((yyvsp[-2].interm.type));
         TFunction *function = new TFunction(&tempString, type, op);
-        TParameter param = { 0, 0, new TType((yyvsp[(4) - (4)].interm.intermTypedNode)->getType()) };
+        TParameter param = { 0, 0, new TType((yyvsp[0].interm.intermTypedNode)->getType()) };
         function->addParameter(param);
         TType type2(EbtVoid, EbpUndefined);  // use this to get the type back
-        if (parseContext.constructorErrorCheck((yyvsp[(2) - (4)].interm.type).line, (yyvsp[(4) - (4)].interm.intermTypedNode), *function, op, &type2)) {
+        if (parseContext.constructorErrorCheck((yyvsp[-2].interm.type).line, (yyvsp[0].interm.intermTypedNode), *function, op, &type2)) {
             (yyval.interm.intermTypedNode) = 0;
         } else {
             //
             // It's a constructor, of type 'type'.
             //
-            (yyval.interm.intermTypedNode) = parseContext.addConstructor((yyvsp[(4) - (4)].interm.intermTypedNode), &type2, op, function, (yyvsp[(2) - (4)].interm.type).line);
+            (yyval.interm.intermTypedNode) = parseContext.addConstructor((yyvsp[0].interm.intermTypedNode), &type2, op, function, (yyvsp[-2].interm.type).line);
         }
 
         if ((yyval.interm.intermTypedNode) == 0) {
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = ir_set_aggregate_op(0, op, (yyvsp[(2) - (4)].interm.type).line);
+            (yyval.interm.intermTypedNode) = ir_set_aggregate_op(0, op, (yyvsp[-2].interm.type).line);
         } else {
 			(yyval.interm.intermTypedNode)->setType(type2);
 		}
-	;}
+	}
+#line 2978 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
-
-/* Line 1455 of yacc.c  */
-#line 743 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpNull; ;}
+#line 744 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpNull; }
+#line 2984 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 34:
-
-/* Line 1455 of yacc.c  */
-#line 744 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpNegative; ;}
+#line 745 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpNegative; }
+#line 2990 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 35:
-
-/* Line 1455 of yacc.c  */
-#line 745 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpLogicalNot; ;}
+#line 746 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpLogicalNot; }
+#line 2996 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 36:
-
-/* Line 1455 of yacc.c  */
-#line 746 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { UNSUPPORTED_FEATURE("~", (yyvsp[(1) - (1)].lex).line);
-              (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpBitwiseNot; ;}
+#line 747 "hlslang.y" /* yacc.c:1646  */
+    { UNSUPPORTED_FEATURE("~", (yyvsp[0].lex).line);
+              (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpBitwiseNot; }
+#line 3003 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 37:
-
-/* Line 1455 of yacc.c  */
-#line 752 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 753 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3009 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 38:
-
-/* Line 1455 of yacc.c  */
-#line 753 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpMul, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "*", false); ;}
+#line 754 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpMul, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "*", false); }
+#line 3015 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 39:
-
-/* Line 1455 of yacc.c  */
-#line 754 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpDiv, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "/", false); ;}
+#line 755 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpDiv, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "/", false); }
+#line 3021 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 40:
-
-/* Line 1455 of yacc.c  */
-#line 755 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpMod, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "%", false); ;}
+#line 756 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpMod, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "%", false); }
+#line 3027 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 41:
-
-/* Line 1455 of yacc.c  */
-#line 759 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 760 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3033 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 42:
-
-/* Line 1455 of yacc.c  */
-#line 760 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpAdd, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "+", false); ;}
+#line 761 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpAdd, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "+", false); }
+#line 3039 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 43:
-
-/* Line 1455 of yacc.c  */
-#line 761 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpSub, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "-", false); ;}
+#line 762 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpSub, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "-", false); }
+#line 3045 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 44:
-
-/* Line 1455 of yacc.c  */
-#line 765 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 766 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3051 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 45:
-
-/* Line 1455 of yacc.c  */
-#line 766 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLeftShift, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "<<", false); ;}
+#line 767 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLeftShift, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "<<", false); }
+#line 3057 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 46:
-
-/* Line 1455 of yacc.c  */
-#line 767 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpRightShift, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, ">>", false); ;}
+#line 768 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpRightShift, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, ">>", false); }
+#line 3063 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 47:
-
-/* Line 1455 of yacc.c  */
-#line 771 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 772 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3069 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 48:
-
-/* Line 1455 of yacc.c  */
-#line 772 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLessThan, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "<", true); ;}
+#line 773 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLessThan, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "<", true); }
+#line 3075 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 49:
-
-/* Line 1455 of yacc.c  */
-#line 773 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpGreaterThan, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, ">", true); ;}
+#line 774 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpGreaterThan, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, ">", true); }
+#line 3081 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 50:
-
-/* Line 1455 of yacc.c  */
-#line 774 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLessThanEqual, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "<=", true); ;}
+#line 775 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLessThanEqual, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "<=", true); }
+#line 3087 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 51:
-
-/* Line 1455 of yacc.c  */
-#line 775 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpGreaterThanEqual, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, ">=", true); ;}
+#line 776 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpGreaterThanEqual, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, ">=", true); }
+#line 3093 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 52:
-
-/* Line 1455 of yacc.c  */
-#line 779 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 780 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3099 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 53:
-
-/* Line 1455 of yacc.c  */
-#line 780 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpEqual, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "==", true); ;}
+#line 781 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpEqual, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "==", true); }
+#line 3105 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 54:
-
-/* Line 1455 of yacc.c  */
-#line 781 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpNotEqual, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "!=", true); ;}
+#line 782 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpNotEqual, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "!=", true); }
+#line 3111 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 55:
-
-/* Line 1455 of yacc.c  */
-#line 785 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 786 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3117 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 56:
-
-/* Line 1455 of yacc.c  */
-#line 786 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpAnd, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "&", false); ;}
+#line 787 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpAnd, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "&", false); }
+#line 3123 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 57:
-
-/* Line 1455 of yacc.c  */
-#line 790 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 791 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3129 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 58:
-
-/* Line 1455 of yacc.c  */
-#line 791 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpExclusiveOr, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "^", false); ;}
+#line 792 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpExclusiveOr, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "^", false); }
+#line 3135 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 59:
-
-/* Line 1455 of yacc.c  */
-#line 795 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 796 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3141 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 60:
-
-/* Line 1455 of yacc.c  */
-#line 796 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpInclusiveOr, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "|", false); ;}
+#line 797 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpInclusiveOr, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "|", false); }
+#line 3147 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 61:
-
-/* Line 1455 of yacc.c  */
-#line 800 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 801 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3153 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 62:
-
-/* Line 1455 of yacc.c  */
-#line 801 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLogicalAnd, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "&&", true); ;}
+#line 802 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLogicalAnd, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "&&", true); }
+#line 3159 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 63:
-
-/* Line 1455 of yacc.c  */
-#line 805 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 806 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3165 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 64:
-
-/* Line 1455 of yacc.c  */
-#line 806 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLogicalXor, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "^^", true); ;}
+#line 807 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLogicalXor, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "^^", true); }
+#line 3171 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 65:
-
-/* Line 1455 of yacc.c  */
-#line 810 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 811 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3177 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 66:
-
-/* Line 1455 of yacc.c  */
-#line 811 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLogicalOr, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line, "||", true); ;}
+#line 812 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = parseContext.add_binary(EOpLogicalOr, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, "||", true); }
+#line 3183 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 67:
-
-/* Line 1455 of yacc.c  */
-#line 815 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 816 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3189 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 68:
-
-/* Line 1455 of yacc.c  */
-#line 816 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 817 "hlslang.y" /* yacc.c:1646  */
     {
-       if (parseContext.boolOrVectorErrorCheck((yyvsp[(2) - (5)].lex).line, (yyvsp[(1) - (5)].interm.intermTypedNode)))
+       if (parseContext.boolOrVectorErrorCheck((yyvsp[-3].lex).line, (yyvsp[-4].interm.intermTypedNode)))
             parseContext.recover();
        
-		(yyval.interm.intermTypedNode) = ir_add_selection((yyvsp[(1) - (5)].interm.intermTypedNode), (yyvsp[(3) - (5)].interm.intermTypedNode), (yyvsp[(5) - (5)].interm.intermTypedNode), (yyvsp[(2) - (5)].lex).line, parseContext.infoSink);
+		(yyval.interm.intermTypedNode) = ir_add_selection((yyvsp[-4].interm.intermTypedNode), (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-3].lex).line, parseContext.infoSink);
            
         if ((yyval.interm.intermTypedNode) == 0) {
-            parseContext.binaryOpError((yyvsp[(2) - (5)].lex).line, ":", (yyvsp[(3) - (5)].interm.intermTypedNode)->getCompleteString(), (yyvsp[(5) - (5)].interm.intermTypedNode)->getCompleteString());
+            parseContext.binaryOpError((yyvsp[-3].lex).line, ":", (yyvsp[-2].interm.intermTypedNode)->getCompleteString(), (yyvsp[0].interm.intermTypedNode)->getCompleteString());
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = (yyvsp[(5) - (5)].interm.intermTypedNode);
+            (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
         }
-    ;}
+    }
+#line 3206 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 69:
-
-/* Line 1455 of yacc.c  */
-#line 831 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 832 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 3212 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 70:
-
-/* Line 1455 of yacc.c  */
-#line 832 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 833 "hlslang.y" /* yacc.c:1646  */
     {        
-        if (parseContext.lValueErrorCheck((yyvsp[(2) - (3)].interm).line, "assign", (yyvsp[(1) - (3)].interm.intermTypedNode)))
+        if (parseContext.lValueErrorCheck((yyvsp[-1].interm).line, "assign", (yyvsp[-2].interm.intermTypedNode)))
             parseContext.recover();
-        (yyval.interm.intermTypedNode) = parseContext.addAssign((yyvsp[(2) - (3)].interm).op, (yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].interm).line);
+        (yyval.interm.intermTypedNode) = parseContext.addAssign((yyvsp[-1].interm).op, (yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].interm).line);
         if ((yyval.interm.intermTypedNode) == 0) {
-            parseContext.assignError((yyvsp[(2) - (3)].interm).line, "assign", (yyvsp[(1) - (3)].interm.intermTypedNode)->getCompleteString(), (yyvsp[(3) - (3)].interm.intermTypedNode)->getCompleteString());
+            parseContext.assignError((yyvsp[-1].interm).line, "assign", (yyvsp[-2].interm.intermTypedNode)->getCompleteString(), (yyvsp[0].interm.intermTypedNode)->getCompleteString());
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = (yyvsp[(1) - (3)].interm.intermTypedNode);
-        } else if (((yyvsp[(1) - (3)].interm.intermTypedNode)->isArray() || (yyvsp[(3) - (3)].interm.intermTypedNode)->isArray()))
+            (yyval.interm.intermTypedNode) = (yyvsp[-2].interm.intermTypedNode);
+        } else if (((yyvsp[-2].interm.intermTypedNode)->isArray() || (yyvsp[0].interm.intermTypedNode)->isArray()))
             parseContext.recover();
-    ;}
+    }
+#line 3228 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 71:
-
-/* Line 1455 of yacc.c  */
-#line 846 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpAssign; ;}
+#line 847 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpAssign; }
+#line 3234 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 72:
-
-/* Line 1455 of yacc.c  */
-#line 847 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpMulAssign; ;}
+#line 848 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpMulAssign; }
+#line 3240 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 73:
-
-/* Line 1455 of yacc.c  */
-#line 848 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpDivAssign; ;}
+#line 849 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpDivAssign; }
+#line 3246 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 74:
-
-/* Line 1455 of yacc.c  */
-#line 849 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { UNSUPPORTED_FEATURE("%=", (yyvsp[(1) - (1)].lex).line);  (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpModAssign; ;}
+#line 850 "hlslang.y" /* yacc.c:1646  */
+    { UNSUPPORTED_FEATURE("%=", (yyvsp[0].lex).line);  (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpModAssign; }
+#line 3252 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 75:
-
-/* Line 1455 of yacc.c  */
-#line 850 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpAddAssign; ;}
+#line 851 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpAddAssign; }
+#line 3258 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 76:
-
-/* Line 1455 of yacc.c  */
-#line 851 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpSubAssign; ;}
+#line 852 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpSubAssign; }
+#line 3264 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 77:
-
-/* Line 1455 of yacc.c  */
-#line 852 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { UNSUPPORTED_FEATURE("<<=", (yyvsp[(1) - (1)].lex).line); (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpLeftShiftAssign; ;}
+#line 853 "hlslang.y" /* yacc.c:1646  */
+    { UNSUPPORTED_FEATURE("<<=", (yyvsp[0].lex).line); (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpLeftShiftAssign; }
+#line 3270 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 78:
-
-/* Line 1455 of yacc.c  */
-#line 853 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { UNSUPPORTED_FEATURE("<<=", (yyvsp[(1) - (1)].lex).line); (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpRightShiftAssign; ;}
+#line 854 "hlslang.y" /* yacc.c:1646  */
+    { UNSUPPORTED_FEATURE("<<=", (yyvsp[0].lex).line); (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpRightShiftAssign; }
+#line 3276 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 79:
-
-/* Line 1455 of yacc.c  */
-#line 854 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { UNSUPPORTED_FEATURE("&=",  (yyvsp[(1) - (1)].lex).line); (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpAndAssign; ;}
+#line 855 "hlslang.y" /* yacc.c:1646  */
+    { UNSUPPORTED_FEATURE("&=",  (yyvsp[0].lex).line); (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpAndAssign; }
+#line 3282 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 80:
-
-/* Line 1455 of yacc.c  */
-#line 855 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { UNSUPPORTED_FEATURE("^=",  (yyvsp[(1) - (1)].lex).line); (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpExclusiveOrAssign; ;}
+#line 856 "hlslang.y" /* yacc.c:1646  */
+    { UNSUPPORTED_FEATURE("^=",  (yyvsp[0].lex).line); (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpExclusiveOrAssign; }
+#line 3288 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 81:
-
-/* Line 1455 of yacc.c  */
-#line 856 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { UNSUPPORTED_FEATURE("|=",  (yyvsp[(1) - (1)].lex).line); (yyval.interm).line = (yyvsp[(1) - (1)].lex).line; (yyval.interm).op = EOpInclusiveOrAssign; ;}
+#line 857 "hlslang.y" /* yacc.c:1646  */
+    { UNSUPPORTED_FEATURE("|=",  (yyvsp[0].lex).line); (yyval.interm).line = (yyvsp[0].lex).line; (yyval.interm).op = EOpInclusiveOrAssign; }
+#line 3294 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 82:
-
-/* Line 1455 of yacc.c  */
-#line 860 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 861 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 3302 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 83:
-
-/* Line 1455 of yacc.c  */
-#line 863 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 864 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermTypedNode) = ir_add_comma((yyvsp[(1) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(2) - (3)].lex).line);
+        (yyval.interm.intermTypedNode) = ir_add_comma((yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line);
         if ((yyval.interm.intermTypedNode) == 0) {
-            parseContext.binaryOpError((yyvsp[(2) - (3)].lex).line, ",", (yyvsp[(1) - (3)].interm.intermTypedNode)->getCompleteString(), (yyvsp[(3) - (3)].interm.intermTypedNode)->getCompleteString());
+            parseContext.binaryOpError((yyvsp[-1].lex).line, ",", (yyvsp[-2].interm.intermTypedNode)->getCompleteString(), (yyvsp[0].interm.intermTypedNode)->getCompleteString());
             parseContext.recover();
-            (yyval.interm.intermTypedNode) = (yyvsp[(3) - (3)].interm.intermTypedNode);
+            (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
         }
-    ;}
+    }
+#line 3315 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 84:
-
-/* Line 1455 of yacc.c  */
-#line 874 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 875 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.constErrorCheck((yyvsp[(1) - (1)].interm.intermTypedNode)))
+        if (parseContext.constErrorCheck((yyvsp[0].interm.intermTypedNode)))
             parseContext.recover();
-        (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 3325 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 85:
-
-/* Line 1455 of yacc.c  */
-#line 882 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermDeclaration) = 0; ;}
+#line 883 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermDeclaration) = 0; }
+#line 3331 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 86:
-
-/* Line 1455 of yacc.c  */
-#line 883 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermDeclaration) = (yyvsp[(1) - (2)].interm.intermDeclaration); ;}
+#line 884 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermDeclaration) = (yyvsp[-1].interm.intermDeclaration); }
+#line 3337 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 87:
-
-/* Line 1455 of yacc.c  */
-#line 887 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 888 "hlslang.y" /* yacc.c:1646  */
     {
         //
         // Multiple declarations of the same function are allowed.
@@ -3676,15 +3347,15 @@ yyreduce:
         //
         // Redeclarations are allowed.  But, return types and parameter qualifiers must match.
         //
-        TFunction* prevDec = static_cast<TFunction*>(parseContext.symbolTable.find((yyvsp[(1) - (2)].interm.function)->getMangledName()));
+        TFunction* prevDec = static_cast<TFunction*>(parseContext.symbolTable.find((yyvsp[-1].interm.function)->getMangledName()));
         if (prevDec) {
-            if (prevDec->getReturnType() != (yyvsp[(1) - (2)].interm.function)->getReturnType()) {
-                parseContext.error((yyvsp[(2) - (2)].lex).line, "overloaded functions must have the same return type", (yyvsp[(1) - (2)].interm.function)->getReturnType().getBasicString(), "");
+            if (prevDec->getReturnType() != (yyvsp[-1].interm.function)->getReturnType()) {
+                parseContext.error((yyvsp[0].lex).line, "overloaded functions must have the same return type", (yyvsp[-1].interm.function)->getReturnType().getBasicString(), "");
                 parseContext.recover();
             }
             for (int i = 0; i < prevDec->getParamCount(); ++i) {
-                if ((*prevDec)[i].type->getQualifier() != (*(yyvsp[(1) - (2)].interm.function))[i].type->getQualifier()) {
-                    parseContext.error((yyvsp[(2) - (2)].lex).line, "overloaded functions must have the same parameter qualifiers", (*(yyvsp[(1) - (2)].interm.function))[i].type->getQualifierString(), "");
+                if ((*prevDec)[i].type->getQualifier() != (*(yyvsp[-1].interm.function))[i].type->getQualifier()) {
+                    parseContext.error((yyvsp[0].lex).line, "overloaded functions must have the same parameter qualifiers", (*(yyvsp[-1].interm.function))[i].type->getQualifierString(), "");
                     parseContext.recover();
                 }
             }
@@ -3695,17 +3366,16 @@ yyreduce:
         // in which case, we want to use the variable names from this one, and not the one that's
         // being redeclared.  So, pass back up this declaration, not the one in the symbol table.
         //
-        (yyval.interm).function = (yyvsp[(1) - (2)].interm.function);
-        (yyval.interm).line = (yyvsp[(2) - (2)].lex).line;
+        (yyval.interm).function = (yyvsp[-1].interm.function);
+        (yyval.interm).line = (yyvsp[0].lex).line;
 
         parseContext.symbolTable.insert(*(yyval.interm).function);
-    ;}
+    }
+#line 3375 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 88:
-
-/* Line 1455 of yacc.c  */
-#line 920 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 921 "hlslang.y" /* yacc.c:1646  */
     {
         //
         // Multiple declarations of the same function are allowed.
@@ -3715,15 +3385,15 @@ yyreduce:
         //
         // Redeclarations are allowed.  But, return types and parameter qualifiers must match.
         //
-        TFunction* prevDec = static_cast<TFunction*>(parseContext.symbolTable.find((yyvsp[(1) - (4)].interm.function)->getMangledName()));
+        TFunction* prevDec = static_cast<TFunction*>(parseContext.symbolTable.find((yyvsp[-3].interm.function)->getMangledName()));
         if (prevDec) {
-            if (prevDec->getReturnType() != (yyvsp[(1) - (4)].interm.function)->getReturnType()) {
-                parseContext.error((yyvsp[(2) - (4)].lex).line, "overloaded functions must have the same return type", (yyvsp[(1) - (4)].interm.function)->getReturnType().getBasicString(), "");
+            if (prevDec->getReturnType() != (yyvsp[-3].interm.function)->getReturnType()) {
+                parseContext.error((yyvsp[-2].lex).line, "overloaded functions must have the same return type", (yyvsp[-3].interm.function)->getReturnType().getBasicString(), "");
                 parseContext.recover();
             }
             for (int i = 0; i < prevDec->getParamCount(); ++i) {
-                if ((*prevDec)[i].type->getQualifier() != (*(yyvsp[(1) - (4)].interm.function))[i].type->getQualifier()) {
-                    parseContext.error((yyvsp[(2) - (4)].lex).line, "overloaded functions must have the same parameter qualifiers", (*(yyvsp[(1) - (4)].interm.function))[i].type->getQualifierString(), "");
+                if ((*prevDec)[i].type->getQualifier() != (*(yyvsp[-3].interm.function))[i].type->getQualifier()) {
+                    parseContext.error((yyvsp[-2].lex).line, "overloaded functions must have the same parameter qualifiers", (*(yyvsp[-3].interm.function))[i].type->getQualifierString(), "");
                     parseContext.recover();
                 }
             }
@@ -3734,640 +3404,608 @@ yyreduce:
         // in which case, we want to use the variable names from this one, and not the one that's
         // being redeclared.  So, pass back up this declaration, not the one in the symbol table.
         //
-        (yyval.interm).function = (yyvsp[(1) - (4)].interm.function);
-        (yyval.interm).line = (yyvsp[(2) - (4)].lex).line;
-        (yyval.interm).function->setInfo(new TTypeInfo(*(yyvsp[(4) - (4)].lex).string, 0));
+        (yyval.interm).function = (yyvsp[-3].interm.function);
+        (yyval.interm).line = (yyvsp[-2].lex).line;
+        (yyval.interm).function->setInfo(new TTypeInfo(*(yyvsp[0].lex).string, 0));
 
         parseContext.symbolTable.insert(*(yyval.interm).function);
-    ;}
+    }
+#line 3414 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 89:
-
-/* Line 1455 of yacc.c  */
-#line 957 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 958 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.function) = (yyvsp[(1) - (1)].interm.function);
-    ;}
+        (yyval.interm.function) = (yyvsp[0].interm.function);
+    }
+#line 3422 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 90:
-
-/* Line 1455 of yacc.c  */
-#line 960 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 961 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.function) = (yyvsp[(1) - (1)].interm.function);
-    ;}
+        (yyval.interm.function) = (yyvsp[0].interm.function);
+    }
+#line 3430 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 91:
-
-/* Line 1455 of yacc.c  */
-#line 967 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 968 "hlslang.y" /* yacc.c:1646  */
     {
         // Add the parameter
-        (yyval.interm.function) = (yyvsp[(1) - (2)].interm.function);
-        if ((yyvsp[(2) - (2)].interm).param.type->getBasicType() != EbtVoid)
-            (yyvsp[(1) - (2)].interm.function)->addParameter((yyvsp[(2) - (2)].interm).param);
+        (yyval.interm.function) = (yyvsp[-1].interm.function);
+        if ((yyvsp[0].interm).param.type->getBasicType() != EbtVoid)
+            (yyvsp[-1].interm.function)->addParameter((yyvsp[0].interm).param);
         else
-            delete (yyvsp[(2) - (2)].interm).param.type;
-    ;}
+            delete (yyvsp[0].interm).param.type;
+    }
+#line 3443 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 92:
-
-/* Line 1455 of yacc.c  */
-#line 975 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 976 "hlslang.y" /* yacc.c:1646  */
     {
         //
         // Only first parameter of one-parameter functions can be void
         // The check for named parameters not being void is done in parameter_declarator
         //
-        if ((yyvsp[(3) - (3)].interm).param.type->getBasicType() == EbtVoid) {
+        if ((yyvsp[0].interm).param.type->getBasicType() == EbtVoid) {
             //
             // This parameter > first is void
             //
-            parseContext.error((yyvsp[(2) - (3)].lex).line, "cannot be an argument type except for '(void)'", "void", "");
+            parseContext.error((yyvsp[-1].lex).line, "cannot be an argument type except for '(void)'", "void", "");
             parseContext.recover();
-            delete (yyvsp[(3) - (3)].interm).param.type;
+            delete (yyvsp[0].interm).param.type;
         } else {
             // Add the parameter
-            (yyval.interm.function) = (yyvsp[(1) - (3)].interm.function);
-            (yyvsp[(1) - (3)].interm.function)->addParameter((yyvsp[(3) - (3)].interm).param);
+            (yyval.interm.function) = (yyvsp[-2].interm.function);
+            (yyvsp[-2].interm.function)->addParameter((yyvsp[0].interm).param);
         }
-    ;}
+    }
+#line 3466 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 93:
-
-/* Line 1455 of yacc.c  */
-#line 996 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 997 "hlslang.y" /* yacc.c:1646  */
     {
-        if ((yyvsp[(1) - (3)].interm.type).qualifier != EvqGlobal && (yyvsp[(1) - (3)].interm.type).qualifier != EvqTemporary) {
-			if ((yyvsp[(1) - (3)].interm.type).qualifier == EvqConst || (yyvsp[(1) - (3)].interm.type).qualifier == EvqStatic)
+        if ((yyvsp[-2].interm.type).qualifier != EvqGlobal && (yyvsp[-2].interm.type).qualifier != EvqTemporary) {
+			if ((yyvsp[-2].interm.type).qualifier == EvqConst || (yyvsp[-2].interm.type).qualifier == EvqStatic)
 			{
-				(yyvsp[(1) - (3)].interm.type).qualifier = EvqTemporary;
+				(yyvsp[-2].interm.type).qualifier = EvqTemporary;
 			}
 			else
 			{
-				parseContext.error((yyvsp[(2) - (3)].lex).line, "no qualifiers allowed for function return", getQualifierString((yyvsp[(1) - (3)].interm.type).qualifier), "");
+				parseContext.error((yyvsp[-1].lex).line, "no qualifiers allowed for function return", getQualifierString((yyvsp[-2].interm.type).qualifier), "");
 				parseContext.recover();
 			}
         }
         // make sure a sampler is not involved as well...
-        if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (3)].lex).line, (yyvsp[(1) - (3)].interm.type)))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-1].lex).line, (yyvsp[-2].interm.type)))
             parseContext.recover();
 
         // Add the function as a prototype after parsing it (we do not support recursion)
         TFunction *function;
-        TType type((yyvsp[(1) - (3)].interm.type));
+        TType type((yyvsp[-2].interm.type));
     const TString* mangled = 0;
-    if ( *(yyvsp[(2) - (3)].lex).string == "main")
+    if ( *(yyvsp[-1].lex).string == "main")
         mangled = NewPoolTString( "xlat_main");
     else
-        mangled = (yyvsp[(2) - (3)].lex).string;
+        mangled = (yyvsp[-1].lex).string;
 
         function = new TFunction(mangled, type);
         (yyval.interm.function) = function;
-    ;}
+    }
+#line 3499 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 94:
-
-/* Line 1455 of yacc.c  */
-#line 1028 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1029 "hlslang.y" /* yacc.c:1646  */
     {
-        if ((yyvsp[(1) - (2)].interm.type).type == EbtVoid) {
-            parseContext.error((yyvsp[(2) - (2)].lex).line, "illegal use of type 'void'", (yyvsp[(2) - (2)].lex).string->c_str(), "");
+        if ((yyvsp[-1].interm.type).type == EbtVoid) {
+            parseContext.error((yyvsp[0].lex).line, "illegal use of type 'void'", (yyvsp[0].lex).string->c_str(), "");
             parseContext.recover();
         }
-        if (parseContext.reservedErrorCheck((yyvsp[(2) - (2)].lex).line, *(yyvsp[(2) - (2)].lex).string))
+        if (parseContext.reservedErrorCheck((yyvsp[0].lex).line, *(yyvsp[0].lex).string))
             parseContext.recover();
-        TParameter param = {(yyvsp[(2) - (2)].lex).string, 0, new TType((yyvsp[(1) - (2)].interm.type))};
-        (yyval.interm).line = (yyvsp[(2) - (2)].lex).line;
+        TParameter param = {(yyvsp[0].lex).string, 0, new TType((yyvsp[-1].interm.type))};
+        (yyval.interm).line = (yyvsp[0].lex).line;
         (yyval.interm).param = param;
-    ;}
+    }
+#line 3515 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 95:
-
-/* Line 1455 of yacc.c  */
-#line 1039 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1040 "hlslang.y" /* yacc.c:1646  */
     {
-        if ((yyvsp[(1) - (4)].interm.type).type == EbtVoid) {
-            parseContext.error((yyvsp[(2) - (4)].lex).line, "illegal use of type 'void'", (yyvsp[(2) - (4)].lex).string->c_str(), "");
+        if ((yyvsp[-3].interm.type).type == EbtVoid) {
+            parseContext.error((yyvsp[-2].lex).line, "illegal use of type 'void'", (yyvsp[-2].lex).string->c_str(), "");
             parseContext.recover();
         }
-        if (parseContext.reservedErrorCheck((yyvsp[(2) - (4)].lex).line, *(yyvsp[(2) - (4)].lex).string))
+        if (parseContext.reservedErrorCheck((yyvsp[-2].lex).line, *(yyvsp[-2].lex).string))
             parseContext.recover();
-        TParameter param = {(yyvsp[(2) - (4)].lex).string, 0, new TType((yyvsp[(1) - (4)].interm.type))};
-        (yyval.interm).line = (yyvsp[(2) - (4)].lex).line;
+        TParameter param = {(yyvsp[-2].lex).string, 0, new TType((yyvsp[-3].interm.type))};
+        (yyval.interm).line = (yyvsp[-2].lex).line;
         (yyval.interm).param = param;
 
         //TODO: add initializer support
-    ;}
+    }
+#line 3533 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 96:
-
-/* Line 1455 of yacc.c  */
-#line 1052 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1053 "hlslang.y" /* yacc.c:1646  */
     {
         // Parameter with register
-        if ((yyvsp[(1) - (3)].interm.type).type == EbtVoid) {
-            parseContext.error((yyvsp[(2) - (3)].lex).line, "illegal use of type 'void'", (yyvsp[(2) - (3)].lex).string->c_str(), "");
+        if ((yyvsp[-2].interm.type).type == EbtVoid) {
+            parseContext.error((yyvsp[-1].lex).line, "illegal use of type 'void'", (yyvsp[-1].lex).string->c_str(), "");
             parseContext.recover();
         }
-        if (parseContext.reservedErrorCheck((yyvsp[(2) - (3)].lex).line, *(yyvsp[(2) - (3)].lex).string))
+        if (parseContext.reservedErrorCheck((yyvsp[-1].lex).line, *(yyvsp[-1].lex).string))
             parseContext.recover();
-        TParameter param = {(yyvsp[(2) - (3)].lex).string, new TTypeInfo("", *(yyvsp[(3) - (3)].lex).string, 0), new TType((yyvsp[(1) - (3)].interm.type))};
-        (yyval.interm).line = (yyvsp[(2) - (3)].lex).line;
+        TParameter param = {(yyvsp[-1].lex).string, new TTypeInfo("", *(yyvsp[0].lex).string, 0), new TType((yyvsp[-2].interm.type))};
+        (yyval.interm).line = (yyvsp[-1].lex).line;
         (yyval.interm).param = param; 
-    ;}
+    }
+#line 3550 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 97:
-
-/* Line 1455 of yacc.c  */
-#line 1064 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1065 "hlslang.y" /* yacc.c:1646  */
     {
         //Parameter with semantic
-        if ((yyvsp[(1) - (4)].interm.type).type == EbtVoid) {
-            parseContext.error((yyvsp[(2) - (4)].lex).line, "illegal use of type 'void'", (yyvsp[(2) - (4)].lex).string->c_str(), "");
+        if ((yyvsp[-3].interm.type).type == EbtVoid) {
+            parseContext.error((yyvsp[-2].lex).line, "illegal use of type 'void'", (yyvsp[-2].lex).string->c_str(), "");
             parseContext.recover();
         }
-        if (parseContext.reservedErrorCheck((yyvsp[(2) - (4)].lex).line, *(yyvsp[(2) - (4)].lex).string))
+        if (parseContext.reservedErrorCheck((yyvsp[-2].lex).line, *(yyvsp[-2].lex).string))
             parseContext.recover();
-        TParameter param = {(yyvsp[(2) - (4)].lex).string, new TTypeInfo(*(yyvsp[(4) - (4)].lex).string, 0), new TType((yyvsp[(1) - (4)].interm.type))};
-        (yyval.interm).line = (yyvsp[(2) - (4)].lex).line;
+        TParameter param = {(yyvsp[-2].lex).string, new TTypeInfo(*(yyvsp[0].lex).string, 0), new TType((yyvsp[-3].interm.type))};
+        (yyval.interm).line = (yyvsp[-2].lex).line;
         (yyval.interm).param = param;
-    ;}
+    }
+#line 3567 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 98:
-
-/* Line 1455 of yacc.c  */
-#line 1076 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1077 "hlslang.y" /* yacc.c:1646  */
     {
         // Check that we can make an array out of this type
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(3) - (5)].lex).line, (yyvsp[(1) - (5)].interm.type)))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-2].lex).line, (yyvsp[-4].interm.type)))
             parseContext.recover();
 
-        if (parseContext.reservedErrorCheck((yyvsp[(2) - (5)].lex).line, *(yyvsp[(2) - (5)].lex).string))
+        if (parseContext.reservedErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string))
             parseContext.recover();
 
         int size;
-        if (parseContext.arraySizeErrorCheck((yyvsp[(3) - (5)].lex).line, (yyvsp[(4) - (5)].interm.intermTypedNode), size))
+        if (parseContext.arraySizeErrorCheck((yyvsp[-2].lex).line, (yyvsp[-1].interm.intermTypedNode), size))
             parseContext.recover();
-        (yyvsp[(1) - (5)].interm.type).setArray(true, size);
+        (yyvsp[-4].interm.type).setArray(true, size);
 
-        TType* type = new TType((yyvsp[(1) - (5)].interm.type));
-        TParameter param = { (yyvsp[(2) - (5)].lex).string, 0, type };
-        (yyval.interm).line = (yyvsp[(2) - (5)].lex).line;
+        TType* type = new TType((yyvsp[-4].interm.type));
+        TParameter param = { (yyvsp[-3].lex).string, 0, type };
+        (yyval.interm).line = (yyvsp[-3].lex).line;
         (yyval.interm).param = param;
-    ;}
+    }
+#line 3590 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 99:
-
-/* Line 1455 of yacc.c  */
-#line 1094 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1095 "hlslang.y" /* yacc.c:1646  */
     {
         // Check that we can make an array out of this type
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(3) - (7)].lex).line, (yyvsp[(1) - (7)].interm.type)))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-4].lex).line, (yyvsp[-6].interm.type)))
             parseContext.recover();
 
-        if (parseContext.reservedErrorCheck((yyvsp[(2) - (7)].lex).line, *(yyvsp[(2) - (7)].lex).string))
+        if (parseContext.reservedErrorCheck((yyvsp[-5].lex).line, *(yyvsp[-5].lex).string))
             parseContext.recover();
 
         int size;
-        if (parseContext.arraySizeErrorCheck((yyvsp[(3) - (7)].lex).line, (yyvsp[(4) - (7)].interm.intermTypedNode), size))
+        if (parseContext.arraySizeErrorCheck((yyvsp[-4].lex).line, (yyvsp[-3].interm.intermTypedNode), size))
             parseContext.recover();
-        (yyvsp[(1) - (7)].interm.type).setArray(true, size);
+        (yyvsp[-6].interm.type).setArray(true, size);
 
-        TType* type = new TType((yyvsp[(1) - (7)].interm.type));
-        TParameter param = { (yyvsp[(2) - (7)].lex).string, new TTypeInfo(*(yyvsp[(7) - (7)].lex).string, 0), type };
-        (yyval.interm).line = (yyvsp[(2) - (7)].lex).line;
+        TType* type = new TType((yyvsp[-6].interm.type));
+        TParameter param = { (yyvsp[-5].lex).string, new TTypeInfo(*(yyvsp[0].lex).string, 0), type };
+        (yyval.interm).line = (yyvsp[-5].lex).line;
         (yyval.interm).param = param;
-    ;}
+    }
+#line 3613 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 100:
-
-/* Line 1455 of yacc.c  */
-#line 1123 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1124 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm) = (yyvsp[(3) - (3)].interm);
-        if (parseContext.paramErrorCheck((yyvsp[(3) - (3)].interm).line, (yyvsp[(1) - (3)].interm.type).qualifier, (yyvsp[(2) - (3)].interm.qualifier), (yyval.interm).param.type))
+        (yyval.interm) = (yyvsp[0].interm);
+        if (parseContext.paramErrorCheck((yyvsp[0].interm).line, (yyvsp[-2].interm.type).qualifier, (yyvsp[-1].interm.qualifier), (yyval.interm).param.type))
             parseContext.recover();
-    ;}
+    }
+#line 3623 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 101:
-
-/* Line 1455 of yacc.c  */
-#line 1128 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1129 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm) = (yyvsp[(2) - (2)].interm);
-        if (parseContext.parameterSamplerErrorCheck((yyvsp[(2) - (2)].interm).line, (yyvsp[(1) - (2)].interm.qualifier), *(yyvsp[(2) - (2)].interm).param.type))
+        (yyval.interm) = (yyvsp[0].interm);
+        if (parseContext.parameterSamplerErrorCheck((yyvsp[0].interm).line, (yyvsp[-1].interm.qualifier), *(yyvsp[0].interm).param.type))
             parseContext.recover();
-        if (parseContext.paramErrorCheck((yyvsp[(2) - (2)].interm).line, EvqTemporary, (yyvsp[(1) - (2)].interm.qualifier), (yyval.interm).param.type))
+        if (parseContext.paramErrorCheck((yyvsp[0].interm).line, EvqTemporary, (yyvsp[-1].interm.qualifier), (yyval.interm).param.type))
             parseContext.recover();
-    ;}
+    }
+#line 3635 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 102:
-
-/* Line 1455 of yacc.c  */
-#line 1138 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1139 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm) = (yyvsp[(3) - (3)].interm);
-        if (parseContext.paramErrorCheck((yyvsp[(3) - (3)].interm).line, (yyvsp[(1) - (3)].interm.type).qualifier, (yyvsp[(2) - (3)].interm.qualifier), (yyval.interm).param.type))
+        (yyval.interm) = (yyvsp[0].interm);
+        if (parseContext.paramErrorCheck((yyvsp[0].interm).line, (yyvsp[-2].interm.type).qualifier, (yyvsp[-1].interm.qualifier), (yyval.interm).param.type))
             parseContext.recover();
-    ;}
+    }
+#line 3645 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 103:
-
-/* Line 1455 of yacc.c  */
-#line 1143 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1144 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm) = (yyvsp[(2) - (2)].interm);
-        if (parseContext.parameterSamplerErrorCheck((yyvsp[(2) - (2)].interm).line, (yyvsp[(1) - (2)].interm.qualifier), *(yyvsp[(2) - (2)].interm).param.type))
+        (yyval.interm) = (yyvsp[0].interm);
+        if (parseContext.parameterSamplerErrorCheck((yyvsp[0].interm).line, (yyvsp[-1].interm.qualifier), *(yyvsp[0].interm).param.type))
             parseContext.recover();
-        if (parseContext.paramErrorCheck((yyvsp[(2) - (2)].interm).line, EvqTemporary, (yyvsp[(1) - (2)].interm.qualifier), (yyval.interm).param.type))
+        if (parseContext.paramErrorCheck((yyvsp[0].interm).line, EvqTemporary, (yyvsp[-1].interm.qualifier), (yyval.interm).param.type))
             parseContext.recover();
-    ;}
+    }
+#line 3657 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 104:
-
-/* Line 1455 of yacc.c  */
-#line 1153 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1154 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.qualifier) = EvqIn;
-    ;}
+    }
+#line 3665 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 105:
-
-/* Line 1455 of yacc.c  */
-#line 1156 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1157 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.qualifier) = EvqIn;
-    ;}
+    }
+#line 3673 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 106:
-
-/* Line 1455 of yacc.c  */
-#line 1159 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1160 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.qualifier) = EvqOut;
-    ;}
+    }
+#line 3681 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 107:
-
-/* Line 1455 of yacc.c  */
-#line 1162 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1163 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.qualifier) = EvqInOut;
-    ;}
+    }
+#line 3689 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 108:
-
-/* Line 1455 of yacc.c  */
-#line 1168 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1169 "hlslang.y" /* yacc.c:1646  */
     {
-        TParameter param = { 0, 0, new TType((yyvsp[(1) - (1)].interm.type)) };
+        TParameter param = { 0, 0, new TType((yyvsp[0].interm.type)) };
         (yyval.interm).param = param;
-    ;}
+    }
+#line 3698 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 109:
-
-/* Line 1455 of yacc.c  */
-#line 1175 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1176 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermDeclaration) = (yyvsp[(1) - (1)].interm.intermDeclaration);
-    ;}
+        (yyval.interm.intermDeclaration) = (yyvsp[0].interm.intermDeclaration);
+    }
+#line 3706 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 110:
-
-/* Line 1455 of yacc.c  */
-#line 1178 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1179 "hlslang.y" /* yacc.c:1646  */
     {
-		TPublicType type = ir_get_decl_type_noarray((yyvsp[(1) - (4)].interm.intermDeclaration));
+		TPublicType type = ir_get_decl_type_noarray((yyvsp[-3].interm.intermDeclaration));
 		
-        if (parseContext.structQualifierErrorCheck((yyvsp[(3) - (4)].lex).line, type))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-1].lex).line, type))
             parseContext.recover();
         
-        if (parseContext.nonInitConstErrorCheck((yyvsp[(3) - (4)].lex).line, *(yyvsp[(3) - (4)].lex).string, type))
+        if (parseContext.nonInitConstErrorCheck((yyvsp[-1].lex).line, *(yyvsp[-1].lex).string, type))
             parseContext.recover();
 
-        if (parseContext.nonInitErrorCheck((yyvsp[(3) - (4)].lex).line, *(yyvsp[(3) - (4)].lex).string, (yyvsp[(4) - (4)].interm.typeInfo), type))
+        if (parseContext.nonInitErrorCheck((yyvsp[-1].lex).line, *(yyvsp[-1].lex).string, (yyvsp[0].interm.typeInfo), type))
             parseContext.recover();
 		
-		TSymbol* sym = parseContext.symbolTable.find(*(yyvsp[(3) - (4)].lex).string);
+		TSymbol* sym = parseContext.symbolTable.find(*(yyvsp[-1].lex).string);
 		if (!sym)
-			(yyval.interm.intermDeclaration) = (yyvsp[(1) - (4)].interm.intermDeclaration);
+			(yyval.interm.intermDeclaration) = (yyvsp[-3].interm.intermDeclaration);
 		else
-			(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[(1) - (4)].interm.intermDeclaration), sym, NULL, parseContext);
-    ;}
+			(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[-3].interm.intermDeclaration), sym, NULL, parseContext);
+    }
+#line 3729 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 111:
-
-/* Line 1455 of yacc.c  */
-#line 1196 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1197 "hlslang.y" /* yacc.c:1646  */
     {
-		TPublicType type = ir_get_decl_type_noarray((yyvsp[(1) - (6)].interm.intermDeclaration));
+		TPublicType type = ir_get_decl_type_noarray((yyvsp[-5].interm.intermDeclaration));
 		
-        if (parseContext.structQualifierErrorCheck((yyvsp[(3) - (6)].lex).line, type))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-3].lex).line, type))
             parseContext.recover();
             
-        if (parseContext.nonInitConstErrorCheck((yyvsp[(3) - (6)].lex).line, *(yyvsp[(3) - (6)].lex).string, type))
+        if (parseContext.nonInitConstErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, type))
             parseContext.recover();
         
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(4) - (6)].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[(4) - (6)].lex).line, type))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-2].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[-2].lex).line, type))
             parseContext.recover();
         else {
             TVariable* variable;
-            if (parseContext.arrayErrorCheck((yyvsp[(4) - (6)].lex).line, *(yyvsp[(3) - (6)].lex).string, (yyvsp[(6) - (6)].interm.typeInfo), type, variable))
+            if (parseContext.arrayErrorCheck((yyvsp[-2].lex).line, *(yyvsp[-3].lex).string, (yyvsp[0].interm.typeInfo), type, variable))
                 parseContext.recover();
 		
 			if (!variable)
-				(yyval.interm.intermDeclaration) = (yyvsp[(1) - (6)].interm.intermDeclaration);
+				(yyval.interm.intermDeclaration) = (yyvsp[-5].interm.intermDeclaration);
 			else {
 				variable->getType().setArray(true);
-				(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[(1) - (6)].interm.intermDeclaration), variable, NULL, parseContext);
+				(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[-5].interm.intermDeclaration), variable, NULL, parseContext);
 			}
         }
-    ;}
+    }
+#line 3758 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 112:
-
-/* Line 1455 of yacc.c  */
-#line 1220 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1221 "hlslang.y" /* yacc.c:1646  */
     {
-		TPublicType type = ir_get_decl_type_noarray((yyvsp[(1) - (7)].interm.intermDeclaration));
+		TPublicType type = ir_get_decl_type_noarray((yyvsp[-6].interm.intermDeclaration));
 		
-        if (parseContext.structQualifierErrorCheck((yyvsp[(3) - (7)].lex).line, type))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-4].lex).line, type))
             parseContext.recover();
             
-        if (parseContext.nonInitConstErrorCheck((yyvsp[(3) - (7)].lex).line, *(yyvsp[(3) - (7)].lex).string, type))
+        if (parseContext.nonInitConstErrorCheck((yyvsp[-4].lex).line, *(yyvsp[-4].lex).string, type))
             parseContext.recover();
 
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(4) - (7)].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[(4) - (7)].lex).line, type))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-3].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[-3].lex).line, type))
             parseContext.recover();
         else {
             int size;
-            if (parseContext.arraySizeErrorCheck((yyvsp[(4) - (7)].lex).line, (yyvsp[(5) - (7)].interm.intermTypedNode), size))
+            if (parseContext.arraySizeErrorCheck((yyvsp[-3].lex).line, (yyvsp[-2].interm.intermTypedNode), size))
                 parseContext.recover();
             type.setArray(true, size);
 			
             TVariable* variable;
-            if (parseContext.arrayErrorCheck((yyvsp[(4) - (7)].lex).line, *(yyvsp[(3) - (7)].lex).string, (yyvsp[(7) - (7)].interm.typeInfo), type, variable))
+            if (parseContext.arrayErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-4].lex).string, (yyvsp[0].interm.typeInfo), type, variable))
                 parseContext.recover();
 			
 			if (!variable)
-				(yyval.interm.intermDeclaration) = (yyvsp[(1) - (7)].interm.intermDeclaration);
+				(yyval.interm.intermDeclaration) = (yyvsp[-6].interm.intermDeclaration);
 			else {
-				(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[(1) - (7)].interm.intermDeclaration), variable, NULL, parseContext);
+				(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[-6].interm.intermDeclaration), variable, NULL, parseContext);
 			}
         }
-    ;}
+    }
+#line 3791 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 113:
-
-/* Line 1455 of yacc.c  */
-#line 1248 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1249 "hlslang.y" /* yacc.c:1646  */
     {
-		TPublicType type = ir_get_decl_type_noarray((yyvsp[(1) - (8)].interm.intermDeclaration));
+		TPublicType type = ir_get_decl_type_noarray((yyvsp[-7].interm.intermDeclaration));
 		
-        if (parseContext.structQualifierErrorCheck((yyvsp[(3) - (8)].lex).line, type))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-5].lex).line, type))
             parseContext.recover();
             
         TVariable* variable = 0;
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(4) - (8)].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[(4) - (8)].lex).line, type))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-4].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[-4].lex).line, type))
             parseContext.recover();
-        else if (parseContext.arrayErrorCheck((yyvsp[(4) - (8)].lex).line, *(yyvsp[(3) - (8)].lex).string, type, variable))
+        else if (parseContext.arrayErrorCheck((yyvsp[-4].lex).line, *(yyvsp[-5].lex).string, type, variable))
 			parseContext.recover();
 		
         {
             TIntermSymbol* symbol;
-            type.setArray(true, (yyvsp[(8) - (8)].interm.intermTypedNode)->getType().getArraySize());
-            if (!parseContext.executeInitializer((yyvsp[(3) - (8)].lex).line, *(yyvsp[(3) - (8)].lex).string, (yyvsp[(6) - (8)].interm.typeInfo), type, (yyvsp[(8) - (8)].interm.intermTypedNode), symbol, variable)) {
+            type.setArray(true, (yyvsp[0].interm.intermTypedNode)->getType().getArraySize());
+            if (!parseContext.executeInitializer((yyvsp[-5].lex).line, *(yyvsp[-5].lex).string, (yyvsp[-2].interm.typeInfo), type, (yyvsp[0].interm.intermTypedNode), symbol, variable)) {
                 if (!variable)
-					(yyval.interm.intermDeclaration) = (yyvsp[(1) - (8)].interm.intermDeclaration);
+					(yyval.interm.intermDeclaration) = (yyvsp[-7].interm.intermDeclaration);
 				else {
-					(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[(1) - (8)].interm.intermDeclaration), variable, (yyvsp[(8) - (8)].interm.intermTypedNode), parseContext);
+					(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[-7].interm.intermDeclaration), variable, (yyvsp[0].interm.intermTypedNode), parseContext);
 				}
             } else {
                 parseContext.recover();
                 (yyval.interm.intermDeclaration) = 0;
             }
         }
-    ;}
+    }
+#line 3823 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 114:
-
-/* Line 1455 of yacc.c  */
-#line 1275 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1276 "hlslang.y" /* yacc.c:1646  */
     {
-		TPublicType type = ir_get_decl_type_noarray((yyvsp[(1) - (9)].interm.intermDeclaration));
+		TPublicType type = ir_get_decl_type_noarray((yyvsp[-8].interm.intermDeclaration));
 		int array_size;
 		
-        if (parseContext.structQualifierErrorCheck((yyvsp[(3) - (9)].lex).line, type))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-6].lex).line, type))
             parseContext.recover();
             
         TVariable* variable = 0;
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(4) - (9)].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[(4) - (9)].lex).line, type))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-5].lex).line, type) || parseContext.arrayQualifierErrorCheck((yyvsp[-5].lex).line, type))
             parseContext.recover();
         else {
-            if (parseContext.arraySizeErrorCheck((yyvsp[(4) - (9)].lex).line, (yyvsp[(5) - (9)].interm.intermTypedNode), array_size))
+            if (parseContext.arraySizeErrorCheck((yyvsp[-5].lex).line, (yyvsp[-4].interm.intermTypedNode), array_size))
                 parseContext.recover();
 			
             type.setArray(true, array_size);
-            if (parseContext.arrayErrorCheck((yyvsp[(4) - (9)].lex).line, *(yyvsp[(3) - (9)].lex).string, (yyvsp[(7) - (9)].interm.typeInfo), type, variable))
+            if (parseContext.arrayErrorCheck((yyvsp[-5].lex).line, *(yyvsp[-6].lex).string, (yyvsp[-2].interm.typeInfo), type, variable))
                 parseContext.recover();
         }
 
         {
             TIntermSymbol* symbol;
-            if (!parseContext.executeInitializer((yyvsp[(3) - (9)].lex).line, *(yyvsp[(3) - (9)].lex).string, (yyvsp[(7) - (9)].interm.typeInfo), type, (yyvsp[(9) - (9)].interm.intermTypedNode), symbol, variable)) {
+            if (!parseContext.executeInitializer((yyvsp[-6].lex).line, *(yyvsp[-6].lex).string, (yyvsp[-2].interm.typeInfo), type, (yyvsp[0].interm.intermTypedNode), symbol, variable)) {
 				if (!variable)
-					(yyval.interm.intermDeclaration) = (yyvsp[(1) - (9)].interm.intermDeclaration);
+					(yyval.interm.intermDeclaration) = (yyvsp[-8].interm.intermDeclaration);
 				else {
-					(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[(1) - (9)].interm.intermDeclaration), variable, (yyvsp[(9) - (9)].interm.intermTypedNode), parseContext);
+					(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[-8].interm.intermDeclaration), variable, (yyvsp[0].interm.intermTypedNode), parseContext);
 				}
             } else {
                 parseContext.recover();
                 (yyval.interm.intermDeclaration) = 0;
             }
         }
-    ;}
+    }
+#line 3861 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 115:
-
-/* Line 1455 of yacc.c  */
-#line 1308 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1309 "hlslang.y" /* yacc.c:1646  */
     {
-		TPublicType type = ir_get_decl_type_noarray((yyvsp[(1) - (6)].interm.intermDeclaration));
+		TPublicType type = ir_get_decl_type_noarray((yyvsp[-5].interm.intermDeclaration));
 		
-        if (parseContext.structQualifierErrorCheck((yyvsp[(3) - (6)].lex).line, type))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-3].lex).line, type))
             parseContext.recover();
 			
         TIntermSymbol* symbol;
 		if ( !IsSampler(type.type)) {
-			if (!parseContext.executeInitializer((yyvsp[(3) - (6)].lex).line, *(yyvsp[(3) - (6)].lex).string, (yyvsp[(4) - (6)].interm.typeInfo), type, (yyvsp[(6) - (6)].interm.intermTypedNode), symbol)) {
-				TSymbol* variable = parseContext.symbolTable.find(*(yyvsp[(3) - (6)].lex).string);
+			if (!parseContext.executeInitializer((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, (yyvsp[-2].interm.typeInfo), type, (yyvsp[0].interm.intermTypedNode), symbol)) {
+				TSymbol* variable = parseContext.symbolTable.find(*(yyvsp[-3].lex).string);
 				if (!variable)
-					(yyval.interm.intermDeclaration) = (yyvsp[(1) - (6)].interm.intermDeclaration);
+					(yyval.interm.intermDeclaration) = (yyvsp[-5].interm.intermDeclaration);
 				else 				
-					(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[(1) - (6)].interm.intermDeclaration), variable, (yyvsp[(6) - (6)].interm.intermTypedNode), parseContext);
+					(yyval.interm.intermDeclaration) = ir_grow_declaration((yyvsp[-5].interm.intermDeclaration), variable, (yyvsp[0].interm.intermTypedNode), parseContext);
 			} else {
 				parseContext.recover();
 				(yyval.interm.intermDeclaration) = 0;
 			}
 		} else {
 			//Special code to skip initializers for samplers
-			(yyval.interm.intermDeclaration) = (yyvsp[(1) - (6)].interm.intermDeclaration);
-			if (parseContext.structQualifierErrorCheck((yyvsp[(3) - (6)].lex).line, type))
+			(yyval.interm.intermDeclaration) = (yyvsp[-5].interm.intermDeclaration);
+			if (parseContext.structQualifierErrorCheck((yyvsp[-3].lex).line, type))
 				parseContext.recover();
 			
-			if (parseContext.nonInitConstErrorCheck((yyvsp[(3) - (6)].lex).line, *(yyvsp[(3) - (6)].lex).string, type))
+			if (parseContext.nonInitConstErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, type))
 				parseContext.recover();
 			
-			if (parseContext.nonInitErrorCheck((yyvsp[(3) - (6)].lex).line, *(yyvsp[(3) - (6)].lex).string, (yyvsp[(4) - (6)].interm.typeInfo), type))
+			if (parseContext.nonInitErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, (yyvsp[-2].interm.typeInfo), type))
 				parseContext.recover();
 		}
-	;}
+	}
+#line 3897 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 116:
-
-/* Line 1455 of yacc.c  */
-#line 1342 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1343 "hlslang.y" /* yacc.c:1646  */
     {
 		(yyval.interm.intermDeclaration) = 0;
-    ;}
+    }
+#line 3905 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 117:
-
-/* Line 1455 of yacc.c  */
-#line 1345 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1346 "hlslang.y" /* yacc.c:1646  */
     {				
 		bool error = false;
-        if (error &= parseContext.structQualifierErrorCheck((yyvsp[(2) - (3)].lex).line, (yyvsp[(1) - (3)].interm.type)))
+        if (error &= parseContext.structQualifierErrorCheck((yyvsp[-1].lex).line, (yyvsp[-2].interm.type)))
             parseContext.recover();
         
-        if (error &= parseContext.nonInitConstErrorCheck((yyvsp[(2) - (3)].lex).line, *(yyvsp[(2) - (3)].lex).string, (yyvsp[(1) - (3)].interm.type)))
+        if (error &= parseContext.nonInitConstErrorCheck((yyvsp[-1].lex).line, *(yyvsp[-1].lex).string, (yyvsp[-2].interm.type)))
             parseContext.recover();
 
-        if (error &= parseContext.nonInitErrorCheck((yyvsp[(2) - (3)].lex).line, *(yyvsp[(2) - (3)].lex).string, (yyvsp[(3) - (3)].interm.typeInfo), (yyvsp[(1) - (3)].interm.type)))
+        if (error &= parseContext.nonInitErrorCheck((yyvsp[-1].lex).line, *(yyvsp[-1].lex).string, (yyvsp[0].interm.typeInfo), (yyvsp[-2].interm.type)))
             parseContext.recover();
 		
-		TSymbol* symbol = parseContext.symbolTable.find(*(yyvsp[(2) - (3)].lex).string);
+		TSymbol* symbol = parseContext.symbolTable.find(*(yyvsp[-1].lex).string);
 		if (!error && symbol) {
-			(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, NULL, (yyvsp[(2) - (3)].lex).line, parseContext);
+			(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, NULL, (yyvsp[-1].lex).line, parseContext);
 		} else {
 			(yyval.interm.intermDeclaration) = 0;
 		}
-    ;}
+    }
+#line 3928 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 118:
-
-/* Line 1455 of yacc.c  */
-#line 1363 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1364 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (5)].lex).line, (yyvsp[(1) - (5)].interm.type)))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-3].lex).line, (yyvsp[-4].interm.type)))
             parseContext.recover();
 
-        if (parseContext.nonInitConstErrorCheck((yyvsp[(2) - (5)].lex).line, *(yyvsp[(2) - (5)].lex).string, (yyvsp[(1) - (5)].interm.type)))
+        if (parseContext.nonInitConstErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, (yyvsp[-4].interm.type)))
             parseContext.recover();
 
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(3) - (5)].lex).line, (yyvsp[(1) - (5)].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[(3) - (5)].lex).line, (yyvsp[(1) - (5)].interm.type)))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-2].lex).line, (yyvsp[-4].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[-2].lex).line, (yyvsp[-4].interm.type)))
             parseContext.recover();
         else {
-            (yyvsp[(1) - (5)].interm.type).setArray(true);
+            (yyvsp[-4].interm.type).setArray(true);
             TVariable* variable;
-            if (parseContext.arrayErrorCheck((yyvsp[(3) - (5)].lex).line, *(yyvsp[(2) - (5)].lex).string, (yyvsp[(5) - (5)].interm.typeInfo), (yyvsp[(1) - (5)].interm.type), variable))
+            if (parseContext.arrayErrorCheck((yyvsp[-2].lex).line, *(yyvsp[-3].lex).string, (yyvsp[0].interm.typeInfo), (yyvsp[-4].interm.type), variable))
                 parseContext.recover();
         }
 		
-		TSymbol* symbol = parseContext.symbolTable.find(*(yyvsp[(2) - (5)].lex).string);
+		TSymbol* symbol = parseContext.symbolTable.find(*(yyvsp[-3].lex).string);
 		if (symbol) {
-			(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, NULL, (yyvsp[(2) - (5)].lex).line, parseContext);
+			(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, NULL, (yyvsp[-3].lex).line, parseContext);
 		} else {
 			(yyval.interm.intermDeclaration) = 0;
 		}
-    ;}
+    }
+#line 3956 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 119:
-
-/* Line 1455 of yacc.c  */
-#line 1386 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1387 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (6)].lex).line, (yyvsp[(1) - (6)].interm.type)))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-4].lex).line, (yyvsp[-5].interm.type)))
             parseContext.recover();
 
-        if (parseContext.nonInitConstErrorCheck((yyvsp[(2) - (6)].lex).line, *(yyvsp[(2) - (6)].lex).string, (yyvsp[(1) - (6)].interm.type)))
+        if (parseContext.nonInitConstErrorCheck((yyvsp[-4].lex).line, *(yyvsp[-4].lex).string, (yyvsp[-5].interm.type)))
 			parseContext.recover();
 		
 		TVariable* variable;
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(3) - (6)].lex).line, (yyvsp[(1) - (6)].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[(3) - (6)].lex).line, (yyvsp[(1) - (6)].interm.type)))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-3].lex).line, (yyvsp[-5].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[-3].lex).line, (yyvsp[-5].interm.type)))
             parseContext.recover();
         else {
             int size;
-            if (parseContext.arraySizeErrorCheck((yyvsp[(3) - (6)].lex).line, (yyvsp[(4) - (6)].interm.intermTypedNode), size))
+            if (parseContext.arraySizeErrorCheck((yyvsp[-3].lex).line, (yyvsp[-2].interm.intermTypedNode), size))
                 parseContext.recover();
 
-            (yyvsp[(1) - (6)].interm.type).setArray(true, size);
-            if (parseContext.arrayErrorCheck((yyvsp[(3) - (6)].lex).line, *(yyvsp[(2) - (6)].lex).string, (yyvsp[(6) - (6)].interm.typeInfo), (yyvsp[(1) - (6)].interm.type), variable))
+            (yyvsp[-5].interm.type).setArray(true, size);
+            if (parseContext.arrayErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-4].lex).string, (yyvsp[0].interm.typeInfo), (yyvsp[-5].interm.type), variable))
                 parseContext.recover();
 			
 			if (variable) {
-				(yyval.interm.intermDeclaration) = ir_add_declaration(variable, NULL, (yyvsp[(2) - (6)].lex).line, parseContext);
+				(yyval.interm.intermDeclaration) = ir_add_declaration(variable, NULL, (yyvsp[-4].lex).line, parseContext);
 			} else {
 				(yyval.interm.intermDeclaration) = 0;
 			}
         }
-	;}
+	}
+#line 3987 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 120:
-
-/* Line 1455 of yacc.c  */
-#line 1412 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1413 "hlslang.y" /* yacc.c:1646  */
     {
-		if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (7)].lex).line, (yyvsp[(1) - (7)].interm.type)))
+		if (parseContext.structQualifierErrorCheck((yyvsp[-5].lex).line, (yyvsp[-6].interm.type)))
 			parseContext.recover();
 
 		TVariable* variable = 0;
-		if (parseContext.arrayTypeErrorCheck((yyvsp[(3) - (7)].lex).line, (yyvsp[(1) - (7)].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[(3) - (7)].lex).line, (yyvsp[(1) - (7)].interm.type)))
+		if (parseContext.arrayTypeErrorCheck((yyvsp[-4].lex).line, (yyvsp[-6].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[-4].lex).line, (yyvsp[-6].interm.type)))
 			parseContext.recover();
 		else {
-			(yyvsp[(1) - (7)].interm.type).setArray(true, (yyvsp[(7) - (7)].interm.intermTypedNode)->getType().getArraySize());
-			if (parseContext.arrayErrorCheck((yyvsp[(3) - (7)].lex).line, *(yyvsp[(2) - (7)].lex).string, (yyvsp[(5) - (7)].interm.typeInfo), (yyvsp[(1) - (7)].interm.type), variable))
+			(yyvsp[-6].interm.type).setArray(true, (yyvsp[0].interm.intermTypedNode)->getType().getArraySize());
+			if (parseContext.arrayErrorCheck((yyvsp[-4].lex).line, *(yyvsp[-5].lex).string, (yyvsp[-2].interm.typeInfo), (yyvsp[-6].interm.type), variable))
 				parseContext.recover();
 		}
 
 		{        
 			TIntermSymbol* symbol;
-			if (!parseContext.executeInitializer((yyvsp[(2) - (7)].lex).line, *(yyvsp[(2) - (7)].lex).string, (yyvsp[(5) - (7)].interm.typeInfo), (yyvsp[(1) - (7)].interm.type), (yyvsp[(7) - (7)].interm.intermTypedNode), symbol, variable)) {
+			if (!parseContext.executeInitializer((yyvsp[-5].lex).line, *(yyvsp[-5].lex).string, (yyvsp[-2].interm.typeInfo), (yyvsp[-6].interm.type), (yyvsp[0].interm.intermTypedNode), symbol, variable)) {
 				if (variable)
-					(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, (yyvsp[(7) - (7)].interm.intermTypedNode), (yyvsp[(6) - (7)].lex).line, parseContext);
+					(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, parseContext);
 				else
 					(yyval.interm.intermDeclaration) = 0;
 			} else {
@@ -4375,35 +4013,34 @@ yyreduce:
 				(yyval.interm.intermDeclaration) = 0;
 			}
 		}
-    ;}
+    }
+#line 4018 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 121:
-
-/* Line 1455 of yacc.c  */
-#line 1438 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1439 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (8)].lex).line, (yyvsp[(1) - (8)].interm.type)))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-6].lex).line, (yyvsp[-7].interm.type)))
             parseContext.recover();
 
         TVariable* variable = 0;
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(3) - (8)].lex).line, (yyvsp[(1) - (8)].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[(3) - (8)].lex).line, (yyvsp[(1) - (8)].interm.type)))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-5].lex).line, (yyvsp[-7].interm.type)) || parseContext.arrayQualifierErrorCheck((yyvsp[-5].lex).line, (yyvsp[-7].interm.type)))
             parseContext.recover();
         else {
             int size;
-            if (parseContext.arraySizeErrorCheck((yyvsp[(3) - (8)].lex).line, (yyvsp[(4) - (8)].interm.intermTypedNode), size))
+            if (parseContext.arraySizeErrorCheck((yyvsp[-5].lex).line, (yyvsp[-4].interm.intermTypedNode), size))
                 parseContext.recover();
 
-            (yyvsp[(1) - (8)].interm.type).setArray(true, size);
-            if (parseContext.arrayErrorCheck((yyvsp[(3) - (8)].lex).line, *(yyvsp[(2) - (8)].lex).string, (yyvsp[(6) - (8)].interm.typeInfo), (yyvsp[(1) - (8)].interm.type), variable))
+            (yyvsp[-7].interm.type).setArray(true, size);
+            if (parseContext.arrayErrorCheck((yyvsp[-5].lex).line, *(yyvsp[-6].lex).string, (yyvsp[-2].interm.typeInfo), (yyvsp[-7].interm.type), variable))
                 parseContext.recover();
         }
         
 		{        
 			TIntermSymbol* symbol;
-			if (!parseContext.executeInitializer((yyvsp[(2) - (8)].lex).line, *(yyvsp[(2) - (8)].lex).string, (yyvsp[(6) - (8)].interm.typeInfo), (yyvsp[(1) - (8)].interm.type), (yyvsp[(8) - (8)].interm.intermTypedNode), symbol, variable)) {
+			if (!parseContext.executeInitializer((yyvsp[-6].lex).line, *(yyvsp[-6].lex).string, (yyvsp[-2].interm.typeInfo), (yyvsp[-7].interm.type), (yyvsp[0].interm.intermTypedNode), symbol, variable)) {
 				if (variable)
-					(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, (yyvsp[(8) - (8)].interm.intermTypedNode), (yyvsp[(7) - (8)].lex).line, parseContext);
+					(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, parseContext);
 				else
 					(yyval.interm.intermDeclaration) = 0;
 			} else {
@@ -4411,22 +4048,21 @@ yyreduce:
 				(yyval.interm.intermDeclaration) = 0;
 			}
 		}       
-    ;}
+    }
+#line 4053 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 122:
-
-/* Line 1455 of yacc.c  */
-#line 1468 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1469 "hlslang.y" /* yacc.c:1646  */
     {
-		if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (5)].lex).line, (yyvsp[(1) - (5)].interm.type)))
+		if (parseContext.structQualifierErrorCheck((yyvsp[-3].lex).line, (yyvsp[-4].interm.type)))
 			parseContext.recover();
 		
-		if (!IsSampler((yyvsp[(1) - (5)].interm.type).type)) {
+		if (!IsSampler((yyvsp[-4].interm.type).type)) {
 			TIntermSymbol* symbol;
-			if (!parseContext.executeInitializer((yyvsp[(2) - (5)].lex).line, *(yyvsp[(2) - (5)].lex).string, (yyvsp[(3) - (5)].interm.typeInfo), (yyvsp[(1) - (5)].interm.type), (yyvsp[(5) - (5)].interm.intermTypedNode), symbol)) {
+			if (!parseContext.executeInitializer((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, (yyvsp[-2].interm.typeInfo), (yyvsp[-4].interm.type), (yyvsp[0].interm.intermTypedNode), symbol)) {
 				if (symbol)
-					(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, (yyvsp[(5) - (5)].interm.intermTypedNode), (yyvsp[(4) - (5)].lex).line, parseContext);
+					(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, (yyvsp[0].interm.intermTypedNode), (yyvsp[-1].lex).line, parseContext);
 				else
 					(yyval.interm.intermDeclaration) = 0;
 			} else {
@@ -4434,893 +4070,811 @@ yyreduce:
 				(yyval.interm.intermDeclaration) = 0;
 			}
 		} else {
-			if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (5)].lex).line, (yyvsp[(1) - (5)].interm.type)))
+			if (parseContext.structQualifierErrorCheck((yyvsp[-3].lex).line, (yyvsp[-4].interm.type)))
 				parseContext.recover();
 
-			if (parseContext.nonInitConstErrorCheck((yyvsp[(2) - (5)].lex).line, *(yyvsp[(2) - (5)].lex).string, (yyvsp[(1) - (5)].interm.type)))
+			if (parseContext.nonInitConstErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, (yyvsp[-4].interm.type)))
 				parseContext.recover();
 
-			if (parseContext.nonInitErrorCheck((yyvsp[(2) - (5)].lex).line, *(yyvsp[(2) - (5)].lex).string, (yyvsp[(3) - (5)].interm.typeInfo), (yyvsp[(1) - (5)].interm.type)))
+			if (parseContext.nonInitErrorCheck((yyvsp[-3].lex).line, *(yyvsp[-3].lex).string, (yyvsp[-2].interm.typeInfo), (yyvsp[-4].interm.type)))
 				parseContext.recover();
 				
-			TSymbol* symbol = parseContext.symbolTable.find(*(yyvsp[(2) - (5)].lex).string);
+			TSymbol* symbol = parseContext.symbolTable.find(*(yyvsp[-3].lex).string);
 			if (symbol) {
-				(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, NULL, (yyvsp[(2) - (5)].lex).line, parseContext);
+				(yyval.interm.intermDeclaration) = ir_add_declaration(symbol, NULL, (yyvsp[-3].lex).line, parseContext);
 			} else {
 				(yyval.interm.intermDeclaration) = 0;
 			}
 		}
-    ;}
+    }
+#line 4091 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 123:
-
-/* Line 1455 of yacc.c  */
-#line 1516 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1517 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type) = (yyvsp[(1) - (1)].interm.type);
-    ;}
+        (yyval.interm.type) = (yyvsp[0].interm.type);
+    }
+#line 4099 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 124:
-
-/* Line 1455 of yacc.c  */
-#line 1519 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1520 "hlslang.y" /* yacc.c:1646  */
     {
-        if ((yyvsp[(2) - (2)].interm.type).array && parseContext.arrayQualifierErrorCheck((yyvsp[(2) - (2)].interm.type).line, (yyvsp[(1) - (2)].interm.type))) {
+        if ((yyvsp[0].interm.type).array && parseContext.arrayQualifierErrorCheck((yyvsp[0].interm.type).line, (yyvsp[-1].interm.type))) {
             parseContext.recover();
-            (yyvsp[(2) - (2)].interm.type).setArray(false);
+            (yyvsp[0].interm.type).setArray(false);
         }
 
-        if ((yyvsp[(1) - (2)].interm.type).qualifier == EvqAttribute &&
-            ((yyvsp[(2) - (2)].interm.type).type == EbtBool || (yyvsp[(2) - (2)].interm.type).type == EbtInt)) {
-            parseContext.error((yyvsp[(2) - (2)].interm.type).line, "cannot be bool or int", getQualifierString((yyvsp[(1) - (2)].interm.type).qualifier), "");
+        if ((yyvsp[-1].interm.type).qualifier == EvqAttribute &&
+            ((yyvsp[0].interm.type).type == EbtBool || (yyvsp[0].interm.type).type == EbtInt)) {
+            parseContext.error((yyvsp[0].interm.type).line, "cannot be bool or int", getQualifierString((yyvsp[-1].interm.type).qualifier), "");
             parseContext.recover();
         }
-        (yyval.interm.type) = (yyvsp[(2) - (2)].interm.type); 
-        (yyval.interm.type).qualifier = (yyvsp[(1) - (2)].interm.type).qualifier;
-    ;}
+        (yyval.interm.type) = (yyvsp[0].interm.type); 
+        (yyval.interm.type).qualifier = (yyvsp[-1].interm.type).qualifier;
+    }
+#line 4118 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 125:
-
-/* Line 1455 of yacc.c  */
-#line 1536 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1537 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type).setBasic(EbtVoid, EvqConst, (yyvsp[(1) - (1)].lex).line);
-    ;}
+        (yyval.interm.type).setBasic(EbtVoid, EvqConst, (yyvsp[0].lex).line);
+    }
+#line 4126 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 126:
-
-/* Line 1455 of yacc.c  */
-#line 1539 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1540 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type).setBasic(EbtVoid, EvqStatic, (yyvsp[(1) - (1)].lex).line);
-    ;}
+        (yyval.interm.type).setBasic(EbtVoid, EvqStatic, (yyvsp[0].lex).line);
+    }
+#line 4134 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 127:
-
-/* Line 1455 of yacc.c  */
-#line 1542 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1543 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type).setBasic(EbtVoid, EvqConst, (yyvsp[(1) - (2)].lex).line); // same as "const" really
-    ;}
+        (yyval.interm.type).setBasic(EbtVoid, EvqConst, (yyvsp[-1].lex).line); // same as "const" really
+    }
+#line 4142 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 128:
-
-/* Line 1455 of yacc.c  */
-#line 1545 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1546 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type).setBasic(EbtVoid, EvqConst, (yyvsp[(1) - (2)].lex).line); // same as "const" really
-    ;}
+        (yyval.interm.type).setBasic(EbtVoid, EvqConst, (yyvsp[-1].lex).line); // same as "const" really
+    }
+#line 4150 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 129:
-
-/* Line 1455 of yacc.c  */
-#line 1548 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1549 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.globalErrorCheck((yyvsp[(1) - (1)].lex).line, parseContext.symbolTable.atGlobalLevel(), "uniform"))
+        if (parseContext.globalErrorCheck((yyvsp[0].lex).line, parseContext.symbolTable.atGlobalLevel(), "uniform"))
             parseContext.recover();
-        (yyval.interm.type).setBasic(EbtVoid, EvqUniform, (yyvsp[(1) - (1)].lex).line);
-    ;}
+        (yyval.interm.type).setBasic(EbtVoid, EvqUniform, (yyvsp[0].lex).line);
+    }
+#line 4160 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 130:
-
-/* Line 1455 of yacc.c  */
-#line 1556 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1557 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type) = (yyvsp[(1) - (1)].interm.type);
-    ;}
+        (yyval.interm.type) = (yyvsp[0].interm.type);
+    }
+#line 4168 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 131:
-
-/* Line 1455 of yacc.c  */
-#line 1559 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1560 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type) = (yyvsp[(1) - (4)].interm.type);
+        (yyval.interm.type) = (yyvsp[-3].interm.type);
 
-        if (parseContext.arrayTypeErrorCheck((yyvsp[(2) - (4)].lex).line, (yyvsp[(1) - (4)].interm.type)))
+        if (parseContext.arrayTypeErrorCheck((yyvsp[-2].lex).line, (yyvsp[-3].interm.type)))
             parseContext.recover();
         else {
             int size;
-            if (parseContext.arraySizeErrorCheck((yyvsp[(2) - (4)].lex).line, (yyvsp[(3) - (4)].interm.intermTypedNode), size))
+            if (parseContext.arraySizeErrorCheck((yyvsp[-2].lex).line, (yyvsp[-1].interm.intermTypedNode), size))
                 parseContext.recover();
             (yyval.interm.type).setArray(true, size);
         }
-    ;}
+    }
+#line 4185 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 132:
-
-/* Line 1455 of yacc.c  */
-#line 1574 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1575 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtVoid,EbpUndefined);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtVoid,EbpUndefined);
+    }
+#line 4193 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 133:
-
-/* Line 1455 of yacc.c  */
-#line 1577 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1578 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
+    }
+#line 4201 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 134:
-
-/* Line 1455 of yacc.c  */
-#line 1580 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1581 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
+    }
+#line 4209 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 135:
-
-/* Line 1455 of yacc.c  */
-#line 1583 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1584 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
+    }
+#line 4217 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 136:
-
-/* Line 1455 of yacc.c  */
-#line 1586 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1587 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtInt,EbpHigh);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtInt,EbpHigh);
+    }
+#line 4225 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 137:
-
-/* Line 1455 of yacc.c  */
-#line 1589 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1590 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtBool,EbpHigh);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtBool,EbpHigh);
+    }
+#line 4233 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 138:
-
-/* Line 1455 of yacc.c  */
-#line 1592 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1593 "hlslang.y" /* yacc.c:1646  */
     {
         TQualifier qual = parseContext.getDefaultQualifier();
-        if ( (yyvsp[(5) - (6)].lex).i > 4 || (yyvsp[(5) - (6)].lex).i < 1 ) {
-            parseContext.error((yyvsp[(2) - (6)].lex).line, "vector dimension out of range", "", "");
+        if ( (yyvsp[-1].lex).i > 4 || (yyvsp[-1].lex).i < 1 ) {
+            parseContext.error((yyvsp[-4].lex).line, "vector dimension out of range", "", "");
             parseContext.recover();
-            (yyval.interm.type).setBasic(EbtFloat, qual, (yyvsp[(1) - (6)].lex).line);
+            (yyval.interm.type).setBasic(EbtFloat, qual, (yyvsp[-5].lex).line);
         } else {
-            (yyval.interm.type).setBasic(EbtFloat, qual, (yyvsp[(1) - (6)].lex).line);
-            (yyval.interm.type).setVector((yyvsp[(5) - (6)].lex).i);
+            (yyval.interm.type).setBasic(EbtFloat, qual, (yyvsp[-5].lex).line);
+            (yyval.interm.type).setVector((yyvsp[-1].lex).i);
         }
-    ;}
+    }
+#line 4249 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 139:
-
-/* Line 1455 of yacc.c  */
-#line 1603 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1604 "hlslang.y" /* yacc.c:1646  */
     {
         TQualifier qual = parseContext.getDefaultQualifier();
-        if ( (yyvsp[(5) - (6)].lex).i > 4 || (yyvsp[(5) - (6)].lex).i < 1 ) {
-            parseContext.error((yyvsp[(2) - (6)].lex).line, "vector dimension out of range", "", "");
+        if ( (yyvsp[-1].lex).i > 4 || (yyvsp[-1].lex).i < 1 ) {
+            parseContext.error((yyvsp[-4].lex).line, "vector dimension out of range", "", "");
             parseContext.recover();
-            (yyval.interm.type).setBasic(EbtInt, qual, (yyvsp[(1) - (6)].lex).line);
+            (yyval.interm.type).setBasic(EbtInt, qual, (yyvsp[-5].lex).line);
         } else {
-            (yyval.interm.type).setBasic(EbtInt, qual, (yyvsp[(1) - (6)].lex).line);
-            (yyval.interm.type).setVector((yyvsp[(5) - (6)].lex).i);
+            (yyval.interm.type).setBasic(EbtInt, qual, (yyvsp[-5].lex).line);
+            (yyval.interm.type).setVector((yyvsp[-1].lex).i);
         }
-    ;}
+    }
+#line 4265 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 140:
-
-/* Line 1455 of yacc.c  */
-#line 1614 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1615 "hlslang.y" /* yacc.c:1646  */
     {
         TQualifier qual = parseContext.getDefaultQualifier();
-        if ( (yyvsp[(5) - (6)].lex).i > 4 || (yyvsp[(5) - (6)].lex).i < 1 ) {
-            parseContext.error((yyvsp[(2) - (6)].lex).line, "vector dimension out of range", "", "");
+        if ( (yyvsp[-1].lex).i > 4 || (yyvsp[-1].lex).i < 1 ) {
+            parseContext.error((yyvsp[-4].lex).line, "vector dimension out of range", "", "");
             parseContext.recover();
-            (yyval.interm.type).setBasic(EbtBool, qual, (yyvsp[(1) - (6)].lex).line);
+            (yyval.interm.type).setBasic(EbtBool, qual, (yyvsp[-5].lex).line);
         } else {
-            (yyval.interm.type).setBasic(EbtBool, qual, (yyvsp[(1) - (6)].lex).line);
-            (yyval.interm.type).setVector((yyvsp[(5) - (6)].lex).i);
+            (yyval.interm.type).setBasic(EbtBool, qual, (yyvsp[-5].lex).line);
+            (yyval.interm.type).setVector((yyvsp[-1].lex).i);
         }
-    ;}
+    }
+#line 4281 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 141:
-
-/* Line 1455 of yacc.c  */
-#line 1625 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1626 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setVector(2);
-    ;}
+    }
+#line 4290 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 142:
-
-/* Line 1455 of yacc.c  */
-#line 1629 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1630 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setVector(3);
-    ;}
+    }
+#line 4299 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 143:
-
-/* Line 1455 of yacc.c  */
-#line 1633 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1634 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setVector(4);
-    ;}
+    }
+#line 4308 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 144:
-
-/* Line 1455 of yacc.c  */
-#line 1637 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1638 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setVector(2);
-    ;}
+    }
+#line 4317 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 145:
-
-/* Line 1455 of yacc.c  */
-#line 1641 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1642 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setVector(3);
-    ;}
+    }
+#line 4326 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 146:
-
-/* Line 1455 of yacc.c  */
-#line 1645 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1646 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setVector(4);
-    ;}
+    }
+#line 4335 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 147:
-
-/* Line 1455 of yacc.c  */
-#line 1649 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1650 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setVector(2);
-    ;}
+    }
+#line 4344 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 148:
-
-/* Line 1455 of yacc.c  */
-#line 1653 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1654 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setVector(3);
-    ;}
+    }
+#line 4353 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 149:
-
-/* Line 1455 of yacc.c  */
-#line 1657 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1658 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setVector(4);
-    ;}
+    }
+#line 4362 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 150:
-
-/* Line 1455 of yacc.c  */
-#line 1661 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1662 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtBool,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtBool,EbpHigh);
         (yyval.interm.type).setVector(2);
-    ;}
+    }
+#line 4371 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 151:
-
-/* Line 1455 of yacc.c  */
-#line 1665 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1666 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtBool,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtBool,EbpHigh);
         (yyval.interm.type).setVector(3);
-    ;}
+    }
+#line 4380 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 152:
-
-/* Line 1455 of yacc.c  */
-#line 1669 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1670 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtBool,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtBool,EbpHigh);
         (yyval.interm.type).setVector(4);
-    ;}
+    }
+#line 4389 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 153:
-
-/* Line 1455 of yacc.c  */
-#line 1673 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1674 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtInt,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtInt,EbpHigh);
         (yyval.interm.type).setVector(2);
-    ;}
+    }
+#line 4398 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 154:
-
-/* Line 1455 of yacc.c  */
-#line 1677 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1678 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtInt,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtInt,EbpHigh);
         (yyval.interm.type).setVector(3);
-    ;}
+    }
+#line 4407 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 155:
-
-/* Line 1455 of yacc.c  */
-#line 1681 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1682 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtInt,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtInt,EbpHigh);
         (yyval.interm.type).setVector(4);
-    ;}
+    }
+#line 4416 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 156:
-
-/* Line 1455 of yacc.c  */
-#line 1685 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1686 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(2, 2);
-    ;}
+    }
+#line 4425 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 157:
-
-/* Line 1455 of yacc.c  */
-#line 1689 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1690 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("float2x3", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+		NONSQUARE_MATRIX_CHECK("float2x3", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(3, 2);
-    ;}
+    }
+#line 4435 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 158:
-
-/* Line 1455 of yacc.c  */
-#line 1694 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1695 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("float2x4", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+		NONSQUARE_MATRIX_CHECK("float2x4", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(4, 2);
-    ;}
+    }
+#line 4445 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 159:
-
-/* Line 1455 of yacc.c  */
-#line 1699 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1700 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("float3x2", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+		NONSQUARE_MATRIX_CHECK("float3x2", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(2, 3);
-    ;}
+    }
+#line 4455 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 160:
-
-/* Line 1455 of yacc.c  */
-#line 1704 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1705 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(3, 3);
-    ;}
+    }
+#line 4464 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 161:
-
-/* Line 1455 of yacc.c  */
-#line 1708 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1709 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("float3x4", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+		NONSQUARE_MATRIX_CHECK("float3x4", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(4, 3);
-    ;}
+    }
+#line 4474 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 162:
-
-/* Line 1455 of yacc.c  */
-#line 1713 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1714 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("float4x2", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+		NONSQUARE_MATRIX_CHECK("float4x2", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(2, 4);
-    ;}
+    }
+#line 4484 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 163:
-
-/* Line 1455 of yacc.c  */
-#line 1718 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1719 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("float4x3", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+		NONSQUARE_MATRIX_CHECK("float4x3", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(3, 4);
-    ;}
+    }
+#line 4494 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 164:
-
-/* Line 1455 of yacc.c  */
-#line 1723 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1724 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpHigh);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpHigh);
         (yyval.interm.type).setMatrix(4, 4);
-    ;}
+    }
+#line 4503 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 165:
-
-/* Line 1455 of yacc.c  */
-#line 1727 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1728 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(2, 2);
-    ;}
+    }
+#line 4512 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 166:
-
-/* Line 1455 of yacc.c  */
-#line 1731 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1732 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("half2x3", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+		NONSQUARE_MATRIX_CHECK("half2x3", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(3, 2);
-    ;}
+    }
+#line 4522 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 167:
-
-/* Line 1455 of yacc.c  */
-#line 1736 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1737 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("half2x4", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+		NONSQUARE_MATRIX_CHECK("half2x4", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(4, 2);
-    ;}
+    }
+#line 4532 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 168:
-
-/* Line 1455 of yacc.c  */
-#line 1741 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1742 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("half3x2", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+		NONSQUARE_MATRIX_CHECK("half3x2", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(2, 3);
-    ;}
+    }
+#line 4542 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 169:
-
-/* Line 1455 of yacc.c  */
-#line 1746 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1747 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(3, 3);
-    ;}
+    }
+#line 4551 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 170:
-
-/* Line 1455 of yacc.c  */
-#line 1750 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1751 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("half3x4", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+		NONSQUARE_MATRIX_CHECK("half3x4", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(4, 3);
-    ;}
+    }
+#line 4561 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 171:
-
-/* Line 1455 of yacc.c  */
-#line 1755 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1756 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("half4x2", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+		NONSQUARE_MATRIX_CHECK("half4x2", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(2, 4);
-    ;}
+    }
+#line 4571 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 172:
-
-/* Line 1455 of yacc.c  */
-#line 1760 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1761 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("half4x3", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+		NONSQUARE_MATRIX_CHECK("half4x3", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(3, 4);
-    ;}
+    }
+#line 4581 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 173:
-
-/* Line 1455 of yacc.c  */
-#line 1765 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1766 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpMedium);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpMedium);
         (yyval.interm.type).setMatrix(4, 4);
-    ;}
+    }
+#line 4590 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 174:
-
-/* Line 1455 of yacc.c  */
-#line 1769 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1770 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(2, 2);
-    ;}
+    }
+#line 4599 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 175:
-
-/* Line 1455 of yacc.c  */
-#line 1773 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1774 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("fixed2x3", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+		NONSQUARE_MATRIX_CHECK("fixed2x3", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(3, 2);
-    ;}
+    }
+#line 4609 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 176:
-
-/* Line 1455 of yacc.c  */
-#line 1778 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1779 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("fixed2x4", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+		NONSQUARE_MATRIX_CHECK("fixed2x4", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(4, 2);
-    ;}
+    }
+#line 4619 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 177:
-
-/* Line 1455 of yacc.c  */
-#line 1783 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1784 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("fixed3x2", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+		NONSQUARE_MATRIX_CHECK("fixed3x2", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(2, 3);
-    ;}
+    }
+#line 4629 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 178:
-
-/* Line 1455 of yacc.c  */
-#line 1788 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1789 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(3, 3);
-    ;}
+    }
+#line 4638 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 179:
-
-/* Line 1455 of yacc.c  */
-#line 1792 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1793 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("fixed3x4", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+		NONSQUARE_MATRIX_CHECK("fixed3x4", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(4, 3);
-    ;}
+    }
+#line 4648 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 180:
-
-/* Line 1455 of yacc.c  */
-#line 1797 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1798 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("fixed4x2", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+		NONSQUARE_MATRIX_CHECK("fixed4x2", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(2, 4);
-    ;}
+    }
+#line 4658 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 181:
-
-/* Line 1455 of yacc.c  */
-#line 1802 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1803 "hlslang.y" /* yacc.c:1646  */
     {
-		NONSQUARE_MATRIX_CHECK("fixed4x3", (yyvsp[(1) - (1)].lex).line);
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+		NONSQUARE_MATRIX_CHECK("fixed4x3", (yyvsp[0].lex).line);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(3, 4);
-    ;}
+    }
+#line 4668 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 182:
-
-/* Line 1455 of yacc.c  */
-#line 1807 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1808 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtFloat,EbpLow);
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtFloat,EbpLow);
         (yyval.interm.type).setMatrix(4, 4);
-    ;}
+    }
+#line 4677 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 183:
-
-/* Line 1455 of yacc.c  */
-#line 1811 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1812 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtTexture,EbpUndefined);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtTexture,EbpUndefined);
+    }
+#line 4685 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 184:
-
-/* Line 1455 of yacc.c  */
-#line 1814 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1815 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSamplerGeneric,EbpUndefined);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSamplerGeneric,EbpUndefined);
+    }
+#line 4693 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 185:
-
-/* Line 1455 of yacc.c  */
-#line 1817 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1818 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler1D,EbpUndefined);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler1D,EbpUndefined);
+    }
+#line 4701 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 186:
-
-/* Line 1455 of yacc.c  */
-#line 1820 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1821 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler2D,EbpUndefined);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler2D,EbpUndefined);
+    }
+#line 4709 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 187:
-
-/* Line 1455 of yacc.c  */
-#line 1823 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1824 "hlslang.y" /* yacc.c:1646  */
     {
-		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler2D,EbpMedium);
-	;}
+		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler2D,EbpMedium);
+	}
+#line 4717 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 188:
-
-/* Line 1455 of yacc.c  */
-#line 1826 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1827 "hlslang.y" /* yacc.c:1646  */
     {
-		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler2D,EbpHigh);
-	;}
+		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler2D,EbpHigh);
+	}
+#line 4725 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 189:
-
-/* Line 1455 of yacc.c  */
-#line 1829 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1830 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler3D,EbpLow);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler3D,EbpLow);
+    }
+#line 4733 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 190:
-
-/* Line 1455 of yacc.c  */
-#line 1832 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1833 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSamplerCube,EbpUndefined);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSamplerCube,EbpUndefined);
+    }
+#line 4741 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 191:
-
-/* Line 1455 of yacc.c  */
-#line 1835 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1836 "hlslang.y" /* yacc.c:1646  */
     {
-		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSamplerCube,EbpMedium);
-	;}
+		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSamplerCube,EbpMedium);
+	}
+#line 4749 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 192:
-
-/* Line 1455 of yacc.c  */
-#line 1838 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1839 "hlslang.y" /* yacc.c:1646  */
     {
-		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSamplerCube,EbpHigh);
-	;}
+		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSamplerCube,EbpHigh);
+	}
+#line 4757 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 193:
-
-/* Line 1455 of yacc.c  */
-#line 1841 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1842 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSamplerRect,EbpUndefined);
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSamplerRect,EbpUndefined);
+    }
+#line 4765 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 194:
-
-/* Line 1455 of yacc.c  */
-#line 1844 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1845 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSamplerRectShadow,EbpLow); // ES3 doesn't have default precision for shadow samplers, so always emit lowp
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSamplerRectShadow,EbpLow); // ES3 doesn't have default precision for shadow samplers, so always emit lowp
+    }
+#line 4773 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 195:
-
-/* Line 1455 of yacc.c  */
-#line 1847 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1848 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler1DShadow,EbpLow); // ES3 doesn't have default precision for shadow samplers, so always emit lowp
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler1DShadow,EbpLow); // ES3 doesn't have default precision for shadow samplers, so always emit lowp
+    }
+#line 4781 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 196:
-
-/* Line 1455 of yacc.c  */
-#line 1850 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1851 "hlslang.y" /* yacc.c:1646  */
     {
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler2DShadow,EbpLow); // ES3 doesn't have default precision for shadow samplers, so always emit lowp
-    ;}
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler2DShadow,EbpLow); // ES3 doesn't have default precision for shadow samplers, so always emit lowp
+    }
+#line 4789 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 197:
-
-/* Line 1455 of yacc.c  */
-#line 1853 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1854 "hlslang.y" /* yacc.c:1646  */
     {
-		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtSampler2DArray,EbpLow);
-	;}
+		SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtSampler2DArray,EbpLow);
+	}
+#line 4797 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 198:
-
-/* Line 1455 of yacc.c  */
-#line 1856 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1857 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.type) = (yyvsp[(1) - (1)].interm.type);
+        (yyval.interm.type) = (yyvsp[0].interm.type);
         (yyval.interm.type).qualifier = parseContext.getDefaultQualifier();
-    ;}
+    }
+#line 4806 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 199:
-
-/* Line 1455 of yacc.c  */
-#line 1860 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1861 "hlslang.y" /* yacc.c:1646  */
     {
         //
         // This is for user defined type names.  The lexical phase looked up the
         // type.
         //
-        TType& structure = static_cast<TVariable*>((yyvsp[(1) - (1)].lex).symbol)->getType();
-        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[(1) - (1)].lex),EbtStruct,EbpUndefined);
+        TType& structure = static_cast<TVariable*>((yyvsp[0].lex).symbol)->getType();
+        SET_BASIC_TYPE((yyval.interm.type),(yyvsp[0].lex),EbtStruct,EbpUndefined);
         (yyval.interm.type).userDef = &structure;
-    ;}
+    }
+#line 4820 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 200:
-
-/* Line 1455 of yacc.c  */
-#line 1872 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1873 "hlslang.y" /* yacc.c:1646  */
     {
-        TType* structure = new TType((yyvsp[(4) - (5)].interm.typeList), *(yyvsp[(2) - (5)].lex).string, EbpUndefined, (yyvsp[(2) - (5)].lex).line);
-        TVariable* userTypeDef = new TVariable((yyvsp[(2) - (5)].lex).string, *structure, true);
+        TType* structure = new TType((yyvsp[-1].interm.typeList), *(yyvsp[-3].lex).string, EbpUndefined, (yyvsp[-3].lex).line);
+        TVariable* userTypeDef = new TVariable((yyvsp[-3].lex).string, *structure, true);
         if (! parseContext.symbolTable.insert(*userTypeDef)) {
-            parseContext.error((yyvsp[(2) - (5)].lex).line, "redefinition", (yyvsp[(2) - (5)].lex).string->c_str(), "struct");
+            parseContext.error((yyvsp[-3].lex).line, "redefinition", (yyvsp[-3].lex).string->c_str(), "struct");
             parseContext.recover();
         }
-        (yyval.interm.type).setBasic(EbtStruct, EvqTemporary, (yyvsp[(1) - (5)].lex).line);
+        (yyval.interm.type).setBasic(EbtStruct, EvqTemporary, (yyvsp[-4].lex).line);
         (yyval.interm.type).userDef = structure;
-    ;}
+    }
+#line 4835 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 201:
-
-/* Line 1455 of yacc.c  */
-#line 1882 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1883 "hlslang.y" /* yacc.c:1646  */
     {
-        TType* structure = new TType((yyvsp[(3) - (4)].interm.typeList), TString(""), EbpUndefined, (yyvsp[(1) - (4)].lex).line);
-        (yyval.interm.type).setBasic(EbtStruct, EvqTemporary, (yyvsp[(1) - (4)].lex).line);
+        TType* structure = new TType((yyvsp[-1].interm.typeList), TString(""), EbpUndefined, (yyvsp[-3].lex).line);
+        (yyval.interm.type).setBasic(EbtStruct, EvqTemporary, (yyvsp[-3].lex).line);
         (yyval.interm.type).userDef = structure;
-    ;}
+    }
+#line 4845 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 202:
-
-/* Line 1455 of yacc.c  */
-#line 1890 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1891 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.typeList) = (yyvsp[(1) - (1)].interm.typeList);
-    ;}
+        (yyval.interm.typeList) = (yyvsp[0].interm.typeList);
+    }
+#line 4853 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 203:
-
-/* Line 1455 of yacc.c  */
-#line 1893 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1894 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.typeList) = (yyvsp[(1) - (2)].interm.typeList);
-        for (unsigned int i = 0; i < (yyvsp[(2) - (2)].interm.typeList)->size(); ++i) {
+        (yyval.interm.typeList) = (yyvsp[-1].interm.typeList);
+        for (unsigned int i = 0; i < (yyvsp[0].interm.typeList)->size(); ++i) {
             for (unsigned int j = 0; j < (yyval.interm.typeList)->size(); ++j) {
-                if ((*(yyval.interm.typeList))[j].type->getFieldName() == (*(yyvsp[(2) - (2)].interm.typeList))[i].type->getFieldName()) {
-                    parseContext.error((*(yyvsp[(2) - (2)].interm.typeList))[i].line, "duplicate field name in structure:", "struct", (*(yyvsp[(2) - (2)].interm.typeList))[i].type->getFieldName().c_str());
+                if ((*(yyval.interm.typeList))[j].type->getFieldName() == (*(yyvsp[0].interm.typeList))[i].type->getFieldName()) {
+                    parseContext.error((*(yyvsp[0].interm.typeList))[i].line, "duplicate field name in structure:", "struct", (*(yyvsp[0].interm.typeList))[i].type->getFieldName().c_str());
                     parseContext.recover();
                 }
             }
-            (yyval.interm.typeList)->push_back((*(yyvsp[(2) - (2)].interm.typeList))[i]);
+            (yyval.interm.typeList)->push_back((*(yyvsp[0].interm.typeList))[i]);
         }
-    ;}
+    }
+#line 4870 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 204:
-
-/* Line 1455 of yacc.c  */
-#line 1908 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1909 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.typeList) = (yyvsp[(2) - (3)].interm.typeList);
+        (yyval.interm.typeList) = (yyvsp[-1].interm.typeList);
 
-        if (parseContext.voidErrorCheck((yyvsp[(1) - (3)].interm.type).line, (*(yyvsp[(2) - (3)].interm.typeList))[0].type->getFieldName(), (yyvsp[(1) - (3)].interm.type))) {
+        if (parseContext.voidErrorCheck((yyvsp[-2].interm.type).line, (*(yyvsp[-1].interm.typeList))[0].type->getFieldName(), (yyvsp[-2].interm.type))) {
             parseContext.recover();
         }
         for (unsigned int i = 0; i < (yyval.interm.typeList)->size(); ++i) {
@@ -5328,584 +4882,527 @@ yyreduce:
             // Careful not to replace already know aspects of type, like array-ness
             //
             TType* type = (*(yyval.interm.typeList))[i].type;
-            type->setBasicType((yyvsp[(1) - (3)].interm.type).type);
-            type->setPrecision((yyvsp[(1) - (3)].interm.type).precision);
-            type->setColsCount((yyvsp[(1) - (3)].interm.type).matcols);
-            type->setRowsCount((yyvsp[(1) - (3)].interm.type).matrows);
-            type->setMatrix((yyvsp[(1) - (3)].interm.type).matrix);
+            type->setBasicType((yyvsp[-2].interm.type).type);
+            type->setPrecision((yyvsp[-2].interm.type).precision);
+            type->setColsCount((yyvsp[-2].interm.type).matcols);
+            type->setRowsCount((yyvsp[-2].interm.type).matrows);
+            type->setMatrix((yyvsp[-2].interm.type).matrix);
             
             // don't allow arrays of arrays
             if (type->isArray()) {
-                if (parseContext.arrayTypeErrorCheck((yyvsp[(1) - (3)].interm.type).line, (yyvsp[(1) - (3)].interm.type)))
+                if (parseContext.arrayTypeErrorCheck((yyvsp[-2].interm.type).line, (yyvsp[-2].interm.type)))
                     parseContext.recover();
             }
-            if ((yyvsp[(1) - (3)].interm.type).array)
-                type->setArraySize((yyvsp[(1) - (3)].interm.type).arraySize);
-            if ((yyvsp[(1) - (3)].interm.type).userDef) {
-                type->setStruct((yyvsp[(1) - (3)].interm.type).userDef->getStruct());
-                type->setTypeName((yyvsp[(1) - (3)].interm.type).userDef->getTypeName());
+            if ((yyvsp[-2].interm.type).array)
+                type->setArraySize((yyvsp[-2].interm.type).arraySize);
+            if ((yyvsp[-2].interm.type).userDef) {
+                type->setStruct((yyvsp[-2].interm.type).userDef->getStruct());
+                type->setTypeName((yyvsp[-2].interm.type).userDef->getTypeName());
             }
         }
-    ;}
+    }
+#line 4905 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 205:
-
-/* Line 1455 of yacc.c  */
-#line 1941 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1942 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.typeList) = NewPoolTTypeList();
-        (yyval.interm.typeList)->push_back((yyvsp[(1) - (1)].interm.typeLine));
-    ;}
+        (yyval.interm.typeList)->push_back((yyvsp[0].interm.typeLine));
+    }
+#line 4914 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 206:
-
-/* Line 1455 of yacc.c  */
-#line 1945 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1946 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.typeList)->push_back((yyvsp[(3) - (3)].interm.typeLine));
-    ;}
+        (yyval.interm.typeList)->push_back((yyvsp[0].interm.typeLine));
+    }
+#line 4922 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 207:
-
-/* Line 1455 of yacc.c  */
-#line 1951 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1952 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.typeLine).type = new TType(EbtVoid, EbpUndefined);
-        (yyval.interm.typeLine).line = (yyvsp[(1) - (1)].lex).line;
-        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[(1) - (1)].lex).string);
-    ;}
+        (yyval.interm.typeLine).line = (yyvsp[0].lex).line;
+        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[0].lex).string);
+    }
+#line 4932 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 208:
-
-/* Line 1455 of yacc.c  */
-#line 1956 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1957 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.typeLine).type = new TType(EbtVoid, EbpUndefined);
-        (yyval.interm.typeLine).line = (yyvsp[(1) - (3)].lex).line;
-        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[(1) - (3)].lex).string);
-        (yyval.interm.typeLine).type->setSemantic(*(yyvsp[(3) - (3)].lex).string);
-    ;}
+        (yyval.interm.typeLine).line = (yyvsp[-2].lex).line;
+        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[-2].lex).string);
+        (yyval.interm.typeLine).type->setSemantic(*(yyvsp[0].lex).string);
+    }
+#line 4943 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 209:
-
-/* Line 1455 of yacc.c  */
-#line 1962 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1963 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.typeLine).type = new TType(EbtVoid, EbpUndefined);
-        (yyval.interm.typeLine).line = (yyvsp[(1) - (4)].lex).line;
-        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[(1) - (4)].lex).string);
+        (yyval.interm.typeLine).line = (yyvsp[-3].lex).line;
+        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[-3].lex).string);
 
         int size;
-        if (parseContext.arraySizeErrorCheck((yyvsp[(2) - (4)].lex).line, (yyvsp[(3) - (4)].interm.intermTypedNode), size))
+        if (parseContext.arraySizeErrorCheck((yyvsp[-2].lex).line, (yyvsp[-1].interm.intermTypedNode), size))
             parseContext.recover();
         (yyval.interm.typeLine).type->setArraySize(size);
-    ;}
+    }
+#line 4958 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 210:
-
-/* Line 1455 of yacc.c  */
-#line 1972 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 1973 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.typeLine).type = new TType(EbtVoid, EbpUndefined);
-        (yyval.interm.typeLine).line = (yyvsp[(1) - (6)].lex).line;
-        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[(1) - (6)].lex).string);
+        (yyval.interm.typeLine).line = (yyvsp[-5].lex).line;
+        (yyval.interm.typeLine).type->setFieldName(*(yyvsp[-5].lex).string);
 
         int size;
-        if (parseContext.arraySizeErrorCheck((yyvsp[(2) - (6)].lex).line, (yyvsp[(3) - (6)].interm.intermTypedNode), size))
+        if (parseContext.arraySizeErrorCheck((yyvsp[-4].lex).line, (yyvsp[-3].interm.intermTypedNode), size))
             parseContext.recover();
         (yyval.interm.typeLine).type->setArraySize(size);
-        (yyval.interm.typeLine).type->setSemantic(*(yyvsp[(6) - (6)].lex).string);
-    ;}
+        (yyval.interm.typeLine).type->setSemantic(*(yyvsp[0].lex).string);
+    }
+#line 4974 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 211:
-
-/* Line 1455 of yacc.c  */
-#line 1988 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 1989 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 4980 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 212:
-
-/* Line 1455 of yacc.c  */
-#line 1989 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 1990 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 4986 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 213:
-
-/* Line 1455 of yacc.c  */
-#line 1990 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode); ;}
+#line 1991 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode); }
+#line 4992 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 214:
-
-/* Line 1455 of yacc.c  */
-#line 1994 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermDeclaration); ;}
+#line 1995 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermDeclaration); }
+#line 4998 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 215:
-
-/* Line 1455 of yacc.c  */
-#line 1998 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermAggregate); ;}
+#line 1999 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermAggregate); }
+#line 5004 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 216:
-
-/* Line 1455 of yacc.c  */
-#line 1999 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2000 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5010 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 217:
-
-/* Line 1455 of yacc.c  */
-#line 2005 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2006 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5016 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 218:
-
-/* Line 1455 of yacc.c  */
-#line 2006 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2007 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5022 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 219:
-
-/* Line 1455 of yacc.c  */
-#line 2007 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2008 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5028 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 220:
-
-/* Line 1455 of yacc.c  */
-#line 2008 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2009 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5034 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 221:
-
-/* Line 1455 of yacc.c  */
-#line 2009 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2010 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5040 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 222:
-
-/* Line 1455 of yacc.c  */
-#line 2013 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermAggregate) = 0; ;}
+#line 2014 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermAggregate) = 0; }
+#line 5046 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 223:
-
-/* Line 1455 of yacc.c  */
-#line 2014 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { parseContext.symbolTable.push(); ;}
+#line 2015 "hlslang.y" /* yacc.c:1646  */
+    { parseContext.symbolTable.push(); }
+#line 5052 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 224:
-
-/* Line 1455 of yacc.c  */
-#line 2014 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { parseContext.symbolTable.pop(); ;}
+#line 2015 "hlslang.y" /* yacc.c:1646  */
+    { parseContext.symbolTable.pop(); }
+#line 5058 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 225:
-
-/* Line 1455 of yacc.c  */
-#line 2014 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2015 "hlslang.y" /* yacc.c:1646  */
     {
-        if ((yyvsp[(3) - (5)].interm.intermAggregate) != 0)
-            (yyvsp[(3) - (5)].interm.intermAggregate)->setOperator(EOpSequence);
-        (yyval.interm.intermAggregate) = (yyvsp[(3) - (5)].interm.intermAggregate);
-    ;}
+        if ((yyvsp[-2].interm.intermAggregate) != 0)
+            (yyvsp[-2].interm.intermAggregate)->setOperator(EOpSequence);
+        (yyval.interm.intermAggregate) = (yyvsp[-2].interm.intermAggregate);
+    }
+#line 5068 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 226:
-
-/* Line 1455 of yacc.c  */
-#line 2022 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2023 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5074 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 227:
-
-/* Line 1455 of yacc.c  */
-#line 2023 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode); ;}
+#line 2024 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode); }
+#line 5080 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 228:
-
-/* Line 1455 of yacc.c  */
-#line 2028 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2029 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.intermNode) = 0;
-    ;}
+    }
+#line 5088 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 229:
-
-/* Line 1455 of yacc.c  */
-#line 2031 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2032 "hlslang.y" /* yacc.c:1646  */
     {
-        if ((yyvsp[(2) - (3)].interm.intermAggregate))
-            (yyvsp[(2) - (3)].interm.intermAggregate)->setOperator(EOpSequence);
-        (yyval.interm.intermNode) = (yyvsp[(2) - (3)].interm.intermAggregate);
-    ;}
+        if ((yyvsp[-1].interm.intermAggregate))
+            (yyvsp[-1].interm.intermAggregate)->setOperator(EOpSequence);
+        (yyval.interm.intermNode) = (yyvsp[-1].interm.intermAggregate);
+    }
+#line 5098 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 230:
-
-/* Line 1455 of yacc.c  */
-#line 2039 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2040 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermAggregate) = ir_make_aggregate((yyvsp[(1) - (1)].interm.intermNode), gNullSourceLoc); 
-    ;}
+        (yyval.interm.intermAggregate) = ir_make_aggregate((yyvsp[0].interm.intermNode), gNullSourceLoc); 
+    }
+#line 5106 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 231:
-
-/* Line 1455 of yacc.c  */
-#line 2042 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2043 "hlslang.y" /* yacc.c:1646  */
     { 
-        (yyval.interm.intermAggregate) = ir_grow_aggregate((yyvsp[(1) - (2)].interm.intermAggregate), (yyvsp[(2) - (2)].interm.intermNode), gNullSourceLoc);
-    ;}
+        (yyval.interm.intermAggregate) = ir_grow_aggregate((yyvsp[-1].interm.intermAggregate), (yyvsp[0].interm.intermNode), gNullSourceLoc);
+    }
+#line 5114 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 232:
-
-/* Line 1455 of yacc.c  */
-#line 2048 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = 0; ;}
+#line 2049 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = 0; }
+#line 5120 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 233:
-
-/* Line 1455 of yacc.c  */
-#line 2049 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = static_cast<TIntermNode*>((yyvsp[(1) - (2)].interm.intermTypedNode)); ;}
+#line 2050 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = static_cast<TIntermNode*>((yyvsp[-1].interm.intermTypedNode)); }
+#line 5126 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 234:
-
-/* Line 1455 of yacc.c  */
-#line 2053 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2054 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.boolErrorCheck((yyvsp[(1) - (5)].lex).line, (yyvsp[(3) - (5)].interm.intermTypedNode)))
+        if (parseContext.boolErrorCheck((yyvsp[-4].lex).line, (yyvsp[-2].interm.intermTypedNode)))
             parseContext.recover();
-        (yyval.interm.intermNode) = ir_add_selection((yyvsp[(3) - (5)].interm.intermTypedNode), (yyvsp[(5) - (5)].interm.nodePair), (yyvsp[(1) - (5)].lex).line, parseContext.infoSink);
-    ;}
+        (yyval.interm.intermNode) = ir_add_selection((yyvsp[-2].interm.intermTypedNode), (yyvsp[0].interm.nodePair), (yyvsp[-4].lex).line, parseContext.infoSink);
+    }
+#line 5136 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 235:
-
-/* Line 1455 of yacc.c  */
-#line 2061 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2062 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.nodePair).node1 = (yyvsp[(1) - (3)].interm.intermNode);
-        (yyval.interm.nodePair).node2 = (yyvsp[(3) - (3)].interm.intermNode);
-    ;}
+        (yyval.interm.nodePair).node1 = (yyvsp[-2].interm.intermNode);
+        (yyval.interm.nodePair).node2 = (yyvsp[0].interm.intermNode);
+    }
+#line 5145 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 236:
-
-/* Line 1455 of yacc.c  */
-#line 2065 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2066 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.nodePair).node1 = (yyvsp[(1) - (1)].interm.intermNode);
+        (yyval.interm.nodePair).node1 = (yyvsp[0].interm.intermNode);
         (yyval.interm.nodePair).node2 = 0;
-    ;}
+    }
+#line 5154 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 237:
-
-/* Line 1455 of yacc.c  */
-#line 2075 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2076 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-        if (parseContext.boolErrorCheck((yyvsp[(1) - (1)].interm.intermTypedNode)->getLine(), (yyvsp[(1) - (1)].interm.intermTypedNode)))
+        (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+        if (parseContext.boolErrorCheck((yyvsp[0].interm.intermTypedNode)->getLine(), (yyvsp[0].interm.intermTypedNode)))
             parseContext.recover();
-    ;}
+    }
+#line 5164 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 238:
-
-/* Line 1455 of yacc.c  */
-#line 2080 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2081 "hlslang.y" /* yacc.c:1646  */
     {
         TIntermSymbol* symbol;
-        if (parseContext.structQualifierErrorCheck((yyvsp[(2) - (4)].lex).line, (yyvsp[(1) - (4)].interm.type)))
+        if (parseContext.structQualifierErrorCheck((yyvsp[-2].lex).line, (yyvsp[-3].interm.type)))
             parseContext.recover();
-        if (parseContext.boolErrorCheck((yyvsp[(2) - (4)].lex).line, (yyvsp[(1) - (4)].interm.type)))
+        if (parseContext.boolErrorCheck((yyvsp[-2].lex).line, (yyvsp[-3].interm.type)))
             parseContext.recover();
 
-        if (!parseContext.executeInitializer((yyvsp[(2) - (4)].lex).line, *(yyvsp[(2) - (4)].lex).string, (yyvsp[(1) - (4)].interm.type), (yyvsp[(4) - (4)].interm.intermTypedNode), symbol)) {
-			(yyval.interm.intermTypedNode) = ir_add_declaration(symbol, (yyvsp[(4) - (4)].interm.intermTypedNode), (yyvsp[(2) - (4)].lex).line, parseContext);
+        if (!parseContext.executeInitializer((yyvsp[-2].lex).line, *(yyvsp[-2].lex).string, (yyvsp[-3].interm.type), (yyvsp[0].interm.intermTypedNode), symbol)) {
+			(yyval.interm.intermTypedNode) = ir_add_declaration(symbol, (yyvsp[0].interm.intermTypedNode), (yyvsp[-2].lex).line, parseContext);
         } else {
             parseContext.recover();
             (yyval.interm.intermTypedNode) = 0;
         }
-    ;}
+    }
+#line 5183 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 239:
-
-/* Line 1455 of yacc.c  */
-#line 2097 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { parseContext.symbolTable.push(); ++parseContext.loopNestingLevel; ;}
+#line 2098 "hlslang.y" /* yacc.c:1646  */
+    { parseContext.symbolTable.push(); ++parseContext.loopNestingLevel; }
+#line 5189 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 240:
-
-/* Line 1455 of yacc.c  */
-#line 2097 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2098 "hlslang.y" /* yacc.c:1646  */
     {
         parseContext.symbolTable.pop();
-        (yyval.interm.intermNode) = ir_add_loop(ELoopWhile, (yyvsp[(4) - (6)].interm.intermTypedNode), 0, (yyvsp[(6) - (6)].interm.intermNode), (yyvsp[(1) - (6)].lex).line);
+        (yyval.interm.intermNode) = ir_add_loop(ELoopWhile, (yyvsp[-2].interm.intermTypedNode), 0, (yyvsp[0].interm.intermNode), (yyvsp[-5].lex).line);
         --parseContext.loopNestingLevel;
-    ;}
+    }
+#line 5199 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 241:
-
-/* Line 1455 of yacc.c  */
-#line 2102 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { ++parseContext.loopNestingLevel; ;}
+#line 2103 "hlslang.y" /* yacc.c:1646  */
+    { ++parseContext.loopNestingLevel; }
+#line 5205 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 242:
-
-/* Line 1455 of yacc.c  */
-#line 2102 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2103 "hlslang.y" /* yacc.c:1646  */
     {
-        if (parseContext.boolErrorCheck((yyvsp[(8) - (8)].lex).line, (yyvsp[(6) - (8)].interm.intermTypedNode)))
+        if (parseContext.boolErrorCheck((yyvsp[0].lex).line, (yyvsp[-2].interm.intermTypedNode)))
             parseContext.recover();
                     
-        (yyval.interm.intermNode) = ir_add_loop(ELoopDoWhile, (yyvsp[(6) - (8)].interm.intermTypedNode), 0, (yyvsp[(3) - (8)].interm.intermNode), (yyvsp[(4) - (8)].lex).line);
+        (yyval.interm.intermNode) = ir_add_loop(ELoopDoWhile, (yyvsp[-2].interm.intermTypedNode), 0, (yyvsp[-5].interm.intermNode), (yyvsp[-4].lex).line);
         --parseContext.loopNestingLevel;
-    ;}
+    }
+#line 5217 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 243:
-
-/* Line 1455 of yacc.c  */
-#line 2109 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { parseContext.symbolTable.push(); ++parseContext.loopNestingLevel; ;}
+#line 2110 "hlslang.y" /* yacc.c:1646  */
+    { parseContext.symbolTable.push(); ++parseContext.loopNestingLevel; }
+#line 5223 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 244:
-
-/* Line 1455 of yacc.c  */
-#line 2109 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2110 "hlslang.y" /* yacc.c:1646  */
     {
         parseContext.symbolTable.pop();
-        (yyval.interm.intermNode) = ir_make_aggregate((yyvsp[(4) - (7)].interm.intermNode), (yyvsp[(2) - (7)].lex).line);
+        (yyval.interm.intermNode) = ir_make_aggregate((yyvsp[-3].interm.intermNode), (yyvsp[-5].lex).line);
         (yyval.interm.intermNode) = ir_grow_aggregate(
                 (yyval.interm.intermNode),
-                ir_add_loop(ELoopFor, reinterpret_cast<TIntermTyped*>((yyvsp[(5) - (7)].interm.nodePair).node1), reinterpret_cast<TIntermTyped*>((yyvsp[(5) - (7)].interm.nodePair).node2), (yyvsp[(7) - (7)].interm.intermNode), (yyvsp[(1) - (7)].lex).line),
-                (yyvsp[(1) - (7)].lex).line);
+                ir_add_loop(ELoopFor, reinterpret_cast<TIntermTyped*>((yyvsp[-2].interm.nodePair).node1), reinterpret_cast<TIntermTyped*>((yyvsp[-2].interm.nodePair).node2), (yyvsp[0].interm.intermNode), (yyvsp[-6].lex).line),
+                (yyvsp[-6].lex).line);
         (yyval.interm.intermNode)->getAsAggregate()->setOperator(EOpSequence);
         --parseContext.loopNestingLevel;
-    ;}
+    }
+#line 5238 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 245:
-
-/* Line 1455 of yacc.c  */
-#line 2122 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2123 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode);
-    ;}
+        (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode);
+    }
+#line 5246 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 246:
-
-/* Line 1455 of yacc.c  */
-#line 2125 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2126 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode);
-    ;}
+        (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode);
+    }
+#line 5254 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 247:
-
-/* Line 1455 of yacc.c  */
-#line 2131 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2132 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermTypedNode) = (yyvsp[(1) - (1)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.intermTypedNode) = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 5262 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 248:
-
-/* Line 1455 of yacc.c  */
-#line 2134 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2135 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.intermTypedNode) = 0;
-    ;}
+    }
+#line 5270 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 249:
-
-/* Line 1455 of yacc.c  */
-#line 2140 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2141 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.nodePair).node1 = (yyvsp[(1) - (2)].interm.intermTypedNode);
+        (yyval.interm.nodePair).node1 = (yyvsp[-1].interm.intermTypedNode);
         (yyval.interm.nodePair).node2 = 0;
-    ;}
+    }
+#line 5279 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 250:
-
-/* Line 1455 of yacc.c  */
-#line 2144 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2145 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.nodePair).node1 = (yyvsp[(1) - (3)].interm.intermTypedNode);
-        (yyval.interm.nodePair).node2 = (yyvsp[(3) - (3)].interm.intermTypedNode);
-    ;}
+        (yyval.interm.nodePair).node1 = (yyvsp[-2].interm.intermTypedNode);
+        (yyval.interm.nodePair).node2 = (yyvsp[0].interm.intermTypedNode);
+    }
+#line 5288 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 251:
-
-/* Line 1455 of yacc.c  */
-#line 2151 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2152 "hlslang.y" /* yacc.c:1646  */
     {
         if (parseContext.loopNestingLevel <= 0) {
-            parseContext.error((yyvsp[(1) - (2)].lex).line, "continue statement only allowed in loops", "", "");
+            parseContext.error((yyvsp[-1].lex).line, "continue statement only allowed in loops", "", "");
             parseContext.recover();
         }        
-        (yyval.interm.intermNode) = ir_add_branch(EOpContinue, (yyvsp[(1) - (2)].lex).line);
-    ;}
+        (yyval.interm.intermNode) = ir_add_branch(EOpContinue, (yyvsp[-1].lex).line);
+    }
+#line 5300 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 252:
-
-/* Line 1455 of yacc.c  */
-#line 2158 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2159 "hlslang.y" /* yacc.c:1646  */
     {
         if (parseContext.loopNestingLevel <= 0) {
-            parseContext.error((yyvsp[(1) - (2)].lex).line, "break statement only allowed in loops", "", "");
+            parseContext.error((yyvsp[-1].lex).line, "break statement only allowed in loops", "", "");
             parseContext.recover();
         }        
-        (yyval.interm.intermNode) = ir_add_branch(EOpBreak, (yyvsp[(1) - (2)].lex).line);
-    ;}
+        (yyval.interm.intermNode) = ir_add_branch(EOpBreak, (yyvsp[-1].lex).line);
+    }
+#line 5312 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 253:
-
-/* Line 1455 of yacc.c  */
-#line 2165 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2166 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermNode) = ir_add_branch(EOpReturn, (yyvsp[(1) - (2)].lex).line);
+        (yyval.interm.intermNode) = ir_add_branch(EOpReturn, (yyvsp[-1].lex).line);
         if (parseContext.currentFunctionType->getBasicType() != EbtVoid) {
-            parseContext.error((yyvsp[(1) - (2)].lex).line, "non-void function must return a value", "return", "");
+            parseContext.error((yyvsp[-1].lex).line, "non-void function must return a value", "return", "");
             parseContext.recover();
         }
-    ;}
+    }
+#line 5324 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 254:
-
-/* Line 1455 of yacc.c  */
-#line 2172 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2173 "hlslang.y" /* yacc.c:1646  */
     {
-        TIntermTyped *temp = (yyvsp[(2) - (3)].interm.intermTypedNode);
+        TIntermTyped *temp = (yyvsp[-1].interm.intermTypedNode);
         if (parseContext.currentFunctionType->getBasicType() == EbtVoid) {
-            parseContext.error((yyvsp[(1) - (3)].lex).line, "void function cannot return a value", "return", "");
+            parseContext.error((yyvsp[-2].lex).line, "void function cannot return a value", "return", "");
             parseContext.recover();
-        } else if (*(parseContext.currentFunctionType) != (yyvsp[(2) - (3)].interm.intermTypedNode)->getType()) {
+        } else if (*(parseContext.currentFunctionType) != (yyvsp[-1].interm.intermTypedNode)->getType()) {
             TOperator op = parseContext.getConstructorOp(*(parseContext.currentFunctionType));
             if (op != EOpNull)
-                temp = parseContext.constructBuiltIn((parseContext.currentFunctionType), op, (yyvsp[(2) - (3)].interm.intermTypedNode), (yyvsp[(1) - (3)].lex).line, false);
+                temp = parseContext.constructBuiltIn((parseContext.currentFunctionType), op, (yyvsp[-1].interm.intermTypedNode), (yyvsp[-2].lex).line, false);
             else
                 temp = 0;
             if (temp == 0) {
-                parseContext.error((yyvsp[(1) - (3)].lex).line, "function return is not matching type:", "return", "");
+                parseContext.error((yyvsp[-2].lex).line, "function return is not matching type:", "return", "");
                 parseContext.recover();
-                temp = (yyvsp[(2) - (3)].interm.intermTypedNode);
+                temp = (yyvsp[-1].interm.intermTypedNode);
             }
         }
-        (yyval.interm.intermNode) = ir_add_branch(EOpReturn, temp, (yyvsp[(1) - (3)].lex).line);
+        (yyval.interm.intermNode) = ir_add_branch(EOpReturn, temp, (yyvsp[-2].lex).line);
         parseContext.functionReturnsValue = true;
-    ;}
+    }
+#line 5349 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 255:
-
-/* Line 1455 of yacc.c  */
-#line 2192 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2193 "hlslang.y" /* yacc.c:1646  */
     {
 		// Jim: using discard when compiling vertex shaders should not be considered a syntactic error, instead,
 		// we should issue a semantic error only if the code path is actually executed. (Not yet implemented)
         //FRAG_ONLY("discard", $1.line);
-        (yyval.interm.intermNode) = ir_add_branch(EOpKill, (yyvsp[(1) - (2)].lex).line);
-    ;}
+        (yyval.interm.intermNode) = ir_add_branch(EOpKill, (yyvsp[-1].lex).line);
+    }
+#line 5360 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 256:
-
-/* Line 1455 of yacc.c  */
-#line 2203 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2204 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode);
+        (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode);
         parseContext.treeRoot = (yyval.interm.intermNode);
-    ;}
+    }
+#line 5369 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 257:
-
-/* Line 1455 of yacc.c  */
-#line 2207 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2208 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermNode) = ir_grow_aggregate((yyvsp[(1) - (2)].interm.intermNode), (yyvsp[(2) - (2)].interm.intermNode), gNullSourceLoc);
+        (yyval.interm.intermNode) = ir_grow_aggregate((yyvsp[-1].interm.intermNode), (yyvsp[0].interm.intermNode), gNullSourceLoc);
         parseContext.treeRoot = (yyval.interm.intermNode);
-    ;}
+    }
+#line 5378 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 258:
-
-/* Line 1455 of yacc.c  */
-#line 2214 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2215 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermNode);
-    ;}
+        (yyval.interm.intermNode) = (yyvsp[0].interm.intermNode);
+    }
+#line 5386 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 259:
-
-/* Line 1455 of yacc.c  */
-#line 2217 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2218 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.interm.intermNode) = (yyvsp[(1) - (1)].interm.intermDeclaration);
-    ;}
+        (yyval.interm.intermNode) = (yyvsp[0].interm.intermDeclaration);
+    }
+#line 5394 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 260:
-
-/* Line 1455 of yacc.c  */
-#line 2220 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.intermNode) = 0; ;}
+#line 2221 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.intermNode) = 0; }
+#line 5400 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 261:
-
-/* Line 1455 of yacc.c  */
-#line 2224 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2225 "hlslang.y" /* yacc.c:1646  */
     {
-        TFunction& function = *((yyvsp[(1) - (1)].interm).function);
+        TFunction& function = *((yyvsp[0].interm).function);
         TFunction* prevDec = static_cast<TFunction*>(parseContext.symbolTable.find(function.getMangledName()));
         //
         // Note:  'prevDec' could be 'function' if this is the first time we've seen function
@@ -5916,7 +5413,7 @@ yyreduce:
             //
             // Then this function already has a body.
             //
-            parseContext.error((yyvsp[(1) - (1)].interm).line, "function already has a body", function.getName().c_str(), "");
+            parseContext.error((yyvsp[0].interm).line, "function already has a body", function.getName().c_str(), "");
             parseContext.recover();
         }
         prevDec->setDefined();
@@ -5949,7 +5446,7 @@ yyreduce:
                 // Insert the parameters with name in the symbol table.
                 //
                 if (! parseContext.symbolTable.insert(*variable)) {
-                    parseContext.error((yyvsp[(1) - (1)].interm).line, "redefinition", variable->getName().c_str(), "");
+                    parseContext.error((yyvsp[0].interm).line, "redefinition", variable->getName().c_str(), "");
                     parseContext.recover();
                     delete variable;
                 }
@@ -5963,530 +5460,476 @@ yyreduce:
                 //                
                 paramNodes = ir_grow_aggregate(
                                                paramNodes, 
-                                               ir_add_symbol(variable, (yyvsp[(1) - (1)].interm).line),
-                                               (yyvsp[(1) - (1)].interm).line);
+                                               ir_add_symbol(variable, (yyvsp[0].interm).line),
+                                               (yyvsp[0].interm).line);
             } else {
-                paramNodes = ir_grow_aggregate(paramNodes, ir_add_symbol_internal(0, "", param.info, *param.type, (yyvsp[(1) - (1)].interm).line), (yyvsp[(1) - (1)].interm).line);
+                paramNodes = ir_grow_aggregate(paramNodes, ir_add_symbol_internal(0, "", param.info, *param.type, (yyvsp[0].interm).line), (yyvsp[0].interm).line);
             }
         }
-        ir_set_aggregate_op(paramNodes, EOpParameters, (yyvsp[(1) - (1)].interm).line);
-        (yyvsp[(1) - (1)].interm).intermAggregate = paramNodes;
+        ir_set_aggregate_op(paramNodes, EOpParameters, (yyvsp[0].interm).line);
+        (yyvsp[0].interm).intermAggregate = paramNodes;
         parseContext.loopNestingLevel = 0;
-    ;}
+    }
+#line 5474 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 262:
-
-/* Line 1455 of yacc.c  */
-#line 2293 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2294 "hlslang.y" /* yacc.c:1646  */
     {
         //?? Check that all paths return a value if return type != void ?
         //   May be best done as post process phase on intermediate code
         if (parseContext.currentFunctionType->getBasicType() != EbtVoid && ! parseContext.functionReturnsValue) {
-            parseContext.error((yyvsp[(1) - (3)].interm).line, "function does not return a value:", "", (yyvsp[(1) - (3)].interm).function->getName().c_str());
+            parseContext.error((yyvsp[-2].interm).line, "function does not return a value:", "", (yyvsp[-2].interm).function->getName().c_str());
             parseContext.recover();
         }
         parseContext.symbolTable.pop();
-        (yyval.interm.intermNode) = ir_grow_aggregate((yyvsp[(1) - (3)].interm).intermAggregate, (yyvsp[(3) - (3)].interm.intermNode), gNullSourceLoc);
-        ir_set_aggregate_op((yyval.interm.intermNode), EOpFunction, (yyvsp[(1) - (3)].interm).line);
-        (yyval.interm.intermNode)->getAsAggregate()->setName((yyvsp[(1) - (3)].interm).function->getMangledName().c_str());
-        (yyval.interm.intermNode)->getAsAggregate()->setPlainName((yyvsp[(1) - (3)].interm).function->getName().c_str());
-        (yyval.interm.intermNode)->getAsAggregate()->setType((yyvsp[(1) - (3)].interm).function->getReturnType());
+        (yyval.interm.intermNode) = ir_grow_aggregate((yyvsp[-2].interm).intermAggregate, (yyvsp[0].interm.intermNode), gNullSourceLoc);
+        ir_set_aggregate_op((yyval.interm.intermNode), EOpFunction, (yyvsp[-2].interm).line);
+        (yyval.interm.intermNode)->getAsAggregate()->setName((yyvsp[-2].interm).function->getMangledName().c_str());
+        (yyval.interm.intermNode)->getAsAggregate()->setPlainName((yyvsp[-2].interm).function->getName().c_str());
+        (yyval.interm.intermNode)->getAsAggregate()->setType((yyvsp[-2].interm).function->getReturnType());
         
-	if ( (yyvsp[(1) - (3)].interm).function->getInfo())
-	    (yyval.interm.intermNode)->getAsAggregate()->setSemantic((yyvsp[(1) - (3)].interm).function->getInfo()->getSemantic());
-    ;}
+	if ( (yyvsp[-2].interm).function->getInfo())
+	    (yyval.interm.intermNode)->getAsAggregate()->setSemantic((yyvsp[-2].interm).function->getInfo()->getSemantic());
+    }
+#line 5496 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 263:
-
-/* Line 1455 of yacc.c  */
-#line 2313 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2314 "hlslang.y" /* yacc.c:1646  */
     {
-		(yyval.interm.intermTypedNode) = (yyvsp[(2) - (3)].interm.intermAggregate);
-    ;}
+		(yyval.interm.intermTypedNode) = (yyvsp[-1].interm.intermAggregate);
+    }
+#line 5504 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 264:
-
-/* Line 1455 of yacc.c  */
-#line 2316 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2317 "hlslang.y" /* yacc.c:1646  */
     {
-		(yyval.interm.intermTypedNode) = (yyvsp[(2) - (4)].interm.intermAggregate);
-    ;}
+		(yyval.interm.intermTypedNode) = (yyvsp[-2].interm.intermAggregate);
+    }
+#line 5512 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 265:
-
-/* Line 1455 of yacc.c  */
-#line 2323 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2324 "hlslang.y" /* yacc.c:1646  */
     {
         //create a new aggNode
-       (yyval.interm.intermAggregate) = ir_make_aggregate( (yyvsp[(1) - (1)].interm.intermTypedNode), (yyvsp[(1) - (1)].interm.intermTypedNode)->getLine());       
-    ;}
+       (yyval.interm.intermAggregate) = ir_make_aggregate( (yyvsp[0].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode)->getLine());       
+    }
+#line 5521 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 266:
-
-/* Line 1455 of yacc.c  */
-#line 2327 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2328 "hlslang.y" /* yacc.c:1646  */
     {
        //take the inherited aggNode and return it
-       (yyval.interm.intermAggregate) = (yyvsp[(1) - (1)].interm.intermTypedNode)->getAsAggregate();
-    ;}
+       (yyval.interm.intermAggregate) = (yyvsp[0].interm.intermTypedNode)->getAsAggregate();
+    }
+#line 5530 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 267:
-
-/* Line 1455 of yacc.c  */
-#line 2331 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2332 "hlslang.y" /* yacc.c:1646  */
     {
         // append to the aggNode
-       (yyval.interm.intermAggregate) = ir_grow_aggregate( (yyvsp[(1) - (3)].interm.intermAggregate), (yyvsp[(3) - (3)].interm.intermTypedNode), (yyvsp[(3) - (3)].interm.intermTypedNode)->getLine());       
-    ;}
+       (yyval.interm.intermAggregate) = ir_grow_aggregate( (yyvsp[-2].interm.intermAggregate), (yyvsp[0].interm.intermTypedNode), (yyvsp[0].interm.intermTypedNode)->getLine());       
+    }
+#line 5539 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 268:
-
-/* Line 1455 of yacc.c  */
-#line 2335 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2336 "hlslang.y" /* yacc.c:1646  */
     {
        // append all children or $3 to $1
-       (yyval.interm.intermAggregate) = parseContext.mergeAggregates( (yyvsp[(1) - (3)].interm.intermAggregate), (yyvsp[(3) - (3)].interm.intermTypedNode)->getAsAggregate());
-    ;}
+       (yyval.interm.intermAggregate) = parseContext.mergeAggregates( (yyvsp[-2].interm.intermAggregate), (yyvsp[0].interm.intermTypedNode)->getAsAggregate());
+    }
+#line 5548 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 269:
-
-/* Line 1455 of yacc.c  */
-#line 2342 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2343 "hlslang.y" /* yacc.c:1646  */
     {
         //empty annotation
       (yyval.interm.ann) = 0;
-    ;}
+    }
+#line 5557 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 270:
-
-/* Line 1455 of yacc.c  */
-#line 2346 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2347 "hlslang.y" /* yacc.c:1646  */
     {
-      (yyval.interm.ann) = (yyvsp[(2) - (3)].interm.ann);
-    ;}
+      (yyval.interm.ann) = (yyvsp[-1].interm.ann);
+    }
+#line 5565 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 271:
-
-/* Line 1455 of yacc.c  */
-#line 2352 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2353 "hlslang.y" /* yacc.c:1646  */
     {
         (yyval.interm.ann) = new TAnnotation;
-		(yyval.interm.ann)->addKey( *(yyvsp[(1) - (1)].lex).string);
-    ;}
+		(yyval.interm.ann)->addKey( *(yyvsp[0].lex).string);
+    }
+#line 5574 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 272:
-
-/* Line 1455 of yacc.c  */
-#line 2356 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2357 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyvsp[(1) - (2)].interm.ann)->addKey( *(yyvsp[(2) - (2)].lex).string);
-		(yyval.interm.ann) = (yyvsp[(1) - (2)].interm.ann);
-    ;}
+        (yyvsp[-1].interm.ann)->addKey( *(yyvsp[0].lex).string);
+		(yyval.interm.ann) = (yyvsp[-1].interm.ann);
+    }
+#line 5583 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 273:
-
-/* Line 1455 of yacc.c  */
-#line 2363 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2364 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.lex).string = (yyvsp[(2) - (5)].lex).string;
-    ;}
+        (yyval.lex).string = (yyvsp[-3].lex).string;
+    }
+#line 5591 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 274:
-
-/* Line 1455 of yacc.c  */
-#line 2369 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2370 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5597 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 275:
-
-/* Line 1455 of yacc.c  */
-#line 2370 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2371 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5603 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 276:
-
-/* Line 1455 of yacc.c  */
-#line 2371 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2372 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5609 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 277:
-
-/* Line 1455 of yacc.c  */
-#line 2372 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2373 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5615 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 278:
-
-/* Line 1455 of yacc.c  */
-#line 2373 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2374 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5621 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 279:
-
-/* Line 1455 of yacc.c  */
-#line 2374 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2375 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5627 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 280:
-
-/* Line 1455 of yacc.c  */
-#line 2375 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2376 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5633 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 281:
-
-/* Line 1455 of yacc.c  */
-#line 2376 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2377 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5639 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 282:
-
-/* Line 1455 of yacc.c  */
-#line 2377 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2378 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5645 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 283:
-
-/* Line 1455 of yacc.c  */
-#line 2378 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2379 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5651 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 284:
-
-/* Line 1455 of yacc.c  */
-#line 2379 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2380 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5657 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 285:
-
-/* Line 1455 of yacc.c  */
-#line 2380 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2381 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5663 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 286:
-
-/* Line 1455 of yacc.c  */
-#line 2381 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2382 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5669 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 287:
-
-/* Line 1455 of yacc.c  */
-#line 2382 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2383 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5675 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 288:
-
-/* Line 1455 of yacc.c  */
-#line 2383 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2384 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5681 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 289:
-
-/* Line 1455 of yacc.c  */
-#line 2384 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2385 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5687 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 290:
-
-/* Line 1455 of yacc.c  */
-#line 2385 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2386 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5693 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 291:
-
-/* Line 1455 of yacc.c  */
-#line 2386 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2387 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5699 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 292:
-
-/* Line 1455 of yacc.c  */
-#line 2387 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2388 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5705 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 293:
-
-/* Line 1455 of yacc.c  */
-#line 2388 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2389 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5711 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 294:
-
-/* Line 1455 of yacc.c  */
-#line 2389 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2390 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5717 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 295:
-
-/* Line 1455 of yacc.c  */
-#line 2393 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2394 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5723 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 296:
-
-/* Line 1455 of yacc.c  */
-#line 2394 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2395 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5729 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 297:
-
-/* Line 1455 of yacc.c  */
-#line 2395 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2396 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5735 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 298:
-
-/* Line 1455 of yacc.c  */
-#line 2396 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2397 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5741 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 299:
-
-/* Line 1455 of yacc.c  */
-#line 2400 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2401 "hlslang.y" /* yacc.c:1646  */
     {
-		(yyval.lex).f = (float)(yyvsp[(1) - (1)].lex).i;
-	;}
+		(yyval.lex).f = (float)(yyvsp[0].lex).i;
+	}
+#line 5749 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 300:
-
-/* Line 1455 of yacc.c  */
-#line 2403 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2404 "hlslang.y" /* yacc.c:1646  */
     {
-		(yyval.lex).f = ((yyvsp[(1) - (1)].lex).b) ? 1.0f : 0.0f;
-	;}
+		(yyval.lex).f = ((yyvsp[0].lex).b) ? 1.0f : 0.0f;
+	}
+#line 5757 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 301:
-
-/* Line 1455 of yacc.c  */
-#line 2406 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2407 "hlslang.y" /* yacc.c:1646  */
     {
-		(yyval.lex).f = (yyvsp[(1) - (1)].lex).f;
-	;}
+		(yyval.lex).f = (yyvsp[0].lex).f;
+	}
+#line 5765 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 302:
-
-/* Line 1455 of yacc.c  */
-#line 2412 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2413 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5771 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 303:
-
-/* Line 1455 of yacc.c  */
-#line 2416 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2417 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5777 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 304:
-
-/* Line 1455 of yacc.c  */
-#line 2417 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2418 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5783 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 305:
-
-/* Line 1455 of yacc.c  */
-#line 2421 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2422 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5789 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 306:
-
-/* Line 1455 of yacc.c  */
-#line 2425 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2426 "hlslang.y" /* yacc.c:1646  */
     {
-        (yyval.lex) = (yyvsp[(4) - (5)].lex);
-    ;}
+        (yyval.lex) = (yyvsp[-1].lex);
+    }
+#line 5797 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 307:
-
-/* Line 1455 of yacc.c  */
-#line 2431 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.lex).string = (yyvsp[(2) - (2)].lex).string;;}
+#line 2432 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.lex).string = (yyvsp[0].lex).string;}
+#line 5803 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 308:
-
-/* Line 1455 of yacc.c  */
-#line 2435 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = 0;;}
+#line 2436 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = 0;}
+#line 5809 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 309:
-
-/* Line 1455 of yacc.c  */
-#line 2436 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[(1) - (1)].lex).string, 0); ;}
+#line 2437 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[0].lex).string, 0); }
+#line 5815 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 310:
-
-/* Line 1455 of yacc.c  */
-#line 2437 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = new TTypeInfo( "", *(yyvsp[(1) - (1)].lex).string, 0); ;}
+#line 2438 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = new TTypeInfo( "", *(yyvsp[0].lex).string, 0); }
+#line 5821 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 311:
-
-/* Line 1455 of yacc.c  */
-#line 2438 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = new TTypeInfo( "", (yyvsp[(1) - (1)].interm.ann)); ;}
+#line 2439 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = new TTypeInfo( "", (yyvsp[0].interm.ann)); }
+#line 5827 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 312:
-
-/* Line 1455 of yacc.c  */
-#line 2439 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[(1) - (2)].lex).string, (yyvsp[(2) - (2)].interm.ann)); ;}
+#line 2440 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[-1].lex).string, (yyvsp[0].interm.ann)); }
+#line 5833 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 313:
-
-/* Line 1455 of yacc.c  */
-#line 2440 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[(1) - (2)].lex).string, *(yyvsp[(2) - (2)].lex).string, 0); ;}
+#line 2441 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[-1].lex).string, *(yyvsp[0].lex).string, 0); }
+#line 5839 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 314:
-
-/* Line 1455 of yacc.c  */
-#line 2441 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = new TTypeInfo( "", *(yyvsp[(1) - (2)].lex).string, (yyvsp[(2) - (2)].interm.ann)); ;}
+#line 2442 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = new TTypeInfo( "", *(yyvsp[-1].lex).string, (yyvsp[0].interm.ann)); }
+#line 5845 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 315:
-
-/* Line 1455 of yacc.c  */
-#line 2442 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[(1) - (3)].lex).string, *(yyvsp[(2) - (3)].lex).string, (yyvsp[(3) - (3)].interm.ann)); ;}
+#line 2443 "hlslang.y" /* yacc.c:1646  */
+    { (yyval.interm.typeInfo) = new TTypeInfo( *(yyvsp[-2].lex).string, *(yyvsp[-1].lex).string, (yyvsp[0].interm.ann)); }
+#line 5851 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 316:
-
-/* Line 1455 of yacc.c  */
-#line 2446 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2447 "hlslang.y" /* yacc.c:1646  */
     {
-		TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst, 1), (yyvsp[(1) - (4)].lex).line);
+		TIntermConstant* constant = ir_add_constant(TType(EbtFloat, EbpUndefined, EvqConst, 1), (yyvsp[-3].lex).line);
 		constant->setValue(0.f);
 		(yyval.interm.intermTypedNode) = constant;
-	;}
+	}
+#line 5861 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 317:
-
-/* Line 1455 of yacc.c  */
-#line 2451 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
+#line 2452 "hlslang.y" /* yacc.c:1646  */
     {
-	;}
+	}
+#line 5868 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 318:
-
-/* Line 1455 of yacc.c  */
-#line 2456 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { ;}
+#line 2457 "hlslang.y" /* yacc.c:1646  */
+    { }
+#line 5874 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 319:
-
-/* Line 1455 of yacc.c  */
-#line 2457 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    { ;}
+#line 2458 "hlslang.y" /* yacc.c:1646  */
+    { }
+#line 5880 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 320:
-
-/* Line 1455 of yacc.c  */
-#line 2461 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2462 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5886 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 321:
-
-/* Line 1455 of yacc.c  */
-#line 2462 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2463 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5892 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 322:
-
-/* Line 1455 of yacc.c  */
-#line 2463 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2464 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5898 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 323:
-
-/* Line 1455 of yacc.c  */
-#line 2464 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2465 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5904 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 324:
-
-/* Line 1455 of yacc.c  */
-#line 2465 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2466 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5910 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
   case 325:
-
-/* Line 1455 of yacc.c  */
-#line 2466 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-    {;}
+#line 2467 "hlslang.y" /* yacc.c:1646  */
+    {}
+#line 5916 "hlslang.tab.c" /* yacc.c:1646  */
     break;
 
 
-
-/* Line 1455 of yacc.c  */
-#line 6488 "hlslang.tab.c"
+#line 5920 "hlslang.tab.c" /* yacc.c:1646  */
       default: break;
     }
+  /* User semantic actions sometimes alter yychar, and that requires
+     that yytoken be updated with the new translation.  We take the
+     approach of translating immediately before every use of yytoken.
+     One alternative is translating here after every semantic action,
+     but that translation would be missed if the semantic action invokes
+     YYABORT, YYACCEPT, or YYERROR immediately after altering yychar or
+     if it invokes YYBACKUP.  In the case of YYABORT or YYACCEPT, an
+     incorrect destructor might then be invoked immediately.  In the
+     case of YYERROR or YYBACKUP, subsequent parser actions might lead
+     to an incorrect destructor call or verbose syntax error message
+     before the lookahead is translated.  */
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
 
   YYPOPSTACK (yylen);
@@ -6495,7 +5938,7 @@ yyreduce:
 
   *++yyvsp = yyval;
 
-  /* Now `shift' the result of the reduction.  Determine what state
+  /* Now 'shift' the result of the reduction.  Determine what state
      that goes to, based on the state we popped back to and the rule
      number reduced by.  */
 
@@ -6510,10 +5953,14 @@ yyreduce:
   goto yynewstate;
 
 
-/*------------------------------------.
-| yyerrlab -- here on detecting error |
-`------------------------------------*/
+/*--------------------------------------.
+| yyerrlab -- here on detecting error.  |
+`--------------------------------------*/
 yyerrlab:
+  /* Make sure we have latest lookahead translation.  See comments at
+     user semantic actions for why this is necessary.  */
+  yytoken = yychar == YYEMPTY ? YYEMPTY : YYTRANSLATE (yychar);
+
   /* If not already recovering from an error, report this error.  */
   if (!yyerrstatus)
     {
@@ -6521,37 +5968,36 @@ yyerrlab:
 #if ! YYERROR_VERBOSE
       yyerror (parseContext, YY_("syntax error"));
 #else
+# define YYSYNTAX_ERROR yysyntax_error (&yymsg_alloc, &yymsg, \
+                                        yyssp, yytoken)
       {
-	YYSIZE_T yysize = yysyntax_error (0, yystate, yychar);
-	if (yymsg_alloc < yysize && yymsg_alloc < YYSTACK_ALLOC_MAXIMUM)
-	  {
-	    YYSIZE_T yyalloc = 2 * yysize;
-	    if (! (yysize <= yyalloc && yyalloc <= YYSTACK_ALLOC_MAXIMUM))
-	      yyalloc = YYSTACK_ALLOC_MAXIMUM;
-	    if (yymsg != yymsgbuf)
-	      YYSTACK_FREE (yymsg);
-	    yymsg = (char *) YYSTACK_ALLOC (yyalloc);
-	    if (yymsg)
-	      yymsg_alloc = yyalloc;
-	    else
-	      {
-		yymsg = yymsgbuf;
-		yymsg_alloc = sizeof yymsgbuf;
-	      }
-	  }
-
-	if (0 < yysize && yysize <= yymsg_alloc)
-	  {
-	    (void) yysyntax_error (yymsg, yystate, yychar);
-	    yyerror (parseContext, yymsg);
-	  }
-	else
-	  {
-	    yyerror (parseContext, YY_("syntax error"));
-	    if (yysize != 0)
-	      goto yyexhaustedlab;
-	  }
+        char const *yymsgp = YY_("syntax error");
+        int yysyntax_error_status;
+        yysyntax_error_status = YYSYNTAX_ERROR;
+        if (yysyntax_error_status == 0)
+          yymsgp = yymsg;
+        else if (yysyntax_error_status == 1)
+          {
+            if (yymsg != yymsgbuf)
+              YYSTACK_FREE (yymsg);
+            yymsg = (char *) YYSTACK_ALLOC (yymsg_alloc);
+            if (!yymsg)
+              {
+                yymsg = yymsgbuf;
+                yymsg_alloc = sizeof yymsgbuf;
+                yysyntax_error_status = 2;
+              }
+            else
+              {
+                yysyntax_error_status = YYSYNTAX_ERROR;
+                yymsgp = yymsg;
+              }
+          }
+        yyerror (parseContext, yymsgp);
+        if (yysyntax_error_status == 2)
+          goto yyexhaustedlab;
       }
+# undef YYSYNTAX_ERROR
 #endif
     }
 
@@ -6560,20 +6006,20 @@ yyerrlab:
   if (yyerrstatus == 3)
     {
       /* If just tried and failed to reuse lookahead token after an
-	 error, discard it.  */
+         error, discard it.  */
 
       if (yychar <= YYEOF)
-	{
-	  /* Return failure if at end of input.  */
-	  if (yychar == YYEOF)
-	    YYABORT;
-	}
+        {
+          /* Return failure if at end of input.  */
+          if (yychar == YYEOF)
+            YYABORT;
+        }
       else
-	{
-	  yydestruct ("Error: discarding",
-		      yytoken, &yylval, parseContext);
-	  yychar = YYEMPTY;
-	}
+        {
+          yydestruct ("Error: discarding",
+                      yytoken, &yylval, parseContext);
+          yychar = YYEMPTY;
+        }
     }
 
   /* Else will try to reuse lookahead token after shifting the error
@@ -6592,7 +6038,7 @@ yyerrorlab:
   if (/*CONSTCOND*/ 0)
      goto yyerrorlab;
 
-  /* Do not reclaim the symbols of the rule which action triggered
+  /* Do not reclaim the symbols of the rule whose action triggered
      this YYERROR.  */
   YYPOPSTACK (yylen);
   yylen = 0;
@@ -6605,35 +6051,37 @@ yyerrorlab:
 | yyerrlab1 -- common code for both syntax error and YYERROR.  |
 `-------------------------------------------------------------*/
 yyerrlab1:
-  yyerrstatus = 3;	/* Each real token shifted decrements this.  */
+  yyerrstatus = 3;      /* Each real token shifted decrements this.  */
 
   for (;;)
     {
       yyn = yypact[yystate];
-      if (yyn != YYPACT_NINF)
-	{
-	  yyn += YYTERROR;
-	  if (0 <= yyn && yyn <= YYLAST && yycheck[yyn] == YYTERROR)
-	    {
-	      yyn = yytable[yyn];
-	      if (0 < yyn)
-		break;
-	    }
-	}
+      if (!yypact_value_is_default (yyn))
+        {
+          yyn += YYTERROR;
+          if (0 <= yyn && yyn <= YYLAST && yycheck[yyn] == YYTERROR)
+            {
+              yyn = yytable[yyn];
+              if (0 < yyn)
+                break;
+            }
+        }
 
       /* Pop the current state because it cannot handle the error token.  */
       if (yyssp == yyss)
-	YYABORT;
+        YYABORT;
 
 
       yydestruct ("Error: popping",
-		  yystos[yystate], yyvsp, parseContext);
+                  yystos[yystate], yyvsp, parseContext);
       YYPOPSTACK (1);
       yystate = *yyssp;
       YY_STACK_PRINT (yyss, yyssp);
     }
 
+  YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
   *++yyvsp = yylval;
+  YY_IGNORE_MAYBE_UNINITIALIZED_END
 
 
   /* Shift the error token.  */
@@ -6657,7 +6105,7 @@ yyabortlab:
   yyresult = 1;
   goto yyreturn;
 
-#if !defined(yyoverflow) || YYERROR_VERBOSE
+#if !defined yyoverflow || YYERROR_VERBOSE
 /*-------------------------------------------------.
 | yyexhaustedlab -- memory exhaustion comes here.  |
 `-------------------------------------------------*/
@@ -6669,16 +6117,21 @@ yyexhaustedlab:
 
 yyreturn:
   if (yychar != YYEMPTY)
-     yydestruct ("Cleanup: discarding lookahead",
-		 yytoken, &yylval, parseContext);
-  /* Do not reclaim the symbols of the rule which action triggered
+    {
+      /* Make sure we have latest lookahead translation.  See comments at
+         user semantic actions for why this is necessary.  */
+      yytoken = YYTRANSLATE (yychar);
+      yydestruct ("Cleanup: discarding lookahead",
+                  yytoken, &yylval, parseContext);
+    }
+  /* Do not reclaim the symbols of the rule whose action triggered
      this YYABORT or YYACCEPT.  */
   YYPOPSTACK (yylen);
   YY_STACK_PRINT (yyss, yyssp);
   while (yyssp != yyss)
     {
       yydestruct ("Cleanup: popping",
-		  yystos[*yyssp], yyvsp, parseContext);
+                  yystos[*yyssp], yyvsp, parseContext);
       YYPOPSTACK (1);
     }
 #ifndef yyoverflow
@@ -6689,13 +6142,7 @@ yyreturn:
   if (yymsg != yymsgbuf)
     YYSTACK_FREE (yymsg);
 #endif
-  /* Make sure YYID is used.  */
-  return YYID (yyresult);
+  return yyresult;
 }
-
-
-
-/* Line 1675 of yacc.c  */
-#line 2469 "E:/Source/GitRepos/hlsl2glslfork/hlslang/MachineIndependent/hlslang.y"
-
+#line 2470 "hlslang.y" /* yacc.c:1906  */
 

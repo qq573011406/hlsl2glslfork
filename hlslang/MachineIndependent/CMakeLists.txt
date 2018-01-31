@@ -23,6 +23,12 @@ target_include_directories(MachineIndependent PUBLIC
 "${PROJECT_SOURCE_DIR}/include/"
 )
 
+if(WIN32)
+    target_compile_definitions(MachineIndependent PUBLIC
+        _CRT_SECURE_NO_WARNINGS
+    )
+endif(WIN32)
+
 option(HLSL2GLSLFORK_GenrateScannerAndParserCode " Generate scanner and parser source code " OFF)
 
 if(WIN32)

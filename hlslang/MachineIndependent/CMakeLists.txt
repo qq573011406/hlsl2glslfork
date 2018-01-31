@@ -15,8 +15,13 @@ add_library(MachineIndependent
     "${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/localintermediate.h"
 )
 
-target_link_libraries(MachineIndependent PRIVATE preprocessor OSDependent)
-target_include_directories(MachineIndependent PUBLIC  "${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/")
+target_link_libraries(MachineIndependent PUBLIC preprocessor OSDependent)
+target_include_directories(MachineIndependent PUBLIC
+"${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/"
+"${PROJECT_SOURCE_DIR}/hlslang/"
+"${PROJECT_SOURCE_DIR}/hlslang/include/"
+"${PROJECT_SOURCE_DIR}/include/"
+)
 
 option(HLSL2GLSLFORK_GenrateScannerAndParserCode " Generate scanner and parser source code " OFF)
 

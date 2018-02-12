@@ -9,7 +9,7 @@ target_include_directories(GLSLCodeGen PUBLIC
     "${PROJECT_SOURCE_DIR}/include/"
 
 )
-target_link_libraries(GLSLCodeGen MachineIndependent)
+target_link_libraries(GLSLCodeGen PUBLIC MachineIndependent)
 
 
 if(WIN32)

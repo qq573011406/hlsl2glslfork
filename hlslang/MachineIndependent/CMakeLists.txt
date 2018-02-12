@@ -15,7 +15,7 @@ add_library(MachineIndependent
     "${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/localintermediate.h"
 )
 
-target_link_libraries(MachineIndependent PUBLIC preprocessor OSDependent)
+target_link_libraries(MachineIndependent PUBLIC preprocessor OSDependent GLSLCodeGen)
 target_include_directories(MachineIndependent PUBLIC
 "${PROJECT_SOURCE_DIR}/hlslang/MachineIndependent/"
 "${PROJECT_SOURCE_DIR}/hlslang/"
